@@ -18,27 +18,39 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Scientific advisor"
+  company = "CEA (French Atomic Energy)"
+  company_url = "http://www.cea.fr/"
+  location = "Le Barp"
+  date_start = "2015-01-01"
   date_end = ""
-  description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
-  """
+  description = """Scientific advisor in the field of high performance computing in numerical simulations"""
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Deputy head"
+  company = "LaBRI (Bordeaux Computer Science Laboratory)"
+  company_url = "https://www.labri.fr/index.php?n=Satanas.Satanas"
+  location = "Talence"
+  date_start = "2011-01-01"
+  date_end = ""
+  description = """Deputy head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) team"""
+
+[[experience]]
+  title = "Expert"
+  company = "GENCI (French supercomputing ressources)"
+  company_url = "http://www.genci.fr/fr"
+  location = "Paris"
+  date_start = "2008-01-01"
+  date_end = "2016-01-01"
+  description = """Expert for Mathematics and Computer Science board"""
+
+[[experience]]
+  title = "Assistant Professor"
+  company = "Bordeaux University"
+  company_url = "https://www.u-bordeaux.fr/"
+  location = "Talence"
+  date_start = "2000-01-01"
+  date_end = ""
+  description = """Parallel algorithms in scientific computing"""
 
 +++

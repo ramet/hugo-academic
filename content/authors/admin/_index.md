@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Nelson Bighetti
+name: Pierre Ramet
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,29 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Assistant Professor of Computer Science
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: Bordeaux University - Inria
+  url: "https://www.u-bordeaux.fr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My interests span high-performance computing, focusing on sparse linear algebra. I am the developer of [PaStiX](https://gitlab.inria.fr/solverstack/pastix), a high-performance sparse direct solver.
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Sparse Linear Algebra
+- Parallel Algorithms
+- Scientific Computing
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: HdR in Computer Science
+    institution: Bordeaux University
+    year: 2017
+  - course: PhD in Computer Science
+    institution: Bordeaux University
+    year: 2000
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -45,23 +42,41 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-- icon: github
-  icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://scholar.google.com/citations?user=FRqHI7gAAAAJ
+- icon: springer
+  icon_pack: ai
+  link: https://www.scopus.com/authid/detail.uri?authorId=56450881700
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Pierre_Ramet
+- icon: acm
+  icon_pack: ai
+  link: http://member.acm.org/~pramet
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/cv.pdf
+- icon: gitlab
+  icon_pack: fab
+  link: https://gitlab.inria.fr/ramet
+- icon: github
+  icon_pack: fab
+  link: https://github.com/ramet
+- icon: docker
+  icon_pack: fab
+  link: https://hub.docker.com/u/tthor
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/tthor_
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/pierre-ramet-8794332a/
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "ramet@labri.fr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -70,6 +85,43 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Pierre Ramet is an assistant professor in computer science at Bordeaux University. His interests span high-performance computing, focusing on sparse linear algebra.
+He leads the team in charge of developing [PaStiX](https://gitlab.inria.fr/solverstack/pastix), a high-performance sparse direct solver.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Research team: [HiePACS](http://team.inria.fr/hiepacs)
+
+ANR supports:
+- [NUMASIS (CIS05)](http://numasis.gforge.inria.fr)
+- [ASTER (CIS06)](http://aster.gforge.inria.fr)
+- [SOLSTICE (CIS06)](http://solstice.gforge.inria.fr)
+- [PETAL (COS08)](http://petal.saclay.inria.fr)
+- [PETALH (MN10)](http://petal.saclay.inria.fr)
+- [ANEMOS (MN11)](http://aster.gforge.inria.fr")
+- [SOLHAR (MN13)](http://solhar.gforge.inria.fr)
+- [SASHIMI (JCJC18)](http://solhar.gforge.inria.fr)
+- [SOLARIS (CE46)](https://www.irit.fr/solharis/)
+
+Industrial partners:
+- [CEA Cesta (DAM)](http://www.cea.fr/Pages/le-cea/les-centres-cea/cesta.aspx)
+- [CEA Cadarache (ITER)](http://irfm.cea.fr/)
+- [EDF](https://www.edf.fr/groupe-edf/qui-sommes-nous/activites/recherche-et-developpement)
+- [TOTAL](https://www.total.com/)
+- [AIRBUS](http://www.airbus.com/)
+- [CERFACS](https://cerfacs.fr/)
+- [ALGO'TECH](http://www.algotech-informatique.com/)
+
+Associate teams with:
+- [LBNL](http://crd.lbl.gov) (Lawrence Berkeley National Laboratory)
+- [Stanford University](https://icme.stanford.edu/") (Institute for Computational and Mathematical Engineering)
+- [ICL](http://icl.cs.utk.edu/) (University of Tennessee)
+
+PhD advising:
+- [Mathieu Faverge](bib/target/Author/FAVERGE-M.html)
+- [Bruno Lathuiliere](bib/target/Author/LATHUILIERE-B.html)
+- [Xavier Lacoste](bib/target/Author/LACOSTE-X.html)
+- [Astrid Casadei](bib/target/Author/CASADEI-A.html)
+- [Salli Moustafa](bib/target/Author/MOUSTAFA-S.html)
+- [Gregoire Pichon](bib/target/Author/PICHON-G.html)
+- [Esragul Korkmaz](bib/target/Author/KORKMAZ-E.html)
+
+Full [CV](files/cv-fr.pdf) (french)

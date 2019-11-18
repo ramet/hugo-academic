@@ -1,0 +1,15 @@
+pip3 install -U academic
+rm all.bib
+cat bib/*.bib > all.bib
+rm -rf content/publication
+mkdir content/publication
+cp index-pub-header.md content/publication/_index.md
+academic import --normalize --overwrite --bibtex all.bib
+
+rm -rf static/bib
+cp -r bib/target static/
+mv static/target static/bib
+rm content/bib/_index.md
+cp index-bib-header.md content/bib/_index.md
+cat static/bib/index.html >> content/bib/_index.md
+
