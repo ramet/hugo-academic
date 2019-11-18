@@ -116,12 +116,12 @@ Associate teams with:
 - [ICL](http://icl.cs.utk.edu/) (University of Tennessee)
 
 PhD advising:
-- [Mathieu Faverge](bib/target/Author/FAVERGE-M.html)
-- [Bruno Lathuiliere](bib/target/Author/LATHUILIERE-B.html)
-- [Xavier Lacoste](bib/target/Author/LACOSTE-X.html)
-- [Astrid Casadei](bib/target/Author/CASADEI-A.html)
-- [Salli Moustafa](bib/target/Author/MOUSTAFA-S.html)
-- [Gregoire Pichon](bib/target/Author/PICHON-G.html)
-- [Esragul Korkmaz](bib/target/Author/KORKMAZ-E.html)
+- [Mathieu Faverge](bib/Author/FAVERGE-M.html)
+- [Bruno Lathuiliere](bib/Author/LATHUILIERE-B.html)
+- [Xavier Lacoste](bib/Author/LACOSTE-X.html)
+- [Astrid Casadei](bib/Author/CASADEI-A.html)
+- [Salli Moustafa](bib/Author/MOUSTAFA-S.html)
+- [Gregoire Pichon](bib/Author/PICHON-G.html)
+- [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
 
 Full [CV](files/cv-fr.pdf) (french)
