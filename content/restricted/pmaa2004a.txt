@@ -1,0 +1,14 @@
+Title:  A Blockwise Algorithm for Sparse Cholesky Incomplete Factorization.
+
+Solving large sparse linear systems by iterative methods has often been quite unsatisfactory when dealing with pratical "industrial" problems. The main difficulty encountered by such methods is their lack of robustness and, generally, the unpredictability and unconsistency of their performance over a wide sample of different problems; certain methods work quite well for certain types of problems but can fail completely on other problems.
+
+Over the past few years, direct methods have made significant progress thanks to either the combinatorial analysis of the Gaussian elimination process and the parallel algorithmic of blockwise solvers optimized for modern parallel supercomputers. Its is now possible to solve practical three-dimensional problems in the order of several millions of equations in a very powerful way with the direct solvers that efficiently use the superscalar effects of modern processors.
+
+However, direct methods may fail to solve very large three-dimensional problems, due to the large amount of memory needed for these cases.
+
+In our work, we consider an approach which, we hope, will bridge the gap  between the two classes of methods. The goal is to provide a method which exploits the parallel blockwise algorithmic used in the framework of the high performance sparse direct solvers for developping robust parallel incomplete factorization based preconditioners for iterative solvers.
+
+The idea is then to define an adaptive blockwise incomplete factorization that is much more accurate (and numerically more robust) than the scalar incomplete factorizations commonly used to precondition iterative solvers. Our approach consists in computing symbolically the block structure of the factors that would have been obtained with a complete factorization, and then deciding to drop off some blocks of this structure according to relevant criterions. Such incomplete factorization can take advantage of the latest breakthroughts in sparse direct methods and therefore be very competitive in CPU time  while avoiding the memory limitation encountered by direct methods. 
+By this way, we expect to be able to solve systems in the order of hundred millions of unknowns. 
+
+

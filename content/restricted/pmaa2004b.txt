@@ -1,0 +1,16 @@
+Title: Using of the High Performance Sparse Solver PaStiX for the Complex Multiscale 3D Simulations performed by the FluidBox Fluid Mechanics Software.
+
+In this paper, we consider a hyperbolic system with multiple time step characteristics. Such a situation arises for example in combustion problems when the acoustic time is small compared to the characteristic time associated to the flame propagation. The problems investigated in this paper are characterized by a small Mach number. 
+At the asymptotic limit, the initial hyperbolic system degenerates to an elliptic problem. Therefore, numerical methods proposed with the assumption of hyperbolicity of the system becomes hill conditioned at this limit. As a consequence, the iterative methods used in the numerical algorithm implemented in the software FluidBox, have a worse convergence behavior. 
+Some physical preconditioning has been proposed to overcome this difficulty. However, in the context of parallel computing, a global preconditioning is unavoidable for performance efficiency. 
+
+The parallelization of FluidBox relies on a domain decomposition. 
+A first version of FluidBox was using a block Jacobi or a block Gauss-Seidel preconditioner that are easily implementable in this framework.
+But to solve  3D problems up to several millions of unknowns on numerous processors, this kind of preconditioner becomes inefficient du to their lack of scalability and robustness. 
+Hence, a collaboration inside the INRIA ScAlApplix project has been setup to use the high performance solver library PaStiX that provides both complete and incomplete factorizations on clusters of SMP nodes to solve large scale
+computations. 
+
+The aim of this work is then to investigate the performance of the combination of FluidBox and PaStiX (both developped in the INRIA ScAlApplix project) and also present the parallel assembly algorithm that allows a good load balance in this context. 
+
+
+

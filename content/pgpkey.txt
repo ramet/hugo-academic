@@ -1,0 +1,4 @@
+Ce fichier revendique la propriété de la clé OpenPGP ayant 0x6d860972a29a74ce pour ID long.
+
+Jeton pour preuve :
+[Verifying my OpenPGP key: openpgp4fpr:812a2b3f26afad618620ce866d860972a29a74ce]
