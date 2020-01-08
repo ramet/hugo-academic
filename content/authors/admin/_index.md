@@ -48,12 +48,12 @@ social:
 - icon: springer
   icon_pack: ai
   link: https://www.scopus.com/authid/detail.uri?authorId=56450881700
+- icon: acm
+  icon_pack: ai
+  link: https://dl.acm.org/profile/81100480198
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Pierre_Ramet
-- icon: acm
-  icon_pack: ai
-  link: http://member.acm.org/~pramet
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
