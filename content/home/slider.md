@@ -30,25 +30,35 @@ height = ""
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
   cta_label = "Get Paper"
-  cta_url = "https://hal.inria.fr/hal-01485507v1"
+  cta_url = "https://hal.inria.fr/hal-01824275"
   cta_icon_pack = "fas"
   cta_icon = "graduation-cap"
 
 [[item]]
   title = "Without reordering"
   content = "Classical symbolic factorization"
-  align = "left"
+  align = "right"
 
   overlay_color = "#555"  # An HTML color value.
   overlay_img = "symbol_classic.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
+  cta_label = "Get Paper"
+  cta_url = "https://hal.inria.fr/inria-00346017"
+  cta_icon_pack = "fas"
+  cta_icon = "graduation-cap"
+
 [[item]]
   title = "With reordering"
   content = "Apply TSP on supernodes"
-  align = "right"
+  align = "left"
 
   overlay_color = "#333"  # An HTML color value.
   overlay_img = "symbol_reordering.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+  cta_label = "Get Paper"
+  cta_url = "https://hal.inria.fr/hal-01485507v1"
+  cta_icon_pack = "fas"
+  cta_icon = "graduation-cap"
 +++

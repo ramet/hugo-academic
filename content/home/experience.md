@@ -18,6 +18,15 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Head"
+  company = "SATANAS team of LaBRI (Bordeaux Computer Science Laboratory)"
+  company_url = "https://www.labri.fr/index.php?n=Satanas.Satanas"
+  location = "Talence"
+  date_start = "2020-01-01"
+  date_end = ""
+  description = """Head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) team"""
+
+[[experience]]
   title = "Scientific advisor"
   company = "CEA (French Atomic Energy)"
   company_url = "http://www.cea.fr/"
@@ -28,16 +37,16 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Deputy head"
-  company = "LaBRI (Bordeaux Computer Science Laboratory)"
+  company = "SATANAS team of LaBRI (Bordeaux Computer Science Laboratory)"
   company_url = "https://www.labri.fr/index.php?n=Satanas.Satanas"
   location = "Talence"
   date_start = "2011-01-01"
-  date_end = ""
+  date_end = "2020-01-01"
   description = """Deputy head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) team"""
 
 [[experience]]
   title = "Expert"
-  company = "GENCI (French supercomputing ressources)"
+  company = "GENCI (French supercomputing resources)"
   company_url = "http://www.genci.fr/fr"
   location = "Paris"
   date_start = "2008-01-01"

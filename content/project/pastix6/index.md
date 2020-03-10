@@ -60,20 +60,34 @@ Future releases will be available on this gitlab project.
 
 ## Available Features
 
-|                         | Seq    | Static | Dyn    | StarPU     | PaRSEC     |
-|-------------------------|--------|--------|--------|------------|------------|
-| POTRF (Cholesky)        | SHM/LR | SHM/LR | SHM/LR | SHM/LR/GPU | SHM/LR/GPU |
-| PXTRF (LL^t for complex)| SHM/LR | SHM/LR | SHM/LR | SHM/LR/GPU | SHM/LR/GPU |
-| HETRF (LDL^h)           | SHM/LR | SHM/LR | SHM/LR | SHM/LR/GPU | SHM/LR/GPU |
-| SYTRF (LDL^t)           | SHM/LR | SHM/LR | SHM/LR | SHM/LR/GPU | SHM/LR/GPU |
-| GETRF (LU)              | SHM/LR | SHM/LR | SHM/LR | SHM/LR/GPU | SHM/LR/GPU |
-| TRSM                    | SHM/LR | SHM/LR | SHM/LR | SHM/LR     | -          |
-| DIAG                    | SHM/LR | SHM/LR | SHM/LR | SHM/LR     | -          |
+* Features available in shared memory with POSIX threads for multicores architectures.
 
-* SHM means Shared Memory using POSIX theads for multicores architectures
-* LR means (block) Low-Rank compression technique to reduce the memory footprint and/or the time-to-solution
+|                         | Seq   | Static | Dyn   | StarPU    | PaRSEC    |
+|-------------------------|-------|--------|-------|-----------|-----------|
+| POTRF (Cholesky)        | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| PXTRF (LL^t for complex)| FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| HETRF (LDL^h)           | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| SYTRF (LDL^t)           | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| GETRF (LU)              | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| TRSM                    | FR/LR | FR/LR  | FR/LR | FR/LR     | -         |
+| DIAG                    | FR/LR | FR/LR  | FR/LR | FR/LR     | -         |
+
+* Features available in hybrid shared/distributed memory with MPI between processes, and POSIX threads within a process.
+
+|                         | Seq   | Static | Dyn   | StarPU    | PaRSEC    |
+|-------------------------|-------|--------|-------|-----------|-----------|
+| POTRF (Cholesky)        | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| PXTRF (LL^t for complex)| FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| HETRF (LDL^h)           | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| SYTRF (LDL^t)           | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| GETRF (LU)              | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| TRSM                    | FR    | FR     | FR    | FR        | -         |
+| DIAG                    | FR    | FR     | FR    | FR        | -         |
+
+* FR means Full-Rank computations without compression techniques
+* LR means Low-Rank compression technique to reduce the memory footprint and/or the time-to-solution
 * *WARNING* GPU kernels are not available on compressed supernodes
-* MPI is not available yet and will come with 6.1.0
+* *WARNING* Low-rank compression and Schur complement are not available with MPI yet.
 
 ## Documentation
 
@@ -118,9 +132,11 @@ The main options to configure the PaStiX configuration build are:
   * PASTIX_ORDERING_METIS[=OFF]: Enable/Disable the support of the Metis library to compute the ordering. Metis 5.1 is required.
 * External schedulers:
   * PASTIX_WITH_PARSEC[=OFF]: Enable/disable the PaRSEC runtime support. Require to install PaRSEC tag pastix-_releasenumber_ (mymaster for master branch) from the repository <https://bitbucket.org/mfaverge/parsec> that includes a few patches on top of the original PaRSEC runtime system. PaRSEC needs to be compiled with option -DPARSEC_WITH_DEVEL_HEADERS=ON.
-  * PASTIX_WITH_STARPU[=OFF]: Enable/disable the StarPU runtime support. Require to install StarPU 1.2.
+  * PASTIX_WITH_STARPU[=OFF]: Enable/disable the StarPU runtime support. Require to install StarPU 1.3.
 * Distributed memory:
-  * PASTIX_WITH_MPI=[OFF]: Distributed memory is not supported yet in PaStiX, however you might need to enable this option if your PaRSEC library has been compiled with MPI support.
+  * PASTIX_WITH_MPI=[OFF]: Enable/disable distributed memory support (See above for details). If used with the PaRSEC library, MPI should be enabled or disabled in both libraries.*
+* External SpM library:
+  * PASTIX_WITH_EXTERNAL_SPM=[OFF]: Enable/disable the use of an external SpM library in favor of the internal one.
 * Documentation:
   * BUILD_DOCUMENTATION[=OFF] to enable the Doxygen documentation generation.
 
@@ -148,6 +164,7 @@ The following people contribute or contributed to the development of PaStiX:
 * Grégoire Pichon, Low-rank solver
 * Florent Pruvost, CMake and Spack
 * Theophile Terraz
+* Tony Delarue, MPI implementation
 
 If we forgot your name, please let us know that we can fix that mistake.
 
@@ -166,5 +183,5 @@ Feel free to use the following publications to reference PaStiX:
 
 ## Licence
 
-<https://gitlab.inria.fr/solverstack/pastix/blob/master/LICENCE>
+<https://gitlab.inria.fr/solverstack/pastix/blob/master/LICENSE>
 

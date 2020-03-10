@@ -111,8 +111,8 @@ Industrial partners:
 - [ALGO'TECH](http://www.algotech-informatique.com/)
 
 Associate teams with:
-- [LBNL](http://crd.lbl.gov) (Lawrence Berkeley National Laboratory)
 - [Stanford University](https://icme.stanford.edu/") (Institute for Computational and Mathematical Engineering)
+- [LBNL](http://crd.lbl.gov) (Lawrence Berkeley National Laboratory)
 - [ICL](http://icl.cs.utk.edu/) (University of Tennessee)
 
 PhD advising:
