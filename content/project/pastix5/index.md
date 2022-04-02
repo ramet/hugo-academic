@@ -3,10 +3,10 @@ title: PaStiX 5
 summary: Parallel Sparse Direct Solver
 tags:
 - Sparse
-date: "2006-01-01"
+date: "2022-04-02"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://gforge.inria.fr/frs/?group_id=186
+external_link: https://files.inria.fr/pastix/releases/
 
 image:
   caption:
