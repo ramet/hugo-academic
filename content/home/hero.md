@@ -45,8 +45,8 @@ hero_media = ""
 
 # Note. An optional note to show underneath the links.
 [cta_note]
-  url = "https://gitlab.inria.fr/solverstack/pastix//uploads/98ce9b47514d0ee2b73089fe7bcb3391/pastix-6.1.0.tar.gz"
-  label = "Latest release 6.1.0"
+  url = "https://gitlab.inria.fr/solverstack/pastix//uploads/3fc798eb3ca6282e21506349df7f9da2/pastix-6.2.1.tar.gz"
+  label = "Latest release 6.2.1"
 +++
 
 ** Solve your sparse linear system **
