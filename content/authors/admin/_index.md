@@ -123,5 +123,8 @@ PhD advising:
 - [Salli Moustafa](bib/Author/MOUSTAFA-S.html)
 - [Gregoire Pichon](bib/Author/PICHON-G.html)
 - [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
+- [Clement Richefort](bib/Author/RICHEFORT-C.html)
 
 Full [CV](files/cv-fr.pdf) (french)
+
+Teaching [Page](https://ramet.gitlab.io/) (french)
