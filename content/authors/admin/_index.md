@@ -91,17 +91,19 @@ He leads the team in charge of developing [PaStiX](https://gitlab.inria.fr/solve
 Research team: [HiePACS](http://team.inria.fr/hiepacs)
 
 ANR supports:
-- [NUMASIS (CIS05)](http://numasis.gforge.inria.fr)
-- [ASTER (CIS06)](http://aster.gforge.inria.fr)
-- [SOLSTICE (CIS06)](http://solstice.gforge.inria.fr)
-- [PETAL (COS08)](http://petal.saclay.inria.fr)
-- [PETALH (MN10)](http://petal.saclay.inria.fr)
-- [ANEMOS (MN11)](http://aster.gforge.inria.fr")
-- [SOLHAR (MN13)](http://solhar.gforge.inria.fr)
-- [SASHIMI (JCJC18)](http://solhar.gforge.inria.fr)
+
 - [SOLARIS (CE46)](https://www.irit.fr/solharis/)
+- [SASHIMI (JCJC18)](http://solhar.gforge.inria.fr)
+- [SOLHAR (MN13)](http://solhar.gforge.inria.fr)
+- [ANEMOS (MN11)](http://aster.gforge.inria.fr")
+- [PETALH (MN10)](http://petal.saclay.inria.fr)
+- [PETAL (COS08)](http://petal.saclay.inria.fr)
+- [SOLSTICE (CIS06)](http://solstice.gforge.inria.fr)
+- [ASTER (CIS06)](http://aster.gforge.inria.fr)
+- [NUMASIS (CIS05)](http://numasis.gforge.inria.fr)
 
 Industrial partners:
+
 - [CEA Cesta (DAM)](http://www.cea.fr/Pages/le-cea/les-centres-cea/cesta.aspx)
 - [CEA Cadarache (ITER)](http://irfm.cea.fr/)
 - [EDF](https://www.edf.fr/groupe-edf/qui-sommes-nous/activites/recherche-et-developpement)
@@ -111,19 +113,22 @@ Industrial partners:
 - [ALGO'TECH](http://www.algotech-informatique.com/)
 
 Associate teams with:
+
 - [Stanford University](https://icme.stanford.edu/") (Institute for Computational and Mathematical Engineering)
 - [LBNL](http://crd.lbl.gov) (Lawrence Berkeley National Laboratory)
 - [ICL](http://icl.cs.utk.edu/) (University of Tennessee)
 
 PhD advising:
-- [Mathieu Faverge](bib/Author/FAVERGE-M.html)
-- [Bruno Lathuiliere](bib/Author/LATHUILIERE-B.html)
-- [Xavier Lacoste](bib/Author/LACOSTE-X.html)
-- [Astrid Casadei](bib/Author/CASADEI-A.html)
-- [Salli Moustafa](bib/Author/MOUSTAFA-S.html)
-- [Gregoire Pichon](bib/Author/PICHON-G.html)
-- [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
+
+- [Abel Calluaud](bib/Author/CALLUAUD-A.html)
 - [Clement Richefort](bib/Author/RICHEFORT-C.html)
+- [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
+- [Gregoire Pichon](bib/Author/PICHON-G.html)
+- [Salli Moustafa](bib/Author/MOUSTAFA-S.html)
+- [Astrid Casadei](bib/Author/CASADEI-A.html)
+- [Xavier Lacoste](bib/Author/LACOSTE-X.html)
+- [Bruno Lathuiliere](bib/Author/LATHUILIERE-B.html)
+- [Mathieu Faverge](bib/Author/FAVERGE-M.html)
 
 Full [CV](files/cv-fr.pdf) (french)
 
