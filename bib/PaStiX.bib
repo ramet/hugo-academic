@@ -295,19 +295,16 @@ ABSTRACT =
 {New supercomputers incorporate many microprocessors which include themselves one or many computational cores. These new architectures induce strongly hierarchical topologies. These are called NUMA architectures. Sparse direct solvers are a basic building block of many numerical simulation algorithms. They need to be adapted to these new architectures with Non Uniform Memory Accesses. We propose to introduce a dynamic scheduling designed for NUMA architectures in the PaStiX, solver. The data structures of the solver, as well as the patterns of communication have been modified to meet the needs of these architectures and dynamic scheduling. We are also interested in the dynamic adaptation of the computation grain to use efficiently multi-core architectures and shared memory. Experiments on several numerical test cases will be presented to prove the efficiency of the approach on different architectures.}
 }
 
-@PhdThesis{t:LaBRI::MC09,
-  author = 	 "Chanaud, M.",
-  title = 	 "Conception d'un solveur haute performance de syst\`emes lin\'eaires creux couplant des m\'ethodes multigrilles et directes pour la r\'esolution des \'equations de Maxwell 3D en r\'egime harmonique discr\'etis\'ees par \'el\'ements finis",
-  school = 	 "LaBRI, Universit\'e Bordeaux",
-  year = 	 "2009",
-  OPTkey = 	 {},
-  address = 	 {Talence, France},
-  OPTtype = 	 {},
-  month = 	 dec,
-  OPTnote = 	 {},
-  OPTannote = 	 {},
-  URL =          {http://www.labri.fr/~ramet/restricted/these_chanaud.pdf},
-  KEYWORDS =     "Sparse"
+@phdthesis{t:LaBRI::MC09,
+url = "http://www.theses.fr/2011BOR14324",
+title = "Conception d'un solveur haute performance de syst\`emes lin\'eaires creux couplant des m\'ethodes multigrilles et directes pour la r\'esolution des \'equations de Maxwell 3D en r\'egime harmonique discr\'etis\'ees par \'el\'ements finis",
+author = "Chanaud, Mathieu",
+year = "2011",
+month = 	 dec,
+NUMBER = "2011BOR14324",
+SCHOOL = {{Universit{\'e} de Bordeaux}},
+url = "http://www.theses.fr/2011BOR14324/document",
+KEYWORDS =     "Sparse"
 }
 
 @phdthesis{t:LaBRI::XL15,
@@ -366,17 +363,19 @@ All our changes are implemented in the SCOTCH partitioner. We present our result
   }
 }
 
-@phdthesis{t:LaBRI::GP18,
+@phdthesis{pichon:tel-01953908,
   TITLE = {{On the use of low-rank arithmetic to reduce the complexity of parallel sparse linear solvers based on direct factorization techniques}},
-  AUTHOR = {Pichon, G.},
+  AUTHOR = {Pichon, Gregoire},
   URL = {https://hal.inria.fr/tel-01953908},
+  NUMBER = {2018BORD0249},
   SCHOOL = {{Universit{\'e} de Bordeaux}},
   YEAR = {2018},
   MONTH = Nov,
-  KEYWORDS = {Low-rank-compression},
-  PDF = {https://hal.inria.fr/tel-01953908/file/thesis_final.pdf},
+  KEYWORDS = {Low-Rank compression},
+  TYPE = {Theses},
+  PDF = {https://hal.inria.fr/tel-01953908v2/file/PICHON_GREGOIRE_2018.pdf},
   HAL_ID = {tel-01953908},
-  HAL_VERSION = {v1},
+  HAL_VERSION = {v2},
 ABSTRACT =
   {
   Solving sparse linear systems is a problem that arises in many
@@ -415,6 +414,25 @@ ABSTRACT =
   investigate in the last part of this thesis a modified nested
   dissection strategy that aligns separators with respect to their
   father to obtain more regular data structure.
+  }
+}
+
+@phdthesis{korkmaz:tel-03875858,
+  TITLE = {{Improving the memory and time overhead of low-rank parallel linear sparse direct solvers}},
+  AUTHOR = {Korkmaz, Esragul},
+  URL = {https://theses.hal.science/tel-03875858},
+  NUMBER = {2022BORD0254},
+  SCHOOL = {{Universit{\'e} de Bordeaux}},
+  YEAR = {2022},
+  MONTH = Sep,
+  KEYWORDS = {Low-Rank compression},
+  TYPE = {Theses},
+  PDF = {https://theses.hal.science/tel-03875858/file/KORKMAZ_ESRAGUL_2022.pdf},
+  HAL_ID = {tel-03875858},
+  HAL_VERSION = {v1},
+  ABSTRACT =
+  {
+Through the recent improvements toward exascale supercomputer systems, huge computations can be performed in reasonable times by using massively parallelized operations. Unfortunately, the increase of the computational units in these systems does not lead to a rise in the memory available per core. Therefore, this memory limitation forces the scientists/engineers to not only efficiently parallelize the operations but also minimize the memory used. Many scientific and engineering applications have to solve large sparse linear systems of the type Ax = b. Although the direct methods are the most robust solutions for these systems, they are costly in terms of their memory usage and time-to-solution. In this respect, the low-rank representations have been recently introduced into these solvers to reduce the time and memory footprint. In this work, our goal is to improve the low-rank feature of the block low-rank (BLR) sparse supernodal direct solver PaStiX. For this purpose, we compare some compression methods to determine the fastest kernel, which keeps the representative data with the smallest rank possible. Then, we focus on improving supernodal solver by reducing the number of re-compression during the updates. Firstly, we study the separator reordering strategies to identify the poorly compressible blocks involved in these updates and reduce their occurrences. Secondly, we propose an orthogonal solution to predict thecompressibility of the blocks before the numerical factorization. This last approach relies on the use of the level of fill of a symbolic block incomplete factorization. Thanks to these optimizations, the memory usage has been reduced more effectively compared to the state of the art solvers while also improving the time to solution. This thesis is a requested first step toward a advanced sparse direct solver using hierarchical compression schemes.
   }
 }
 
@@ -2530,7 +2548,7 @@ In this talk, we present new ordering heuristics to perform block low-rank clust
   INSTITUTION = {{Inria Bordeaux - Sud Ouest}},
   YEAR = {2022},
   MONTH = Jul,
-  KEYWORDS = {Low-rank compression ; randomization ; Compression de rang faible ; randomisation},
+  KEYWORDS = {Randomized},
   PDF = {https://hal.inria.fr/hal-03718312v4/file/RR-9476.pdf},
   HAL_ID = {hal-03718312},
   HAL_VERSION = {v4},
