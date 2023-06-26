@@ -17,6 +17,17 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+
+[[experience]]
+  title = "Full Professor"
+  company = "Bordeaux University"
+  company_url = "https://www.u-bordeaux.fr/"
+  location = "Talence"
+  date_start = "2023-09-01"
+  date_end = ""
+  description = """Parallel algorithms in scientific computing"""
+
 [[experience]]
   title = "Head"
   company = "SATANAS team of LaBRI (Bordeaux Computer Science Laboratory)"
@@ -58,8 +69,8 @@ date_format = "Jan 2006"
   company = "Bordeaux University"
   company_url = "https://www.u-bordeaux.fr/"
   location = "Talence"
-  date_start = "2000-01-01"
-  date_end = ""
+  date_start = "2000-09-01"
+  date_end = "2023-09-01"
   description = """Parallel algorithms in scientific computing"""
 
 +++

@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor of Computer Science
+role: Full Professor of Computer Science
 
 # Organizations/Affiliations
 organizations:
@@ -85,7 +85,7 @@ user_groups:
 - Visitors
 ---
 
-Pierre Ramet is an assistant professor in computer science at Bordeaux University. His interests span high-performance computing, focusing on sparse linear algebra.
+Pierre Ramet is a full professor in computer science at Bordeaux University. His interests span high-performance computing, focusing on sparse linear algebra.
 He leads the team in charge of developing [PaStiX](https://gitlab.inria.fr/solverstack/pastix), a high-performance sparse direct solver.
 
 Research team: [TOPAL](http://team.inria.fr/topal) (Tools and Optimization for high Performance Applications and Learning)
