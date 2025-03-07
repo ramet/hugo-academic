@@ -39,9 +39,9 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: envelope
-  icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+# - icon: envelope
+#   icon_pack: fas
+#   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=FRqHI7gAAAAJ
@@ -68,9 +68,9 @@ social:
 - icon: docker
   icon_pack: fab
   link: https://hub.docker.com/u/tthor
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/tthor_
+# - icon: twitter
+#   icon_pack: fab
+#   link: https://twitter.com/tthor_
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/pierre-ramet-8794332a/
@@ -120,6 +120,8 @@ Associate teams with:
 
 PhD advising:
 
+- [Dimitri Walther](bib/Author/WALTHER-D.html)
+- [Alycia Lisito](bib/Author/LISITO-A.html)
 - [Abel Calluaud](bib/Author/CALLUAUD-A.html)
 - [Clement Richefort](bib/Author/RICHEFORT-C.html)
 - [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
