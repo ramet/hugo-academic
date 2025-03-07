@@ -4,7 +4,8 @@ cat bib/*.bib > all.bib
 rm -rf content/publication
 mkdir content/publication
 cp index-pub-header.md content/publication/_index.md
-academic import --normalize --overwrite --bibtex all.bib
+#academic import --normalize --overwrite --bibtex all.bib
+academic import --normalize --overwrite all.bib content/publication/
 
 rm -rf static/bib
 cp -r bib/target static/
