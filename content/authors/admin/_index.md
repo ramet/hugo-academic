@@ -54,17 +54,17 @@ social:
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Pierre_Ramet
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: files/cv.pdf
 - icon: gitlab
   icon_pack: fab
   link: https://gitlab.inria.fr/ramet
 - icon: github
   icon_pack: fab
   link: https://github.com/ramet
+# Link to a PDF of your resume/CV from the About widget.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+- icon: cv
+  icon_pack: ai
+  link: files/cv.pdf
 - icon: docker
   icon_pack: fab
   link: https://hub.docker.com/u/tthor
@@ -85,7 +85,7 @@ user_groups:
 - Visitors
 ---
 
-Pierre Ramet is a full professor in computer science at Bordeaux University. His interests span high-performance computing, focusing on sparse linear algebra.
+Pierre Ramet is professor in computer science at Bordeaux University. His interests span high-performance computing, focusing on sparse linear algebra.
 He leads the team in charge of developing [PaStiX](https://gitlab.inria.fr/solverstack/pastix), a high-performance sparse direct solver.
 
 Research team: [TOPAL](http://team.inria.fr/topal) (Tools and Optimization for high Performance Applications and Learning)

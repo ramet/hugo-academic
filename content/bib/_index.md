@@ -46,36 +46,47 @@ Selection by year
 
 <br /><table align="center" cellpadding="4" cellspacing="2">
 <tr align="left" valign="top">
+<td><a href="Year/2024.html">2024</a></td>
+<td><a href="Year/2023.html">2023</a></td>
+<td><a href="Year/2022.html">2022</a></td>
 <td><a href="Year/2021.html">2021</a></td>
 <td><a href="Year/2020.html">2020</a></td>
 <td><a href="Year/2019.html">2019</a></td>
 <td><a href="Year/2018.html">2018</a></td>
 <td><a href="Year/2017.html">2017</a></td>
 <td><a href="Year/2016.html">2016</a></td>
+</tr>
+<tr align="left" valign="top">
 <td><a href="Year/2015.html">2015</a></td>
 <td><a href="Year/2014.html">2014</a></td>
 <td><a href="Year/2013.html">2013</a></td>
-</tr>
-<tr align="left" valign="top">
 <td><a href="Year/2012.html">2012</a></td>
 <td><a href="Year/2011.html">2011</a></td>
 <td><a href="Year/2010.html">2010</a></td>
 <td><a href="Year/2009.html">2009</a></td>
 <td><a href="Year/2008.html">2008</a></td>
 <td><a href="Year/2007.html">2007</a></td>
+</tr>
+<tr align="left" valign="top">
 <td><a href="Year/2006.html">2006</a></td>
 <td><a href="Year/2005.html">2005</a></td>
 <td><a href="Year/2004.html">2004</a></td>
-</tr>
-<tr align="left" valign="top">
 <td><a href="Year/2003.html">2003</a></td>
 <td><a href="Year/2002.html">2002</a></td>
 <td><a href="Year/2001.html">2001</a></td>
 <td><a href="Year/2000.html">2000</a></td>
 <td><a href="Year/1999.html">1999</a></td>
 <td><a href="Year/1998.html">1998</a></td>
+</tr>
+<tr align="left" valign="top">
 <td><a href="Year/1997.html">1997</a></td>
 <td><a href="Year/1996.html">1996</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </table><br />
@@ -196,7 +207,7 @@ Selection by author
 <td bgcolor="#badfe1"><strong>L</strong></td>
 <td><a name="AUTHL"></a><a href="Author/LACOSTE-X.html">Xavier <strong>Lacoste</strong></a></td>
 <td><a href="Author/LATHUILIERE-B.html">B. <strong>Lathuilière</strong></a></td>
-<td></td>
+<td><a href="Author/LISITO-A.html">Alycia <strong>Lisito</strong></a></td>
 </tr>
 <tr align="left" valign="top">
 <td bgcolor="#badfe1"><strong>M</strong></td>
@@ -213,8 +224,8 @@ Selection by author
 <tr align="left" valign="top">
 <td bgcolor="#badfe1"><strong>R</strong></td>
 <td><a name="AUTHR"></a><a href="Author/RAMET-P.html">Pierre <strong>Ramet</strong></a></td>
+<td><a href="Author/RICHEFORT-C.html">Clément <strong>Richefort</strong></a></td>
 <td><a href="Author/ROMAN-J.html">Jean <strong>Roman</strong></a></td>
-<td></td>
 </tr>
 </table>
 <br />
@@ -244,7 +255,7 @@ Selection by keyword
 <td bgcolor="#badfe1">J</td>
 <td bgcolor="#badfe1">K</td>
 <td bgcolor="#badfe1"><a href="#KEYWL">L</a></td>
-<td bgcolor="#badfe1">M</td>
+<td bgcolor="#badfe1"><a href="#KEYWM">M</a></td>
 <td bgcolor="#badfe1"><a href="#KEYWN">N</a></td>
 </tr>
 <tr align="center">
@@ -274,13 +285,19 @@ Selection by keyword
 <tr align="left" valign="top">
 <td bgcolor="#badfe1"><strong>H</strong></td>
 <td><a name="KEYWH"></a><a href="Keyword/H-MAT.html">H-Mat</a></td>
-<td></td>
+<td><a href="Keyword/HPL.html">HPL</a></td>
 <td></td>
 </tr>
 <tr align="left" valign="top">
 <td bgcolor="#badfe1"><strong>L</strong></td>
 <td><a name="KEYWL"></a><a href="Keyword/LOAD-BALANCING.html">Load balancing</a></td>
-<td><a href="Keyword/LOW-RANK-COMPRESSION.html">Low-rank compression</a></td>
+<td><a href="Keyword/LOW-RANK-COMPRESSION.html">Low-Rank compression</a></td>
+<td></td>
+</tr>
+<tr align="left" valign="top">
+<td bgcolor="#badfe1"><strong>M</strong></td>
+<td><a name="KEYWM"></a><a href="Keyword/MULTIGRID.html">Multigrid</a></td>
+<td></td>
 <td></td>
 </tr>
 <tr align="left" valign="top">
@@ -362,9 +379,9 @@ du copyright.
 
 <br /><hr size="2" width="100%"><br />
 
-Last modified: Sat Apr  2 17:37:05 2022
+Last modified: Sat Mar  8 09:59:24 2025
 
-<br />Author: ramet.
+<br />Author: root.
 
 <br /><hr size="2" width="100%"><br />
 
