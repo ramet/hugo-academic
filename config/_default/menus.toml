@@ -9,14 +9,15 @@
 #  weight = 10
 
 [[main]]
-  name = "Publications"
+  name = "BIB"
   url = "bib/"
-  weight = 20
+  weight = 30
 
 [[main]]
-  name = "HAL"
-  url = "hal/"
-  weight = 30
+  name = "Publications HAL"
+#  url = "hal/"
+  url = "https://cv.hal.science/pierre-ramet"
+  weight = 20
 
 #[[main]]
 #  name = "Posts"

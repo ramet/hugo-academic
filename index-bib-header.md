@@ -1,6 +1,6 @@
 
 ---
-title: bibtex2html
+title: Pierre Ramet's publications
 
 # View.
 #   1 = List
