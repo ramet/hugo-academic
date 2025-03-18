@@ -19,6 +19,23 @@ cat static/bib/index.html >> content/bib/_index.md
 hugo server
 open http://localhost:1313/
 
+fix "application/ld+json" in public/index.html with:
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Talence",
+    "addressRegion": "Aquitaine",
+    "postalCode": "33405",
+    "streetAddress": "Bordeaux University"
+  },
+  "image": "static/img/tthor.png",
+  "jobTitle": "Professor",
+  "name": "Pierre Ramet",
+  "url": "https://ramet.github.io/"
+}
+
 public/ is a clone from git@github.com:ramet/ramet.github.io.git
 git add .
 git commit -m "update"
