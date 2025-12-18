@@ -122,7 +122,6 @@ PhD advising:
 
 - [Dimitri Walther](bib/Author/WALTHER-D.html)
 - [Alycia Lisito](bib/Author/LISITO-A.html)
-- [Abel Calluaud](bib/Author/CALLUAUD-A.html)
 - [Clement Richefort](bib/Author/RICHEFORT-C.html)
 - [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
 - [Gregoire Pichon](bib/Author/PICHON-G.html)
