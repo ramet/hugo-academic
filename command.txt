@@ -1,6 +1,6 @@
 # ==============================================================================
 # Commandes de mise à jour et publication du site web académique
-# Branche : clean-academic (Hugo Blox moderne à la racine du dépôt)
+# Branche : main (Hugo Blox moderne à la racine du dépôt)
 # Répertoire de publication : public/ (sous-module vers ramet.github.io)
 # ==============================================================================
 
@@ -48,4 +48,4 @@ git push origin master
 cd ..
 git add .
 git commit -m "update sources"
-git push origin clean-academic
+git push origin main
