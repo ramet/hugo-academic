@@ -89,7 +89,7 @@ sections:
           - Cryptography and security fundamentals.
           - DevOps (virtualization and CI/CD automation).
           - Unsupervised machine learning in the context of the **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering integration throughout the curriculum.
+          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering integration.
         - **Enseirb-Matmeca & Master in Computer Science:**
           - Numerical algorithms.
           - High-Performance Computing (HPC), parallel & distributed algorithms, and scientific computing.
