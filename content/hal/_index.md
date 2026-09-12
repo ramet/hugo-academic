@@ -1,16 +1,8 @@
 ---
-title:
-
-# View.
-#   1 = List
-#   2 = Compact
-#   3 = Card
-view: 2
-
-# Optional header image (relative to `static/img/` folder).
-header:
-  caption: ""
-  image: ""
+title: "Publications HAL"
+summary: "Pierre Ramet's publications on HAL"
 ---
 
- <iframe height='1024' width='1024' frameborder='0' allowtransparency='true' scrolling='auto' src="https://cv.hal.science/pierre-ramet"></iframe>
+<div style="width: 100%; height: 85vh; min-height: 700px; margin-top: 1rem;">
+  <iframe src="https://cv.hal.science/pierre-ramet" width="100%" height="100%" frameborder="0" style="border: none; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);"></iframe>
+</div>

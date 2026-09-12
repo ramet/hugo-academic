@@ -1,0 +1,120 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Pierre Ramet
+  given: Pierre
+  family: Ramet
+postnominals:
+  - PhD
+  - HdR
+role: Full Professor of Computer Science
+bio: |
+  Pierre Ramet is a Full Professor of Computer Science at Bordeaux University and a researcher at Inria. His research interests span high-performance computing, focusing on sparse linear algebra and parallel algorithms. He leads the team in charge of developing PaStiX, a high-performance sparse direct solver.
+
+affiliations:
+  - name: Bordeaux University - Inria
+    url: https://www.u-bordeaux.fr/
+
+links:
+  - icon: at-symbol
+    url: mailto:pierre.ramet@u-bordeaux.fr
+    label: E-mail Me
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=FRqHI7gAAAAJ
+    label: Google Scholar
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Pierre_Ramet
+    label: ResearchGate
+  - icon: brands/github
+    url: https://github.com/ramet
+    label: GitHub
+  - icon: brands/gitlab
+    url: https://gitlab.inria.fr/ramet
+    label: GitLab
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/pierre-ramet-8794332a/
+    label: LinkedIn
+  - icon: brands/docker
+    url: https://hub.docker.com/u/tthor
+    label: Docker
+  - icon: academicons/cv
+    url: files/cv.pdf
+    label: CV (English)
+  - icon: academicons/cv
+    url: files/cv-fr.pdf
+    label: CV (Français)
+
+interests:
+  - High-Performance Computing
+  - Sparse Linear Algebra
+  - Parallel Algorithms
+  - Scientific Computing
+
+education:
+  - degree: HdR in Computer Science
+    institution: Bordeaux University
+    year: 2017
+    summary: "Habilitation à Diriger des Recherches"
+  - degree: PhD in Computer Science
+    institution: Bordeaux University
+    year: 2000
+    summary: "Doctorat en Informatique"
+
+experience:
+  - role: Full Professor
+    org: Bordeaux University
+    org_url: https://www.u-bordeaux.fr/
+    start: "2023-09-01"
+    end: ""
+    summary: "Parallel algorithms in scientific computing"
+  - role: Head of Department
+    org: SATANAS department of LaBRI
+    org_url: https://www.labri.fr/
+    start: "2020-01-01"
+    end: ""
+    summary: "Head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) department"
+  - role: Scientific Advisor
+    org: CEA (French Atomic Energy Commission)
+    org_url: http://www.cea.fr/
+    start: "2015-01-01"
+    end: ""
+    summary: "Scientific advisor in the field of high-performance computing for numerical simulations"
+  - role: Deputy Head of Department
+    org: SATANAS department of LaBRI
+    org_url: https://www.labri.fr/
+    start: "2011-01-01"
+    end: "2020-01-01"
+    summary: "Deputy head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) department"
+  - role: Scientific Expert
+    org: GENCI (French National High-Performance Computing Agency)
+    org_url: http://www.genci.fr/
+    start: "2008-01-01"
+    end: "2016-01-01"
+    summary: "Scientific expert on the Mathematics and Computer Science evaluation board"
+  - role: Assistant Professor
+    org: Bordeaux University
+    org_url: https://www.u-bordeaux.fr/
+    start: "2000-09-01"
+    end: "2023-09-01"
+    summary: "Parallel algorithms in scientific computing"
+
+skills:
+  - name: Research Domains
+    items:
+      - label: Sparse Linear Algebra
+        level: 5
+      - label: High-Performance Computing (HPC)
+        level: 5
+      - label: Parallel Algorithms & Runtime Systems
+        level: 5
+      - label: Scientific Computing
+        level: 5
+
+languages:
+  - name: French
+    level: 5
+    label: Native
+  - name: English
+    level: 5
+    label: Fluent

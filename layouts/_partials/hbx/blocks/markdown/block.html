@@ -1,0 +1,35 @@
+{{/* Hugo Blox: Markdown */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+{{ $title := "" }}
+{{ with index $content "title" }}{{ $title = printf "%v" . | emojify | $page.RenderString }}{{ end }}
+{{ $text := "" }}
+{{ with index $content "text" }}{{ $text = printf "%v" . | emojify | $page.RenderString | safeHTML }}{{ end }}
+
+{{ $design := $block.design }}
+{{ if not (reflect.IsMap $design) }}{{ $design = dict }}{{ end }}
+{{ $wide := index $design "wide" | default false }}
+{{ $containerWidth := "max-w-prose" }}
+{{ $proseWidth := "max-w-prose" }}
+{{ if $wide }}
+  {{ $containerWidth = "max-w-7xl w-full" }}
+  {{ $proseWidth = "max-w-none w-full" }}
+{{ end }}
+
+<div class="flex flex-col items-center {{ $containerWidth }} mx-auto gap-3 justify-center px-6">
+
+  {{ with $title }}
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white text-center">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  {{/* We use DIV rather than P to support `prose` class and multiple paragraphs */}}
+  {{ with $text }}<div class="prose prose-slate lg:prose-xl dark:prose-invert {{ $proseWidth }}">{{ . }}</div>{{ end }}
+</div>

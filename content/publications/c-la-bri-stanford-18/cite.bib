@@ -1,0 +1,15 @@
+@misc{c:LaBRI::stanford18,
+ abstract = {
+Sparse direct solvers is a time consuming operation required by many scientific applications to simulate physical problems. By its important overall cost, many studies tried to optimize the time to solution of those solvers on multi-core and distributed architectures.  In this talk, we will present recent advances on PaStiX (https://gitlab.inria.fr/solverstack/pastix), a supernodal sparse direct solver, which has been enhanced by the introduction of Block Low-Rank compression.  We will compare the numerical stability, and the performance in terms of memory consumption and time to solution of different approaches by selecting when the compression of the factorized matrix occurs.
+Many works have also addressed heterogeneous architectures to exploit accelerators such as GPUs or Intel Xeon Phi with interesting speedup. The new implementation on top of runtime systems (PaRSEC, StarPU), will be compared with the static scheduling used in previous experiments. Among the preprocessing steps of a sparse direct solver, reordering and block symbolic factorization are two major steps to reach a suitable granularity. In this talk, we will present a reordering strategy to increase off-diagonal block sizes. It enhances BLAS kernels and allows to handle larger tasks, reducing runtime overhead.
+Finally, in order to improve the efficiency of the sparse update kernel for both BLR (block low rank) and HODLR (hierarchically off-diagonal low-rank), we are currently investigating the BDLR (boundary distance low-rank) method to preselect rows and columns in the low-rank approximation algorithm.
+},
+ author = {Ramet, P.},
+ howpublished = {Seminar at Stanford},
+ month = {April},
+ optannote = {},
+ optkey = {},
+ optnote = {},
+ title = {Heterogeneous architectures, Hybrid methods, Hierarchical matrices for Sparse Linear Solvers},
+ year = {2018}
+}

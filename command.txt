@@ -1,43 +1,51 @@
-pip3 install -U academic
+# ==============================================================================
+# Commandes de mise à jour et publication du site web académique
+# Branche : clean-academic (Hugo Blox moderne à la racine du dépôt)
+# Répertoire de publication : public/ (sous-module vers ramet.github.io)
+# ==============================================================================
 
-# make in /bib
+# 0. Vérification / Mise à jour de l'outil academic (dans ~/.venv/)
+~/.venv/bin/pip install -U academic
 
-rm all.bib
+# 1. OPTION RAPIDE : Tout reconstruire en une seule commande
+./build.sh
+
+# ------------------------------------------------------------------------------
+# OU EN DÉTAIL (ÉTAPE PAR ÉTAPE) :
+# ------------------------------------------------------------------------------
+
+# Étape A : Concaténation des fichiers BibTeX
 cat bib/*.bib > all.bib
-rm -rf content/publication
-mkdir content/publication
-cp index-pub-header.md content/publication/_index.md
-academic import --normalize --overwrite all.bib content/publication/
 
-rm -rf static/bib
-cp -r bib/target static/
-mv static/target static/bib
-rm content/bib/_index.md
-cp index-bib-header.md content/bib/_index.md
-cat static/bib/index.html >> content/bib/_index.md
+# Étape B : Import des publications dans le format Markdown Hugo Blox
+~/.venv/bin/academic import --normalize --overwrite all.bib content/publications/
 
+# Étape C (Optionnel) : Reconstruire la bibliographie HTML bibtex2html
+# cd bib && make bib && cd ..
+# cp -r bib/target static/bib
+
+# Étape D : Tester le site en local
 hugo server
-open http://localhost:1313/
+# Ouvrir http://localhost:1313/ dans le navigateur
 
-fix "application/ld+json" in public/index.html with:
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Talence",
-    "addressRegion": "Aquitaine",
-    "postalCode": "33405",
-    "streetAddress": "Bordeaux University"
-  },
-  "image": "static/img/tthor.png",
-  "jobTitle": "Professor",
-  "name": "Pierre Ramet",
-  "url": "https://ramet.github.io/"
-}
+# Étape E : Compiler pour la production (génère directement dans public/)
+hugo --environment production --cleanDestinationDir
 
-public/ is a clone from git@github.com:ramet/ramet.github.io.git
+# NOTE : L'injection des métadonnées Schema.org ("Person" JSON-LD) pour le
+# référencement est désormais automatisée via le hook :
+# layouts/_partials/hooks/head-end/person-jsonld.html
+# Plus aucune modification manuelle de public/index.html n'est nécessaire !
+
+# ------------------------------------------------------------------------------
+# PUBLICATION VERS GITHUB PAGES (https://ramet.github.io) :
+# ------------------------------------------------------------------------------
+cd public
 git add .
-git commit -m "update"
-git push
+git commit -m "update site"
+git push origin master
 
+# Et pour sauvegarder les modifications du code source dans le dépôt principal :
+cd ..
+git add .
+git commit -m "update sources"
+git push origin clean-academic

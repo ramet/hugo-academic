@@ -1,0 +1,17 @@
+@phdthesis{korkmaz:tel-03875858,
+ abstract = {
+Through the recent improvements toward exascale supercomputer systems, huge computations can be performed in reasonable times by using massively parallelized operations. Unfortunately, the increase of the computational units in these systems does not lead to a rise in the memory available per core. Therefore, this memory limitation forces the scientists/engineers to not only efficiently parallelize the operations but also minimize the memory used. Many scientific and engineering applications have to solve large sparse linear systems of the type Ax = b. Although the direct methods are the most robust solutions for these systems, they are costly in terms of their memory usage and time-to-solution. In this respect, the low-rank representations have been recently introduced into these solvers to reduce the time and memory footprint. In this work, our goal is to improve the low-rank feature of the block low-rank (BLR) sparse supernodal direct solver PaStiX. For this purpose, we compare some compression methods to determine the fastest kernel, which keeps the representative data with the smallest rank possible. Then, we focus on improving supernodal solver by reducing the number of re-compression during the updates. Firstly, we study the separator reordering strategies to identify the poorly compressible blocks involved in these updates and reduce their occurrences. Secondly, we propose an orthogonal solution to predict thecompressibility of the blocks before the numerical factorization. This last approach relies on the use of the level of fill of a symbolic block incomplete factorization. Thanks to these optimizations, the memory usage has been reduced more effectively compared to the state of the art solvers while also improving the time to solution. This thesis is a requested first step toward a advanced sparse direct solver using hierarchical compression schemes.
+},
+ author = {Korkmaz, Esragul},
+ hal_id = {tel-03875858},
+ hal_version = {v1},
+ keywords = {Low-Rank compression},
+ month = {September},
+ number = {2022BORD0254},
+ pdf = {https://theses.hal.science/tel-03875858/file/KORKMAZ_ESRAGUL_2022.pdf},
+ school = {Université de Bordeaux},
+ title = {Improving the memory and time overhead of low-rank parallel linear sparse direct solvers},
+ type = {Theses},
+ url = {https://theses.hal.science/tel-03875858},
+ year = {2022}
+}

@@ -1,0 +1,169 @@
+<html>
+
+<title>
+Publications of year 2022</title>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="keywords" lang="en" content="bibtex2html, bibliography, article, report">
+<META name="GENERATOR" content="bibtex2html 1.01">
+</head>
+<body bgcolor="#ffffff" link="blue" alink="blue" vlink="blue">
+
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<table width="100%">
+<tr><td height="50" bgcolor="#669999" align="center">
+<strong><font size=6 color="#ffffff" face="times">
+Publications of year 2022
+</font></strong>
+</td></tr>
+</table>
+
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Thesis
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="korkmaz:tel-03875858"></a><a href="../Author/KORKMAZ-E.html">Esragul Korkmaz</a>.
+<strong>Improving the memory and time overhead of low-rank parallel linear sparse direct solvers</strong>.
+Theses,
+Université de Bordeaux,
+September 2022.
+ <a href="https://theses.hal.science/tel-03875858"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://theses.hal.science/tel-03875858/file/KORKMAZ_ESRAGUL_2022.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/LOW-RANK-COMPRESSION.html">Low-Rank compression</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ Through the recent improvements toward exascale supercomputer systems, huge computations can be performed in reasonable times by using massively parallelized operations. Unfortunately, the increase of the computational units in these systems does not lead to a rise in the memory available per core. Therefore, this memory limitation forces the scientists/engineers to not only efficiently parallelize the operations but also minimize the memory used. Many scientific and engineering applications have to solve large sparse linear systems of the type Ax = b. Although the direct methods are the most robust solutions for these systems, they are costly in terms of their memory usage and time-to-solution. In this respect, the low-rank representations have been recently introduced into these solvers to reduce the time and memory footprint. In this work, our goal is to improve the low-rank feature of the block low-rank (BLR) sparse supernodal direct solver PaStiX. For this purpose, we compare some compression methods to determine the fastest kernel, which keeps the representative data with the smallest rank possible. Then, we focus on improving supernodal solver by reducing the number of re-compression during the updates. Firstly, we study the separator reordering strategies to identify the poorly compressible blocks involved in these updates and reduce their occurrences. Secondly, we propose an orthogonal solution to predict thecompressibility of the blocks before the numerical factorization. This last approach relies on the use of the level of fill of a symbolic block incomplete factorization. Thanks to these optimizations, the memory usage has been reduced more effectively compared to the state of the art solvers while also improving the time to solution. This thesis is a requested first step toward a advanced sparse direct solver using hierarchical compression schemes. </td>
+
+</tr></table></center>
+<br /><pre>
+@phdthesis{korkmaz:tel-03875858,
+TITLE = {{Improving the memory and time overhead of low-rank parallel linear sparse direct solvers}},
+AUTHOR = {Korkmaz, Esragul},
+URL = {https://theses.hal.science/tel-03875858},
+NUMBER = {2022BORD0254},
+SCHOOL = {{Universit{\'e} de Bordeaux}},
+YEAR = {2022},
+MONTH = Sep,
+KEYWORDS = {Low-Rank compression},
+TYPE = {Theses},
+PDF = {https://theses.hal.science/tel-03875858/file/KORKMAZ_ESRAGUL_2022.pdf},
+HAL_ID = {tel-03875858},
+HAL_VERSION = {v1},
+ABSTRACT = { Through the recent improvements toward exascale supercomputer systems, huge computations can be performed in reasonable times by using massively parallelized operations. Unfortunately, the increase of the computational units in these systems does not lead to a rise in the memory available per core. Therefore, this memory limitation forces the scientists/engineers to not only efficiently parallelize the operations but also minimize the memory used. Many scientific and engineering applications have to solve large sparse linear systems of the type Ax = b. Although the direct methods are the most robust solutions for these systems, they are costly in terms of their memory usage and time-to-solution. In this respect, the low-rank representations have been recently introduced into these solvers to reduce the time and memory footprint. In this work, our goal is to improve the low-rank feature of the block low-rank (BLR) sparse supernodal direct solver PaStiX. For this purpose, we compare some compression methods to determine the fastest kernel, which keeps the representative data with the smallest rank possible. Then, we focus on improving supernodal solver by reducing the number of re-compression during the updates. Firstly, we study the separator reordering strategies to identify the poorly compressible blocks involved in these updates and reduce their occurrences. Secondly, we propose an orthogonal solution to predict thecompressibility of the blocks before the numerical factorization. This last approach relies on the use of the level of fill of a symbolic block incomplete factorization. Thanks to these optimizations, the memory usage has been reduced more effectively compared to the state of the art solvers while also improving the time to solution. This thesis is a requested first step toward a advanced sparse direct solver using hierarchical compression schemes. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Internal reports
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="korkmaz:hal-03718312"></a><a href="../Author/KORKMAZ-E.html">Esragul Korkmaz</a>,
+<a href="../Author/FAVERGE-M.html">Mathieu Faverge</a>,
+<a href="../Author/PICHON-G.html">Grégoire Pichon</a>,
+ and <a href="../Author/RAMET-P.html">Pierre Ramet</a>.
+<strong>Reaching the Quality of SVD for Low-Rank Compression Through QR Variants</strong>.
+Research Report RR-9476,
+Inria Bordeaux - Sud Ouest,
+July 2022.
+ <a href="https://hal.inria.fr/hal-03718312"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://hal.inria.fr/hal-03718312v4/file/RR-9476.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/RANDOMIZED.html">Randomized</a>.
+<br /><pre>
+@techreport{korkmaz:hal-03718312,
+TITLE = {{Reaching the Quality of SVD for Low-Rank Compression Through QR Variants}},
+AUTHOR = {Korkmaz, Esragul and Faverge, Mathieu and Pichon, Gr{\'e}goire and Ramet, Pierre},
+URL = {https://hal.inria.fr/hal-03718312},
+TYPE = {Research Report},
+NUMBER = {RR-9476},
+PAGES = {43},
+INSTITUTION = {{Inria Bordeaux - Sud Ouest}},
+YEAR = {2022},
+MONTH = Jul,
+KEYWORDS = {Randomized},
+PDF = {https://hal.inria.fr/hal-03718312v4/file/RR-9476.pdf},
+HAL_ID = {hal-03718312},
+HAL_VERSION = {v4},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<br /><hr size="2" width="100%"><br />
+
+<u><strong>Disclaimer:</strong></u><br /><br />
+<p><em>
+This material is presented to ensure timely dissemination of
+scholarly and technical work. Copyright and all rights therein
+are retained by authors or by other copyright holders.
+All person copying this information are expected to adhere to
+the terms and constraints invoked by each author's copyright.
+In most cases, these works may not be reposted
+without the explicit permission of the copyright holder.
+
+</em></p>
+<p><em>
+Les documents contenus dans ces répertoires sont rendus disponibles
+par les auteurs qui y ont contribué en vue d'assurer la diffusion
+à temps de travaux savants et techniques sur une base non-commerciale.
+Les droits de copie et autres droits sont gardés par les auteurs
+et par les détenteurs du copyright, en dépit du fait qu'ils présentent
+ici leurs travaux sous forme électronique. Les personnes copiant ces
+informations doivent adhérer aux termes et contraintes couverts par
+le copyright de chaque auteur. Ces travaux ne peuvent pas être
+rendus disponibles ailleurs sans la permission explicite du détenteur
+du copyright.
+
+</em></p>
+
+<br /><hr size="2" width="100%"><br />
+
+Last modified: Sat Mar  8 09:59:24 2025
+
+<br />Author: root.
+
+<br /><hr size="2" width="100%"><br />
+
+<p>This document was translated from BibT<sub>E</sub>X by
+<a href="http://www-sop.inria.fr/epidaure/personnel/malandain/codes/bibtex2html.html"><em>bibtex2html</em></a>
+</p>
+
+
+</body>
+
+
+</html>

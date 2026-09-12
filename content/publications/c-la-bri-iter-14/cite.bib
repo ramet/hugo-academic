@@ -1,0 +1,20 @@
+@misc{c:LaBRI::ITER14,
+ abstact = {
+Modern supercomputers have reached a very high degree of hardware complexity. They
+are often composed of multicore processors relying on multiple memory banks and
+possibly accelerated with GPUs or co-processors. Programming these machines may
+be extremely hard, achieving high performance across such machines even harder.
+In this presentation, we discuss a methodology for programming numerical algorithms
+independently of the architectures and use runtime systems to exploit the potential of the
+underlying architectures. To do so, the numerical algorithm (and code) is written in terms
+of graph of tasks. We will show how high-performance dense linear algebra libraries (think
+LAPACK and ScaLAPACK) have been rewritten accordingly. We will also present
+simular results for a sparse direct solver (PaStiX), which is used in the Jorek plasma
+physics code. We will finally briefly present a few direct, iterative and hybrid open source
+solvers based on these building blocks.},
+ author = {Agullo, E. and Ramet, P.},
+ howpublished = {7th ITER International School, High Performance Computing in Fusion Science, Aix-en-Provence, France},
+ month = {August},
+ title = {Task-based linear solvers for modern architectures},
+ year = {2014}
+}

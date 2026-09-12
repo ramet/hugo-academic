@@ -1,0 +1,788 @@
+<html>
+
+<title>
+Publications of year 2015</title>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="keywords" lang="en" content="bibtex2html, bibliography, article, report">
+<META name="GENERATOR" content="bibtex2html 1.01">
+</head>
+<body bgcolor="#ffffff" link="blue" alink="blue" vlink="blue">
+
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<table width="100%">
+<tr><td height="50" bgcolor="#669999" align="center">
+<strong><font size=6 color="#ffffff" face="times">
+Publications of year 2015
+</font></strong>
+</td></tr>
+</table>
+
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Thesis
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="t:LaBRI::AC15"></a><a href="../Author/CASADEI-A.html">A. Casadei</a>.
+<strong>Optimizations of hybrid sparse linear solvers relying on Schur complement and domain decomposition approaches</strong>.
+PhD thesis,
+Université de Bordeaux,
+October 2015.
+ <a href="https://tel.archives-ouvertes.fr/tel-01228520"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://tel.archives-ouvertes.fr/tel-01228520/file/CASADEI_ASTRID_2015.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ In this thesis, we focus on the parallel solving of large sparse linear systems. Our main interest is on direct-iterative hybrid solvers such as HIPS, MAPHYS, PDSLIN or SHYLU, which rely on domain decomposition and Schur complement approaches. Althrough these solvers are not as time and space consuming as direct methods, they still suffer from serious overheads. In a first part, we thus present the existing techniques for reducing the memory consumption, and we present a new method which does not impact the numerical robustness of the preconditioner. This technique reduces the memory peak by doing a special scheduling of computation, allocation, and freeing tasks in particular in the Schur coupling blocks of the matrix. In a second part, we focus on the load balancing of the domain decomposition in a parallel context. This problem consists in partitioning the adjacency graph of the matrix in as many domains as desired. We point out that a good load balancing for the most expensive steps of an hybrid solver such as MAPHYS relies on the balancing of both interior nodes and interface nodes of the domains. Through, until now, graph partitioners such as METIS or SCOTCH used to optimize only the first criteria (i.e. the balancing of interior nodes) in the context of sparse matrix ordering. We propose different variations of the existing algorithms to improve the balancing of interface nodes and interior nodes simultaneously. All our changes are implemented in the SCOTCH partitioner. We present our results on large collection of matrices coming from real industrial cases. </td>
+
+</tr></table></center>
+<br /><pre>
+@phdthesis{t:LaBRI::AC15,
+TITLE = {{Optimizations of hybrid sparse linear solvers relying on Schur complement and domain decomposition approaches}},
+AUTHOR = {Casadei, A.},
+URL = {https://tel.archives-ouvertes.fr/tel-01228520},
+NUMBER = {2015BORD0186},
+SCHOOL = {{Universit{\'e} de Bordeaux}},
+YEAR = {2015},
+MONTH = Oct,
+KEYWORDS = {Sparse},
+PDF = {https://tel.archives-ouvertes.fr/tel-01228520/file/CASADEI_ASTRID_2015.pdf},
+HAL_ID = {tel-01228520},
+HAL_VERSION = {v1},
+ABSTRACT = { In this thesis, we focus on the parallel solving of large sparse linear systems. Our main interest is on direct-iterative hybrid solvers such as HIPS, MAPHYS, PDSLIN or SHYLU, which rely on domain decomposition and Schur complement approaches. Althrough these solvers are not as time and space consuming as direct methods, they still suffer from serious overheads. In a first part, we thus present the existing techniques for reducing the memory consumption, and we present a new method which does not impact the numerical robustness of the preconditioner. This technique reduces the memory peak by doing a special scheduling of computation, allocation, and freeing tasks in particular in the Schur coupling blocks of the matrix. In a second part, we focus on the load balancing of the domain decomposition in a parallel context. This problem consists in partitioning the adjacency graph of the matrix in as many domains as desired. We point out that a good load balancing for the most expensive steps of an hybrid solver such as MAPHYS relies on the balancing of both interior nodes and interface nodes of the domains. Through, until now, graph partitioners such as METIS or SCOTCH used to optimize only the first criteria (i.e. the balancing of interior nodes) in the context of sparse matrix ordering. We propose different variations of the existing algorithms to improve the balancing of interface nodes and interior nodes simultaneously. All our changes are implemented in the SCOTCH partitioner. We present our results on large collection of matrices coming from real industrial cases. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="t:LaBRI::XL15"></a><a href="../Author/LACOSTE-X.html">X. Lacoste</a>.
+<strong>Scheduling and memory optimizations for sparse direct solver on multi-core/multi-gpu duster systems</strong>.
+PhD thesis,
+Université de Bordeaux,
+February 2015.
+ <a href="https://tel.archives-ouvertes.fr/tel-01222565"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://tel.archives-ouvertes.fr/tel-01222565/file/LACOSTE_XAVIER_2015.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ The ongoing hardware evolution exhibits an escalation in the number, as well as in the heterogeneity, of computing resources. The pressure to maintain reasonable levels of performance and portability forces application developers to leave the traditional programming paradigms and explore alternative solutions. PaStiX is a parallel sparse direct solver, based on a dynamic scheduler for modern hierarchical manycore architectures. In this thesis, we study the benefits and the limits of replacing the highly specialized internal scheduler of the PaStiX solver by two generic runtime systems: PaRSEC and StarPU. Thus, we have to describe the factorization algorithm as a tasks graph that we provide to the runtime system. Then it can decide how to process and optimize the graph traversal in order to maximize the algorithm efficiency for the targeted hardware platform. A comparative study of the performance of the PaStiX solver on top of its original internal scheduler, PaRSEC, and StarPU frameworks is performed. The analysis highlights that these generic task-based runtimes achieve comparable results to the application-optimized embedded scheduler on homogeneous platforms. Furthermore, they are able to significantly speed up the solver on heterogeneous environments by taking advantage of the accelerators while hiding the complexity of their efficient manipulation from the programmer. In this thesis, we also study the possibilities to build a distributed sparse linear solver on top of task-based runtime systems to target heterogeneous clusters. To permit an efficient and easy usage of these developments in parallel simulations, we also present an optimized distributed interface aiming at hiding the complexity of the construction of a distributed matrix to the user. </td>
+
+</tr></table></center>
+<br /><pre>
+@phdthesis{t:LaBRI::XL15,
+TITLE = {{Scheduling and memory optimizations for sparse direct solver on multi-core/multi-gpu duster systems}},
+AUTHOR = {Lacoste, X.},
+URL = {https://tel.archives-ouvertes.fr/tel-01222565},
+NUMBER = {2015BORD0016},
+SCHOOL = {{Universit{\'e} de Bordeaux}},
+YEAR = {2015},
+MONTH = Feb,
+KEYWORDS = {Sparse},
+PDF = {https://tel.archives-ouvertes.fr/tel-01222565/file/LACOSTE_XAVIER_2015.pdf},
+HAL_ID = {tel-01222565},
+HAL_VERSION = {v1},
+ABSTRACT = { The ongoing hardware evolution exhibits an escalation in the number, as well as in the heterogeneity, of computing resources. The pressure to maintain reasonable levels of performance and portability forces application developers to leave the traditional programming paradigms and explore alternative solutions. PaStiX is a parallel sparse direct solver, based on a dynamic scheduler for modern hierarchical manycore architectures. In this thesis, we study the benefits and the limits of replacing the highly specialized internal scheduler of the PaStiX solver by two generic runtime systems: PaRSEC and StarPU. Thus, we have to describe the factorization algorithm as a tasks graph that we provide to the runtime system. Then it can decide how to process and optimize the graph traversal in order to maximize the algorithm efficiency for the targeted hardware platform. A comparative study of the performance of the PaStiX solver on top of its original internal scheduler, PaRSEC, and StarPU frameworks is performed. The analysis highlights that these generic task-based runtimes achieve comparable results to the application-optimized embedded scheduler on homogeneous platforms. Furthermore, they are able to significantly speed up the solver on heterogeneous environments by taking advantage of the accelerators while hiding the complexity of their efficient manipulation from the programmer. In this thesis, we also study the possibilities to build a distributed sparse linear solver on top of task-based runtime systems to target heterogeneous clusters. To permit an efficient and easy usage of these developments in parallel simulations, we also present an optimized distributed interface aiming at hiding the complexity of the construction of a distributed matrix to the user. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="t:LaBRI::SM15"></a><a href="../Author/MOUSTAFA-S.html">S. Moustafa</a>.
+<strong>Massively Parallel Cartesian Discrete Ordinates Method for Neutron Transport Simulation</strong>.
+PhD thesis,
+Université de Bordeaux,
+December 2015.
+ <a href="https://tel.archives-ouvertes.fr/tel-01379686"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://tel.archives-ouvertes.fr/tel-01379686/file/MOUSTAFA_SALLI_2015.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/NEUTRON.html">Neutron</a>.
+<br /><pre>
+@phdthesis{t:LaBRI::SM15,
+TITLE = {{Massively Parallel Cartesian Discrete Ordinates Method for Neutron Transport Simulation}},
+AUTHOR = {Moustafa, S.},
+URL = {https://tel.archives-ouvertes.fr/tel-01379686},
+NUMBER = {2015BORD0408},
+SCHOOL = {{Universit{\'e} de Bordeaux}},
+YEAR = {2015},
+MONTH = Dec,
+KEYWORDS = {Neutron} PDF = {https://tel.archives-ouvertes.fr/tel-01379686/file/MOUSTAFA_SALLI_2015.pdf},
+HAL_ID = {tel-01379686},
+HAL_VERSION = {v2},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Conference articles
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="C:LaBRI::iciam15b"></a><a href="../Author/CASADEI-A.html">A. Casadei</a> and <a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>Towards a recursive graph bipartitioning algorithm for well balanced domain decomposition</strong>.
+In <em>Mini-Symposium on Combinatorial Issues in Sparse Matrix Computation at ICIAM'15 conference</em>,
+Pekin, China,
+August 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/iciam2.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+In the context of hybrid sparse linear solvers based on domain decomposition and Schur complement approaches, getting a domain decomposition tool leading to a good balancing of both the internal node set size and the interface node set size is a critical point for parallel computation. We propose several variations of the existing algorithms in the multilevel Scotch partitioner and we illustrate the improved results on a collection of graphs coming from numerical scientific applications.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::iciam15b,
+author = {Casadei, A. and Ramet, P.},
+title = {Towards a recursive graph bipartitioning algorithm for well balanced domain decomposition},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {Mini-Symposium on "Combinatorial Issues in Sparse Matrix Computation" at ICIAM'15 conference},
+OPTpages = {},
+year = {2015},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Pekin, China},
+month = aug,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/iciam2.pdf},
+KEYWORDS = "Sparse",
+ABSTRACT = {In the context of hybrid sparse linear solvers based on domain decomposition and Schur complement approaches, getting a domain decomposition tool leading to a good balancing of both the internal node set size and the interface node set size is a critical point for parallel computation. We propose several variations of the existing algorithms in the multilevel Scotch partitioner and we illustrate the improved results on a collection of graphs coming from numerical scientific applications.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::cse15b"></a><a href="../Author/CASADEI-A.html">A. Casadei</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Towards a recursive graph bipartitioning algorithm for well balanced domain decomposition</strong>.
+In <em>Mini-Symposium on Partitioning for Complex Objectives at SIAM CSE'15 conference</em>,
+Salt Lake City, USA,
+March 2015.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@InProceedings{C:LaBRI::cse15b,
+author = {Casadei, A. and Ramet, P. and Roman, J.},
+title = {Towards a recursive graph bipartitioning algorithm for well balanced domain decomposition},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {Mini-Symposium on "Partitioning for Complex Objectives" at SIAM CSE'15 conference},
+OPTpages = {},
+year = {2015},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Salt Lake City, USA},
+month = mar,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::sparsedays2015"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Blocking strategy optimizations for sparse direct linear solver on heterogeneous architectures</strong>.
+In <em>Sparse Days</em>,
+Saint Girons, France,
+June 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/sparsedays15.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ In the context of solving sparse linear systems, an ordering process partitions the matrix graph to minimize both fill-in and computational cost. We found that the ordering strategy used within supernodes might be enhanced to reduce the number of off-diagonal blocks, and then increases block sizes and kernel performance. This turns to be into the same complexity as the factorization algorithm, but allows for more efficient BLAS kernels. On the other side, supernodes that are too large need to be split to create more parallelism. The regular splitting strategy when applied locally impacts significantly the number of off-diagonal blocks and might have negative effect on the efficiency. In this talk, we present both a new strategy to improve supernodes ordering and splitting strategy that both enlarge the off-diagonal block sizes without changing the computational cost of the factorization. Performance improvement gains on the supernodal solver PaStiX are shown on multi-cores and heterogeneous architectures. </td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::sparsedays2015,
+author = {Faverge, M. and Pichon, G. and Ramet, P. and Roman, J.},
+title = {{Blocking strategy optimizations for sparse direct linear solver on heterogeneous architectures}},
+booktitle = {Sparse Days},
+OPTcrossref = {},
+OPTkey = {},
+OPTpages = {},
+year = 2015,
+OPTeditor = {},
+OPTnumber = {},
+OPTvolume = {},
+OPTseries = {},
+address = {Saint Girons, France},
+month = jun,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/sparsedays15.pdf},
+KEYWORDS = "Sparse",
+ABSTRACT = { In the context of solving sparse linear systems, an ordering process partitions the matrix graph to minimize both fill-in and computational cost. We found that the ordering strategy used within supernodes might be enhanced to reduce the number of off-diagonal blocks, and then increases block sizes and kernel performance. This turns to be into the same complexity as the factorization algorithm, but allows for more efficient BLAS kernels. On the other side, supernodes that are too large need to be split to create more parallelism. The regular splitting strategy when applied locally impacts significantly the number of off-diagonal blocks and might have negative effect on the efficiency. In this talk, we present both a new strategy to improve supernodes ordering and splitting strategy that both enlarge the off-diagonal block sizes without changing the computational cost of the factorization. Performance improvement gains on the supernodal solver PaStiX are shown on multi-cores and heterogeneous architectures. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::CIMI15"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>On the use of H-Matrix Arithmetic in PaStiX: a Preliminary Study</strong>.
+In <em>Workshop on Fast Solvers</em>,
+Toulouse, France,
+June 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/cimi15.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/LOW-RANK-COMPRESSION.html">Low-rank compression</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ When solving large sparse linear systems, both the amount of memory needed and the computational cost represent a burden to efficiency. In order to solve larger systems, low-rank strategies are used to reduce the overall complexity of a solver. In this talk, we present a preliminary study of the use of H-Matrix arithmetic in a supernodal solver. We also present a new feature in PaStiX, a reordering strategy to reduce the number of off-diagonal blocks in the symbolic factorization. It allows BLAS kernels to be more efficient, and those ideas could be explored in the context of a low-rank strategy. </td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::CIMI15,
+author = {Faverge, M. and Pichon, G. and Ramet, P. and Roman, J.},
+title = {{On the use of H-Matrix Arithmetic in PaStiX: a Preliminary Study}},
+booktitle = {Workshop on Fast Solvers},
+OPTcrossref = {},
+OPTkey = {},
+OPTpages = {},
+year = 2015,
+OPTeditor = {},
+OPTnumber = {},
+OPTvolume = {},
+OPTseries = {},
+address = {Toulouse, France},
+month = jun,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/cimi15.pdf},
+KEYWORDS = "Low-rank compression",
+ABSTRACT = { When solving large sparse linear systems, both the amount of memory needed and the computational cost represent a burden to efficiency. In order to solve larger systems, low-rank strategies are used to reduce the overall complexity of a solver. In this talk, we present a preliminary study of the use of H-Matrix arithmetic in a supernodal solver. We also present a new feature in PaStiX, a reordering strategy to reduce the number of off-diagonal blocks in the symbolic factorization. It allows BLAS kernels to be more efficient, and those ideas could be explored in the context of a low-rank strategy. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::cse15a"></a><a href="../Author/LACOSTE-X.html">X. Lacoste</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+ and <a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>A task-based sparse direct solver suited for large scale hierarchical/heterogeneous architectures</strong>.
+In <em>Mini-Symposium on Task-based Scientific Computing Applications at SIAM CSE'15 conference</em>,
+Salt Lake City, USA,
+March 2015.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@InProceedings{C:LaBRI::cse15a,
+author = {Lacoste, X. and Faverge, M. and Ramet, P.},
+title = {A task-based sparse direct solver suited for large scale hierarchical/heterogeneous architectures},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {Mini-Symposium on "Task-based Scientific Computing Applications" at SIAM CSE'15 conference},
+OPTpages = {},
+year = {2015},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Salt Lake City, USA},
+month = mar,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="moustafa:hal-01078362"></a><a href="../Author/MOUSTAFA-S.html">S. Moustafa</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+L. Plagne,
+ and <a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>3D Cartesian Transport Sweep for Massively Parallel Architectures with PARSEC</strong>.
+In <em>29th IEEE International Parallel & Distributed Processing Symposium, IPDPS'15</em>,
+Hyderabad, India,
+pages 581-590,
+May 2015.
+<strong>ISSN:</strong> 1530-2075.
+ <a href="https://hal.inria.fr/hal-01078362"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="http://dx.doi.org/10.1109/IPDPS.2015.75"><img align="middle" border="0" src="../Icons/doi.gif"></a> Keyword(s): <a href="../Keyword/NEUTRON.html">Neutron</a>.
+<br /><pre>
+@inproceedings{moustafa:hal-01078362,
+TITLE = {{3D Cartesian Transport Sweep for Massively Parallel Architectures with PARSEC}},
+AUTHOR = {Moustafa, S. and Faverge, M. and Plagne, L. and Ramet, P.},
+URL = {https://hal.inria.fr/hal-01078362},
+BOOKTITLE = {{29th IEEE International Parallel \& Distributed Processing Symposium, IPDPS'15}},
+ADDRESS = {Hyderabad, India},
+YEAR = {2015},
+MONTH = May,
+PAGES = {581-590},
+DOI = {10.1109/IPDPS.2015.75},
+ISSN={1530-2075},
+KEYWORDS = "Neutron",
+HAL_ID = {hal-01078362},
+HAL_VERSION = {v1},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="pichon:hal-01078356"></a><a href="../Author/PICHON-G.html">G. Pichon</a>,
+A. Haidar,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+ and J. Kurzak.
+<strong>Divide and Conquer Symmetric Tridiagonal Eigensolver for Multicore Architectures</strong>.
+In <em>IEEE International Parallel & Distributed Processing Symposium (IPDPS 2015)</em>,
+Hyderabad, India,
+May 2015.
+ <a href="https://hal.inria.fr/hal-01078356"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://hal.inria.fr/hal-01078356/file/dnc_final.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> <br /><pre>
+@inproceedings{pichon:hal-01078356,
+TITLE = {{Divide and Conquer Symmetric Tridiagonal Eigensolver for Multicore Architectures}},
+AUTHOR = {Pichon, G. and Haidar, A. and Faverge, M. and Kurzak, J.},
+URL = {https://hal.inria.fr/hal-01078356},
+BOOKTITLE = {{IEEE International Parallel \& Distributed Processing Symposium (IPDPS 2015)}},
+ADDRESS = {Hyderabad, India},
+YEAR = {2015},
+MONTH = May,
+PDF = {https://hal.inria.fr/hal-01078356/file/dnc_final.pdf},
+HAL_ID = {hal-01078356},
+HAL_VERSION = {v3},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::iciam15a"></a><a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>On the design of parallel linear solvers for large scale problems</strong>.
+In <em>Mini-Symposium on Recent advances in matrix computations for extreme-scale computers at ICIAM'15 conference</em>,
+Pekin, China,
+August 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/iciam1.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+In this talk we will discuss our research activities on the design of parallel linear solvers for large scale problems that range from dense linear algebra, to parallel sparse direct solver and hybrid iterative-direct approaches. In particular we will describe the implementations designed on top of runtime systems that should provide both code and performance portabilities. Finally, we will present some preliminary results on the integration of h-matrice kernels in our sparse direct solver framework.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::iciam15a,
+author = {Ramet, P.},
+title = {On the design of parallel linear solvers for large scale problems},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {Mini-Symposium on "Recent advances in matrix computations for extreme-scale computers" at ICIAM'15 conference},
+OPTpages = {},
+year = {2015},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Pekin, China},
+month = aug,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/iciam1.pdf},
+KEYWORDS = "Sparse",
+ABSTRACT = {In this talk we will discuss our research activities on the design of parallel linear solvers for large scale problems that range from dense linear algebra, to parallel sparse direct solver and hybrid iterative-direct approaches. In particular we will describe the implementations designed on top of runtime systems that should provide both code and performance portabilities. Finally, we will present some preliminary results on the integration of h-matrice kernels in our sparse direct solver framework.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Internal reports
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="alaya:hal-01142204"></a>M. Alaya,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/LACOSTE-X.html">X. Lacoste</a>,
+A. Péré-Laperne,
+J. Péré-Laperne,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and T. Terraz.
+<strong>Simul'Elec and PASTIX interface specifications</strong>.
+Technical Report RT-0458,
+INRIA Bordeaux ; AlgoTech,
+April 2015.
+ <a href="https://hal.inria.fr/hal-01142204"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://hal.inria.fr/hal-01142204/file/RT-458.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> <br /><pre>
+@techreport{alaya:hal-01142204,
+TITLE = {{Simul'Elec and PASTIX interface specifications}},
+AUTHOR = {Alaya, M. and Faverge, M. and Lacoste, X. and P{\'e}r{\'e}-Laperne, A. and P{\'e}r{\'e}-Laperne, J. and Ramet, P. and Terraz, T.},
+URL = {https://hal.inria.fr/hal-01142204},
+TYPE = {Technical Report},
+NUMBER = {RT-0458},
+INSTITUTION = {{INRIA Bordeaux ; AlgoTech}},
+YEAR = {2015},
+MONTH = Apr,
+PDF = {https://hal.inria.fr/hal-01142204/file/RT-458.pdf},
+HAL_ID = {hal-01142204},
+HAL_VERSION = {v1},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="f:LaBRI::cesta15"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/LACOSTE-X.html">X. Lacoste</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and T. Terraz.
+<strong>Etude de la factorisation directe hétérogène et de la factorisation incomplète sur solveur PaStiX appliquées à des systèmes issus de problèmes du CEA/CESTA</strong>.
+Technical report,
+C.E.A. / C.E.S.T.A,
+2015.
+Note: Rapport Final.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@TechReport{f:LaBRI::cesta15,
+author = "Faverge, M. and Lacoste, X. and Ramet, P. and Terraz, T.",
+title = "Etude de la factorisation directe h\'et\'erog\`ene et de la factorisation incompl\`ete sur solveur PaStiX appliqu\'ees \`a des syst\`emes issus de probl\`emes du CEA/CESTA",
+institution = "C.E.A. / C.E.S.T.A",
+year = "2015",
+note = "Rapport Final",
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Miscellaneous
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="c:LaBRI::lescape"></a>H. Beaugendre,
+L. Lestandi,
+ and <a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>Benchmarking of the linear solver PaStiX for integration in LESCAPE</strong>.
+Internship Inria,
+March 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/lescape.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> <br /><pre>
+@Misc{c:LaBRI::lescape,
+OPTkey = {},
+author = {Beaugendre, H. and Lestandi, L. and Ramet, P.},
+title = {{Benchmarking of the linear solver PaStiX for integration in LESCAPE}},
+howpublished = {Internship Inria},
+month = mar,
+year = 2015,
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/lescape.pdf},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="c:LaBRI::JDEV"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/LACOSTE-X.html">X. Lacoste</a>,
+ and <a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>PaStiX: Parallel Sparse Matrix Package</strong>.
+JDEV2015 : Journées Développement Logiciel,
+July 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/jdev.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> <br /><pre>
+@Misc{c:LaBRI::JDEV,
+OPTkey = {},
+author = {Faverge, M. and Lacoste, X. and Ramet, P.},
+title = {{PaStiX: Parallel Sparse Matrix Package}},
+howpublished = {JDEV2015 : Journ\'ees D\'eveloppement Logiciel},
+month = jul,
+year = 2015,
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/jdev.pdf},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="c:LaBRI::pastix-solhar3"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Blocking strategy optimization for sparse direct linear solvers on heterogeneous architectures</strong>.
+SOLHAR meeting, Lyon, France,
+June 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/pastix-solhar3.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@Misc{c:LaBRI::pastix-solhar3,
+OPTkey = {},
+author = {Faverge, M. and Pichon, G. and Ramet, P. and Roman, J.},
+title = {Blocking strategy optimization for sparse direct linear solvers on heterogeneous architectures},
+howpublished = {SOLHAR meeting, Lyon, France},
+month = jun,
+year = 2015,
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/pastix-solhar3.pdf},
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="c:LaBRI::HOSCAR2015"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Blocking strategy optimizations for sparse direct linear solver on heterogeneous architectures</strong>.
+Workshop INRIA-CNPq, HOSCAR meeting, Sophia-Antipolis, France,
+September 2015.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ In the context of solving sparse linear systems, an ordering process partitions the matrix graph to minimize both fill-in and computational cost. We found that the ordering strategy used within supernodes might be enhanced to reduce the number of off-diagonal blocks, and then increases block sizes and kernel performance. This turns to be into the same complexity as the factorization algorithm, but allows for more efficient BLAS kernels. On the other side, supernodes that are too large need to be split to create more parallelism. The regular splitting strategy when applied locally impacts significantly the number of off-diagonal blocks and might have negative effect on the efficiency. In this talk, we present both a new strategy to improve supernodes ordering and splitting strategy that both enlarge the off-diagonal block sizes without changing the computational cost of the factorization. Performance improvement gains on the supernodal solver PaStiX are shown on multi-cores and heterogeneous architectures. </td>
+
+</tr></table></center>
+<br /><pre>
+@Misc{c:LaBRI::HOSCAR2015,
+author = {Faverge, M. and Pichon, G. and Ramet, P. and Roman, J.},
+title = {{Blocking strategy optimizations for sparse direct linear solver on heterogeneous architectures}},
+OPTcrossref = {},
+OPTkey = {},
+howpublished = {Workshop INRIA-CNPq, HOSCAR meeting, Sophia-Antipolis, France},
+OPTpages = {},
+year = {2015},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+month = sep,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = { In the context of solving sparse linear systems, an ordering process partitions the matrix graph to minimize both fill-in and computational cost. We found that the ordering strategy used within supernodes might be enhanced to reduce the number of off-diagonal blocks, and then increases block sizes and kernel performance. This turns to be into the same complexity as the factorization algorithm, but allows for more efficient BLAS kernels. On the other side, supernodes that are too large need to be split to create more parallelism. The regular splitting strategy when applied locally impacts significantly the number of off-diagonal blocks and might have negative effect on the efficiency. In this talk, we present both a new strategy to improve supernodes ordering and splitting strategy that both enlarge the off-diagonal block sizes without changing the computational cost of the factorization. Performance improvement gains on the supernodal solver PaStiX are shown on multi-cores and heterogeneous architectures. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="c:LaBRI::MCIA15"></a>Y. Laizet,
+A. Moreau,
+J.-M. Frigerio,
+Ph. Chaumeil,
+P. Gay,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+D. Sherman,
+ and A. Franc.
+<strong>Biodiversiton : application du HPC à l'étude de la biodiversité</strong>.
+Seminar at MCIA (Mésocentre de Calcul Intensif Aquitain),
+March 2015.
+ <a href="http://www.labri.fr/~ramet/restricted/biodiversiton.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> <br /><pre>
+@Misc{c:LaBRI::MCIA15,
+OPTkey = {},
+author = {Laizet, Y. and Moreau, A. and Frigerio, J.-M. and Chaumeil, Ph. and Gay, P. and Ramet, P. and Sherman, D. and Franc, A.},
+title = {Biodiversiton : application du HPC \`a l'\'etude de la biodiversit\'e},
+howpublished = {Seminar at MCIA (M\'esocentre de Calcul Intensif Aquitain)},
+month = mar,
+year = 2015,
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/biodiversiton.pdf},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="c:LaBRI::CNRS15"></a><a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>On the design of parallel linear solvers for large scale problems</strong>.
+Formation CNRS, Journée problème de Poisson, Paris, France,
+January 2015.
+<br /><pre>
+@Misc{c:LaBRI::CNRS15,
+author = {Ramet, P.},
+title = {On the design of parallel linear solvers for large scale problems},
+month = jan,
+year = {2015},
+howpublished = {Formation CNRS, Journ\'ee probl\`eme de Poisson, Paris, France} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="c:LaBRI::MDS15"></a><a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>Solveurs Directs</strong>.
+Maison de la Simulation, Formation PATC, Algèbre Linéaire Creuse Parallèle, Paris, France,
+April 2015.
+<br /><pre>
+@Misc{c:LaBRI::MDS15,
+author = {Ramet, P.},
+title = {Solveurs Directs},
+month = apr,
+year = {2015},
+howpublished = {Maison de la Simulation, Formation PATC, Alg\`ebre Lin\'eaire Creuse Parall\`ele, Paris, France} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<br /><hr size="2" width="100%"><br />
+
+<u><strong>Disclaimer:</strong></u><br /><br />
+<p><em>
+This material is presented to ensure timely dissemination of
+scholarly and technical work. Copyright and all rights therein
+are retained by authors or by other copyright holders.
+All person copying this information are expected to adhere to
+the terms and constraints invoked by each author's copyright.
+In most cases, these works may not be reposted
+without the explicit permission of the copyright holder.
+
+</em></p>
+<p><em>
+Les documents contenus dans ces répertoires sont rendus disponibles
+par les auteurs qui y ont contribué en vue d'assurer la diffusion
+à temps de travaux savants et techniques sur une base non-commerciale.
+Les droits de copie et autres droits sont gardés par les auteurs
+et par les détenteurs du copyright, en dépit du fait qu'ils présentent
+ici leurs travaux sous forme électronique. Les personnes copiant ces
+informations doivent adhérer aux termes et contraintes couverts par
+le copyright de chaque auteur. Ces travaux ne peuvent pas être
+rendus disponibles ailleurs sans la permission explicite du détenteur
+du copyright.
+
+</em></p>
+
+<br /><hr size="2" width="100%"><br />
+
+Last modified: Sat Mar  8 09:59:24 2025
+
+<br />Author: root.
+
+<br /><hr size="2" width="100%"><br />
+
+<p>This document was translated from BibT<sub>E</sub>X by
+<a href="http://www-sop.inria.fr/epidaure/personnel/malandain/codes/bibtex2html.html"><em>bibtex2html</em></a>
+</p>
+
+
+</body>
+
+
+</html>

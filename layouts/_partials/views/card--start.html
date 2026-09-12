@@ -1,0 +1,22 @@
+{{ $config := .config }}
+{{ $cols := 2 }}
+{{ with $config.columns }}
+  {{ $cols = . }}
+{{ end }}
+
+{{ $gridCols := "grid-cols-1" }}
+{{ $maxW := "max-w-4xl" }}
+{{ if eq $cols 2 }}
+  {{ $gridCols = "grid-cols-1 md:grid-cols-2" }}
+  {{ $maxW = "max-w-5xl" }}
+{{ else if eq $cols 3 }}
+  {{ $gridCols = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" }}
+  {{ $maxW = "max-w-6xl" }}
+{{ else if eq $cols 4 }}
+  {{ $gridCols = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" }}
+  {{ $maxW = "max-w-7xl" }}
+{{ else }}
+  {{ $maxW = "max-w-[65ch]" }}
+{{ end }}
+
+<div class="container {{ $maxW }} mx-auto grid {{ $gridCols }} gap-6 my-5">

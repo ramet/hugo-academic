@@ -1,0 +1,401 @@
+<html>
+
+<title>
+Publications of year 2016</title>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="keywords" lang="en" content="bibtex2html, bibliography, article, report">
+<META name="GENERATOR" content="bibtex2html 1.01">
+</head>
+<body bgcolor="#ffffff" link="blue" alink="blue" vlink="blue">
+
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<table width="100%">
+<tr><td height="50" bgcolor="#669999" align="center">
+<strong><font size=6 color="#ffffff" face="times">
+Publications of year 2016
+</font></strong>
+</td></tr>
+</table>
+
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Conference articles
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="C:LaBRI::sparsedays2016"></a><a href="../Author/AGULLO-E.html">E. Agullo</a>.
+<strong>Overview of Task-based Sparse and Data-sparse Solvers on Top of Runtime Systems</strong>.
+In <em>Sparse Days</em>,
+Toulouse, France,
+June 2016.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+The complexity of the hardware architectures of modern supercomputers led the community of developers of scientific libraries to adopt new parallel programming paradigms. Among them, task-based programming has certainly become one of the most popular as it allows for high productivity while ensuring high performance and portability by delegating tasks management to a runtime system. In this talk, we will present an overview of sparse solvers that have been designed in the context of the Matrices Over Runtime Systems @ Exascale (MORSE) and Solvers for Heterogeneous Architectures (SOLHAR) projects. We will present the design of new direct solvers implementing supernodal (PaStiX) and multifrontal (qr-mumps) methods, new Krylov solvers ensuring pipelining both at a numerical and software level, new sparse hybrid methods (MaPHyS) as well as data sparse libraries implementing fast multipole methods (ScalFMM) and hierarchical matrices (hmat, in collaboration with Airbus Group Innovations). For all these methods, we will highlight the challenges we have faced in terms of expressivity, granularity, scheduling and scalability and illustrate their performance on large academic and industrial test problems.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::sparsedays2016,
+author = {Agullo, E.},
+title = {Overview of Task-based Sparse and Data-sparse Solvers on Top of Runtime Systems},
+booktitle = "Sparse Days",
+OPTcrossref = {},
+OPTkey = {},
+OPTpages = {},
+year = {2016},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Toulouse, France},
+month = jun,
+OPTorganization = {},
+OPTpublisher = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = {The complexity of the hardware architectures of modern supercomputers led the community of developers of scientific libraries to adopt new parallel programming paradigms. Among them, task-based programming has certainly become one of the most popular as it allows for high productivity while ensuring high performance and portability by delegating tasks management to a runtime system. In this talk, we will present an overview of sparse solvers that have been designed in the context of the Matrices Over Runtime Systems @ Exascale (MORSE) and Solvers for Heterogeneous Architectures (SOLHAR) projects. We will present the design of new direct solvers implementing supernodal (PaStiX) and multifrontal (qr-mumps) methods, new Krylov solvers ensuring pipelining both at a numerical and software level, new sparse hybrid methods (MaPHyS) as well as data sparse libraries implementing fast multipole methods (ScalFMM) and hierarchical matrices (hmat, in collaboration with Airbus Group Innovations). For all these methods, we will highlight the challenges we have faced in terms of expressivity, granularity, scheduling and scalability and illustrate their performance on large academic and industrial test problems.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::PMAA2016"></a><a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/PICHON-G.html">G. Pichon</a>,
+ and <a href="../Author/RAMET-P.html">P. Ramet</a>.
+<strong>Exploiting Kepler architecture in sparse direct solver with runtime systems</strong>.
+In <em>Proceedings of PMAA'2016</em>,
+Bordeaux, France,
+July 2016.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ Sparse direct solvers is a time consuming operation required by many scientific applications to simulate physical problems. By its important overall cost, many studies tried to optimize the time to solution of those solvers on multi-core and distributed architectures. More recently, many works have addressed heterogeneous architectures to exploit accelerators such as GPUs or Intel Xeon Phi with interesting speedup. Despite researches towards generic solutions to efficiently exploit those accelerators, their hardware evolution requires continual adaptation of the kernels running on those architectures. The recent Nvidia architectures, as Kepler, present a larger number of parallel units thus requiring more data to feed every computational units. A solution considered to supply enough computation has been to study problems with large number of small computations. The batched BLAS libraries proposed by Intel, Nvidia, or the University of Tennessee are examples of this solution. We discuss in this talk the use of the variable size batched matrix-matrix multiply to improve the performance of a the PaStiX sparse direct solver. Indeed, this kernel suits the supernodal method of the solver, and the multiple updates of variable sizes that occur during the numerical factorization. Performance results on a spectrum of matrices with different properties will be presented.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::PMAA2016,
+author = {Faverge, M. and Pichon, G. and Ramet, P.},
+title = {Exploiting {K}epler architecture in sparse direct solver with runtime systems},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {Proceedings of {PMAA}'2016},
+OPTpages = {},
+year = {2016},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Bordeaux, France},
+month = jul,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = { Sparse direct solvers is a time consuming operation required by many scientific applications to simulate physical problems. By its important overall cost, many studies tried to optimize the time to solution of those solvers on multi-core and distributed architectures. More recently, many works have addressed heterogeneous architectures to exploit accelerators such as GPUs or Intel Xeon Phi with interesting speedup. Despite researches towards generic solutions to efficiently exploit those accelerators, their hardware evolution requires continual adaptation of the kernels running on those architectures. The recent Nvidia architectures, as Kepler, present a larger number of parallel units thus requiring more data to feed every computational units. A solution considered to supply enough computation has been to study problems with large number of small computations. The batched BLAS libraries proposed by Intel, Nvidia, or the University of Tennessee are examples of this solution. We discuss in this talk the use of the variable size batched matrix-matrix multiply to improve the performance of a the PaStiX sparse direct solver. Indeed, this kernel suits the supernodal method of the solver, and the multiple updates of variable sizes that occur during the numerical factorization. Performance results on a spectrum of matrices with different properties will be presented.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::pp16b"></a><a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/DARVE-E.html">E. Darve</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Exploiting H-Matrices in Sparse Direct Solvers</strong>.
+In <em>SIAM Conference on Parallel Processing for Scientific Computing</em>,
+Paris, France,
+April 2016.
+Keyword(s): <a href="../Keyword/LOW-RANK-COMPRESSION.html">Low-rank compression</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+In this talk, we describe a preliminary fast direct solver using HODLR library to compress large blocks appearing in the symbolic structure of the PaStiX sparse direct solver. We will present our general strategy before analyzing the practical gains in terms of memory and floating point operations with respect to a theoretical study of the problem. Finally, we will discuss ways to enhance the overall performance of the solver.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::pp16b,
+author = {Pichon, G. and Darve, E. and Faverge, M. and Ramet, P. and Roman, J.},
+title = {{Exploiting H-Matrices in Sparse Direct Solvers}},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {{SIAM} Conference on Parallel Processing for Scientific Computing},
+OPTpages = {},
+year = {2016},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Paris, France},
+month = apr,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Low-rank compression",
+ABSTRACT = {In this talk, we describe a preliminary fast direct solver using HODLR library to compress large blocks appearing in the symbolic structure of the PaStiX sparse direct solver. We will present our general strategy before analyzing the practical gains in terms of memory and floating point operations with respect to a theoretical study of the problem. Finally, we will discuss ways to enhance the overall performance of the solver.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::an16"></a><a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/DARVE-E.html">E. Darve</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>On the use of low rank approximations for sparse direct solvers</strong>.
+In <em>SIAM Annual Meeting</em>,
+Boston, USA,
+July 2016.
+Keyword(s): <a href="../Keyword/LOW-RANK-COMPRESSION.html">Low-rank compression</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+In this talk, we describe a preliminary fast direct solver using HODLR library to compress large blocks appearing in the symbolic structure of the PaStiX sparse direct solver. We will present our general strategy before analyzing the practical gains in terms of memory and floating point operations with respect to a theoretical study of the problem. Finally, we will discuss the impact of reordering technic to enhance the low-rank compression.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::an16,
+author = {Pichon, G. and Darve, E. and Faverge, M. and Ramet, P. and Roman, J.},
+title = {On the use of low rank approximations for sparse direct solvers},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {{SIAM} Annual Meeting},
+OPTpages = {},
+year = {2016},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Boston, USA},
+month = jul,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Low-rank compression",
+ABSTRACT = {In this talk, we describe a preliminary fast direct solver using HODLR library to compress large blocks appearing in the symbolic structure of the PaStiX sparse direct solver. We will present our general strategy before analyzing the practical gains in terms of memory and floating point operations with respect to a theoretical study of the problem. Finally, we will discuss the impact of reordering technic to enhance the low-rank compression.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::purdue2016"></a><a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/DARVE-E.html">E. Darve</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Sparse Supernodal Solver Using Hierarchical Compression</strong>.
+In <em>Workshop on Fast Direct Solvers</em>,
+Purdue, USA,
+November 2016.
+Keyword(s): <a href="../Keyword/LOW-RANK-COMPRESSION.html">Low-rank compression</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+In this talk, we present the PaStiX sparse supernodal solver, using hierarchical compression to reduce the burden on large blocks appearing during the nested dissection process. To improve the efficiency of our sparse update kernel for both BLR (block low rank) and HODLR (hierarchically off-diagonal low-rank), we investigate to BDLR (boundary distance low-rank) method to preselect rows and columns in the low-rank approximation algorithm. We will also discuss ordering strategies to enhance data locality and compressibility.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::purdue2016,
+author = {Pichon, G. and Darve, E. and Faverge, M. and Ramet, P. and Roman, J.},
+title = {Sparse Supernodal Solver Using Hierarchical Compression},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {Workshop on Fast Direct Solvers},
+OPTpages = {},
+year = {2016},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Purdue, USA},
+month = nov,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Low-rank compression",
+ABSTRACT = {In this talk, we present the PaStiX sparse supernodal solver, using hierarchical compression to reduce the burden on large blocks appearing during the nested dissection process. To improve the efficiency of our sparse update kernel for both BLR (block low rank) and HODLR (hierarchically off-diagonal low-rank), we investigate to BDLR (boundary distance low-rank) method to preselect rows and columns in the low-rank approximation algorithm. We will also discuss ordering strategies to enhance data locality and compressibility.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::pp16a"></a><a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Impact of Blocking Strategies for Sparse Direct Solvers on Top of Generic Runtimes</strong>.
+In <em>SIAM Conference on Parallel Processing for Scientific Computing</em>,
+Paris, France,
+April 2016.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+Among the preprocessing steps of a sparse direct solver, reordering and block symbolic factorization are two major steps to reach a suitable granularity for BLAS kernels efficiency and runtime management. In this talk, we present a reordering strategy to increase off-diagonal block sizes. It enhances BLAS kernels and allows to handle larger tasks, reducing runtime overhead. Finally, we will comment the resulting gain in the PaStiX solver implemented over StarPU and PaRSEC.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::pp16a,
+author = {Pichon, G. and Faverge, M. and Ramet, P. and Roman, J.},
+title = {Impact of Blocking Strategies for Sparse Direct Solvers on Top of Generic Runtimes},
+OPTcrossref = {},
+OPTkey = {},
+booktitle = {{SIAM} Conference on Parallel Processing for Scientific Computing},
+OPTpages = {},
+year = {2016},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {Paris, France},
+month = apr,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = {Among the preprocessing steps of a sparse direct solver, reordering and block symbolic factorization are two major steps to reach a suitable granularity for BLAS kernels efficiency and runtime management. In this talk, we present a reordering strategy to increase off-diagonal block sizes. It enhances BLAS kernels and allows to handle larger tasks, reducing runtime overhead. Finally, we will comment the resulting gain in the PaStiX solver implemented over StarPU and PaRSEC.} 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Internal reports
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="pichon:hal-01276746"></a><a href="../Author/PICHON-G.html">G. Pichon</a>,
+<a href="../Author/FAVERGE-M.html">M. Faverge</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Reordering strategy for blocking optimization in sparse linear solvers</strong>.
+Research Report RR-8860,
+Inria Bordeaux Sud-Ouest ; LaBRI - Laboratoire Bordelais de Recherche en Informatique ; Bordeaux INP ; Université de Bordeaux,
+February 2016.
+ <a href="https://hal.inria.fr/hal-01276746"><img align="middle" border="0" src="../Icons/www.gif"></a>  <a href="https://hal.inria.fr/hal-01276746/file/RR-8860-v1.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@techreport{pichon:hal-01276746,
+TITLE = {{Reordering strategy for blocking optimization in sparse linear solvers}},
+AUTHOR = {Pichon, G. and Faverge, M. and Ramet, P. and Roman, J.},
+URL = {https://hal.inria.fr/hal-01276746},
+TYPE = {Research Report},
+NUMBER = {RR-8860},
+PAGES = {26},
+INSTITUTION = {{Inria Bordeaux Sud-Ouest ; LaBRI - Laboratoire Bordelais de Recherche en Informatique ; Bordeaux INP ; Universit{\'e} de Bordeaux}},
+YEAR = {2016},
+MONTH = Feb,
+KEYWORDS = {Sparse},
+PDF = {https://hal.inria.fr/hal-01276746/file/RR-8860-v1.pdf},
+HAL_ID = {hal-01276746},
+HAL_VERSION = {v2},
+
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<br /><hr size="2" width="100%"><br />
+
+<u><strong>Disclaimer:</strong></u><br /><br />
+<p><em>
+This material is presented to ensure timely dissemination of
+scholarly and technical work. Copyright and all rights therein
+are retained by authors or by other copyright holders.
+All person copying this information are expected to adhere to
+the terms and constraints invoked by each author's copyright.
+In most cases, these works may not be reposted
+without the explicit permission of the copyright holder.
+
+</em></p>
+<p><em>
+Les documents contenus dans ces répertoires sont rendus disponibles
+par les auteurs qui y ont contribué en vue d'assurer la diffusion
+à temps de travaux savants et techniques sur une base non-commerciale.
+Les droits de copie et autres droits sont gardés par les auteurs
+et par les détenteurs du copyright, en dépit du fait qu'ils présentent
+ici leurs travaux sous forme électronique. Les personnes copiant ces
+informations doivent adhérer aux termes et contraintes couverts par
+le copyright de chaque auteur. Ces travaux ne peuvent pas être
+rendus disponibles ailleurs sans la permission explicite du détenteur
+du copyright.
+
+</em></p>
+
+<br /><hr size="2" width="100%"><br />
+
+Last modified: Sat Mar  8 09:59:24 2025
+
+<br />Author: root.
+
+<br /><hr size="2" width="100%"><br />
+
+<p>This document was translated from BibT<sub>E</sub>X by
+<a href="http://www-sop.inria.fr/epidaure/personnel/malandain/codes/bibtex2html.html"><em>bibtex2html</em></a>
+</p>
+
+
+</body>
+
+
+</html>
