@@ -1,0 +1,39 @@
+@inproceedings{C:LaBRI::siam2017b,
+ abstract = {Sparse direct solvers is a time consuming operation required by many
+scientific applications to simulate physical problems. By its important overall
+cost, many studies tried to optimize the time to solution of those solvers
+on multi-core and distributed architectures. More recently, many works
+have addressed heterogeneous architectures to exploit accelerators such as
+GPUs or Intel Xeon Phi with interesting speedup. Despite researches towards
+generic solutions to efficiently exploit those accelerators, their hardware
+evolution requires continual adaptation of the kernels running on those
+architectures. The recent Nvidia architectures, as Kepler, present a larger
+number of parallel units thus requiring more data to feed every computational
+units. A solution considered to supply enough computation has been
+to study problems with large number of small computations. The batched
+BLAS libraries proposed by Intel, Nvidia, or the University of Tennessee are
+examples of this solution. We discuss in this talk the use of the variable size
+batched matrix-matrix multiply to improve the performance of a the PaStiX
+sparse direct solver. Indeed, this kernel suits the supernodal method of the
+solver, and the multiple updates of variable sizes that occur during the numerical
+factorization. Performance results on a spectrum of matrices with
+different properties will be presented.},
+ address = {Atlanta, USA},
+ author = {Pichon, G. and Faverge, M. and Ramet, P.},
+ booktitle = {SIAM Conference on Computation Science and Engineering},
+ keywords = {Sparse},
+ month = {February},
+ optannote = {},
+ optcrossref = {},
+ opteditor = {},
+ optkey = {},
+ optnote = {},
+ optnumber = {},
+ optorganization = {},
+ optpages = {},
+ optpublisher = {},
+ optseries = {},
+ optvolume = {},
+ title = {Exploiting Modern Manycore Architecture in Sparse Direct Solver with Runtime Systems},
+ year = {2017}
+}

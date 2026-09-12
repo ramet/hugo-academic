@@ -1,125 +1,157 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ""
-date: 2022-10-24
+title: ''
+summary: ''
+date: 2026-09-12
 type: landing
-
-design:
-  # Default section spacing
-  spacing: "6rem"
 
 sections:
   - block: resume-biography-3
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      username: me
+      text: ''
+      buttons:
+        - text: Download CV (English)
+          url: files/cv.pdf
+        - text: Télécharger CV (Français)
+          url: files/cv-fr.pdf
+      headings:
+        about: ''
+        education: ''
+        interests: ''
     design:
-      css_class: dark
       background:
-        color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
+        gradient_mesh:
+          enable: true
+      name:
+        size: lg
+      avatar:
+        size: medium
+        shape: circle
+
   - block: markdown
+    id: about
     content:
-      title: '📚 My Research'
+      title: '🔬 Research & Activities'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        Pierre Ramet is a Full Professor of Computer Science at **Bordeaux University** and a researcher at **Inria**. His research interests span high-performance computing, focusing on sparse linear algebra and parallel algorithms.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
+        He leads the team in charge of developing **[PaStiX](https://gitlab.inria.fr/solverstack/pastix)**, a high-performance sparse direct solver.
+
+        - **Research team:** [TOPAL](http://team.inria.fr/topal) (Tools and Optimization for High-Performance Applications and Learning)
+        - **Teaching:** [Page in French](https://ramet.gitlab.io/)
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6 text-sm">
+        <div>
+
+        #### ANR Grants & Support:
+        - [SOLARIS (CE46)](https://www.irit.fr/solharis/)
+        - [SASHIMI (JCJC18)](http://solhar.gforge.inria.fr)
+        - [SOLHAR (MN13)](http://solhar.gforge.inria.fr)
+        - [ANEMOS (MN11)](http://aster.gforge.inria.fr)
+        - [PETALH (MN10)](http://petal.saclay.inria.fr)
+        - [PETAL (COS08)](http://petal.saclay.inria.fr)
+        - [SOLSTICE (CIS06)](http://solstice.gforge.inria.fr)
+        - [ASTER (CIS06)](http://aster.gforge.inria.fr)
+        - [NUMASIS (CIS05)](http://numasis.gforge.inria.fr)
+
+        </div>
+        <div>
+
+        #### Industrial Partners:
+        - [CEA Cesta (DAM)](http://www.cea.fr/Pages/le-cea/les-centres-cea/cesta.aspx)
+        - [CEA Cadarache (ITER)](http://irfm.cea.fr/)
+        - [EDF](https://www.edf.fr/groupe-edf/qui-sommes-nous/activites/recherche-et-developpement)
+        - [TOTAL](https://www.total.com/)
+        - [AIRBUS](http://www.airbus.com/)
+        - [CERFACS](https://cerfacs.fr/)
+        - [ALGO'TECH](http://www.algotech-informatique.com/)
+
+        </div>
+        <div>
+
+        #### Associated Teams:
+        - [Stanford University](https://icme.stanford.edu/) (ICME)
+        - [LBNL](http://crd.lbl.gov) (Lawrence Berkeley Lab)
+        - [ICL](http://icl.cs.utk.edu/) (University of Tennessee)
+
+        </div>
+        <div>
+
+        #### PhD Advising:
+        - [Dimitri Walther](bib/Author/WALTHER-D.html)
+        - [Alycia Lisito](bib/Author/LISITO-A.html)
+        - [Clement Richefort](bib/Author/RICHEFORT-C.html)
+        - [Esragul Korkmaz](bib/Author/KORKMAZ-E.html)
+        - [Gregoire Pichon](bib/Author/PICHON-G.html)
+        - [Salli Moustafa](bib/Author/MOUSTAFA-S.html)
+        - [Astrid Casadei](bib/Author/CASADEI-A.html)
+        - [Xavier Lacoste](bib/Author/LACOSTE-X.html)
+        - [Bruno Lathuiliere](bib/Author/LATHUILIERE-B.html)
+        - [Mathieu Faverge](bib/Author/FAVERGE-M.html)
+
+        </div>
+        </div>
     design:
-      columns: '1'
+      wide: true
+
+  - block: resume-experience
+    id: experience
+    content:
+      username: me
+    design:
+      date_format: 'Jan 2006'
+      is_education_first: false
+
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Publications
+      text: |-
+        Recent publications are also available on **[HAL](https://cv.hal.science/pierre-ramet)**, and the complete bibliography can be browsed in the **[BibTeX Archive (bibtex2html)](bib/)**.
       filters:
         folders:
-          - publication
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
+          - publications
         exclude_featured: false
     design:
       view: citation
+
   - block: collection
-    id: talks
+    id: projects
     content:
-      title: Recent & Upcoming Talks
+      title: Projects
       filters:
         folders:
-          - event
+          - projects
     design:
-      view: article-grid
-      columns: 1
+      view: card
+      columns: 2
+
   - block: collection
     id: news
     content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
+      title: News & Releases
+      page_type: blog
       count: 5
-      # Filter on criteria
-      filters:
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
       order: desc
     design:
-      # Choose a layout view
-      view: date-title-summary
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the Hugo Blox Builder demo site
+      view: card
+      columns: 2
+
+  - block: markdown
+    id: contact
     content:
-      title: 👉 Build your own academic website like this
+      title: Contact
       text: |-
-        This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
+        **Pierre Ramet**  
+        Professeur des Universités, Université de Bordeaux  
+        Inria Bordeaux - Sud-Ouest  
+        351 cours de la Libération, 33405 Talence Cedex, France  
 
-        <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-        
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+        - **Office:** Inria Bordeaux / LaBRI
+        - **Phone:** +33 5 24 57 40 39
+        - **Email:** [pierre.ramet@u-bordeaux.fr](mailto:pierre.ramet@u-bordeaux.fr) / [ramet@labri.fr](mailto:ramet@labri.fr)
+        - **PGP Public Key:** [ramet.asc](files/ramet.asc)
     design:
-      card:
-        # Card background color (CSS class)
-        css_class: "bg-primary-700"
-        css_style: ""
+      columns: '1'
 ---

@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/ramet/ramet.github.io.git
+	branch = master

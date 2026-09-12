@@ -1,0 +1,409 @@
+<html>
+
+<title>
+Publications of year 2004</title>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="keywords" lang="en" content="bibtex2html, bibliography, article, report">
+<META name="GENERATOR" content="bibtex2html 1.01">
+</head>
+<body bgcolor="#ffffff" link="blue" alink="blue" vlink="blue">
+
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<table width="100%">
+<tr><td height="50" bgcolor="#669999" align="center">
+<strong><font size=6 color="#ffffff" face="times">
+Publications of year 2004
+</font></strong>
+</td></tr>
+</table>
+
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Conference articles
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="C:LaBRI::PMAA2004b"></a><a href="../Author/HENON-P.html">P. Hénon</a>,
+B. Nkonga,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Using of the High Performance Sparse Solver PaStiX for the Complex Multiscale 3D Simulations performed by the FluidBox Fluid Mechanics Software</strong>.
+In <em>Proceedings of PMAA'2004</em>,
+Marseille, France,
+October 2004.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ In this paper, we consider a hyperbolic system with multiple time step characteristics. Such a situation arises for example in combustion problems when the acoustic time is small compared to the characteristic time associated to the flame propagation. The problems investigated in this paper are characterized by a small Mach number. At the asymptotic limit, the initial hyperbolic system degenerates to an elliptic problem. Therefore, numerical methods proposed with the assumption of hyperbolicity of the system becomes hill conditioned at this limit. As a consequence, the iterative methods used in the numerical algorithm implemented in the software FluidBox, have a worse convergence behavior. Some physical preconditioning has been proposed to overcome this difficulty. However, in the context of parallel computing, a global preconditioning is unavoidable for performance efficiency. 
+
+The parallelization of FluidBox relies on a domain decomposition. A first version of FluidBox was using a block Jacobi or a block Gauss-Seidel preconditioner that are easily implementable in this framework. But to solve 3D problems up to several millions of unknowns on numerous processors, this kind of preconditioner becomes inefficient du to their lack of scalability and robustness. Hence, a collaboration inside the INRIA ScAlApplix project has been setup to use the high performance solver library PaStiX that provides both complete and incomplete factorizations on clusters of SMP nodes to solve large scale computations. 
+
+The aim of this work is then to investigate the performance of the combination of FluidBox and PaStiX (both developped in the INRIA ScAlApplix project) and also present the parallel assembly algorithm that allows a good load balance in this context. </td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::PMAA2004b,
+author = "H\'enon, P. and Nkonga, B. and Ramet, P. and Roman, J.",
+title = "Using of the High Performance Sparse Solver PaStiX for the Complex Multiscale 3D Simulations performed by the FluidBox Fluid Mechanics Software",
+booktitle = "Proceedings of {PMAA}'2004",
+OPTcrossref = {},
+OPTkey = {},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+year = "2004",
+OPTorganization = {},
+OPTpublisher = {},
+address = {Marseille, France},
+month = oct,
+OPTpages = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = { In this paper, we consider a hyperbolic system with multiple time step characteristics. Such a situation arises for example in combustion problems when the acoustic time is small compared to the characteristic time associated to the flame propagation. The problems investigated in this paper are characterized by a small Mach number. At the asymptotic limit, the initial hyperbolic system degenerates to an elliptic problem. Therefore, numerical methods proposed with the assumption of hyperbolicity of the system becomes hill conditioned at this limit. As a consequence, the iterative methods used in the numerical algorithm implemented in the software FluidBox, have a worse convergence behavior. Some physical preconditioning has been proposed to overcome this difficulty. However, in the context of parallel computing, a global preconditioning is unavoidable for performance efficiency. 
+
+The parallelization of FluidBox relies on a domain decomposition. A first version of FluidBox was using a block Jacobi or a block Gauss-Seidel preconditioner that are easily implementable in this framework. But to solve 3D problems up to several millions of unknowns on numerous processors, this kind of preconditioner becomes inefficient du to their lack of scalability and robustness. Hence, a collaboration inside the INRIA ScAlApplix project has been setup to use the high performance solver library PaStiX that provides both complete and incomplete factorizations on clusters of SMP nodes to solve large scale computations. 
+
+The aim of this work is then to investigate the performance of the combination of FluidBox and PaStiX (both developped in the INRIA ScAlApplix project) and also present the parallel assembly algorithm that allows a good load balance in this context. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::para2004"></a><a href="../Author/HENON-P.html">P. Hénon</a>,
+<a href="../Author/PELLEGRINI-F.html">F. Pellegrini</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+<a href="../Author/ROMAN-J.html">J. Roman</a>,
+ and Y. Saad.
+<strong>Applying parallel direct solver skills to build robust and highly performant preconditioners</strong>.
+In <em>Proceedings of PARA'2004</em>,
+volume 3732 of <em>LNCS</em>,
+Copenhagen, Denmark,
+pages 601-619,
+June 2004.
+Springer Verlag.
+ <a href="http://www.labri.fr/~ramet/restricted/para2004.pdf"><img align="middle" border="0" src="../Icons/pdf.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+The purpose of our work is to provide a method which exploits the parallel blockwise algorithmic approach used in the framework of high performance sparse direct solvers in order to develop robust preconditioners based on a parallel incomplete factorization. The idea is then to define an adaptive blockwise incomplete factorization that is much more accurate (and numerically more robust) than the scalar incomplete factorizations commonly used to precondition iterative solvers.</td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::para2004,
+author = {H\'enon, P. and Pellegrini, F. and Ramet, P. and Roman, J. and Saad, Y.},
+title = {Applying parallel direct solver skills to build robust and highly performant preconditioners},
+booktitle = {Proceedings of {PARA'2004}},
+OPTcrossref = {},
+OPTkey = {},
+pages = {601--619},
+year = {2004},
+OPTeditor = {},
+volume = {3732},
+OPTnumber = {},
+series = {LNCS},
+address = {Copenhagen, Denmark},
+month = jun,
+OPTorganization = {},
+publisher = "Springer Verlag",
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/para2004.pdf},
+ABSTRACT = {The purpose of our work is to provide a method which exploits the parallel blockwise algorithmic approach used in the framework of high performance sparse direct solvers in order to develop robust preconditioners based on a parallel incomplete factorization. The idea is then to define an adaptive blockwise incomplete factorization that is much more accurate (and numerically more robust) than the scalar incomplete factorizations commonly used to precondition iterative solvers.},
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::ppsc2004a"></a><a href="../Author/HENON-P.html">P. Hénon</a>,
+<a href="../Author/PELLEGRINI-F.html">F. Pellegrini</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+<a href="../Author/ROMAN-J.html">J. Roman</a>,
+ and Y. Saad.
+<strong>High Performance Complete and Incomplete Factorizations for Very Large Sparse Systems by using Scotch and PaStiX softwares</strong>.
+In <em>Eleventh SIAM Conference on Parallel Processing for Scientific Computing</em>,
+San Francisco, USA,
+February 2004.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ PaStiX is a scientific library that provides a high performance direct supernodal solver for very large sparse linear systems. It relies on a block factorization based on an hybrid ordering (Nested Dissection + Halo Approximate Minimum Degree) obtained using the Scotch library. Efficient static scheduling and memory management are used to solve irregular problems with more of 25 millions unknowns on clusters of SMP nodes. In order to solve larger 3D problems, we apply these blockwise algorithms to compute robust and efficient parallel ILU preconditioners. </td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::ppsc2004a,
+author = {H\'enon, P. and Pellegrini, F. and Ramet, P. and Roman, J. and Saad, Y.},
+title = {High Performance Complete and Incomplete Factorizations for Very Large Sparse Systems by using {Scotch} and {PaStiX} softwares},
+booktitle = {Eleventh {SIAM} Conference on Parallel Processing for Scientific Computing},
+OPTcrossref = {},
+OPTkey = {},
+OPTpages = {},
+year = {2004},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+address = {San Francisco, USA},
+month = feb,
+OPTorganization = {},
+OPTpublisher = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = { PaStiX is a scientific library that provides a high performance direct supernodal solver for very large sparse linear systems. It relies on a block factorization based on an hybrid ordering (Nested Dissection + Halo Approximate Minimum Degree) obtained using the Scotch library. Efficient static scheduling and memory management are used to solve irregular problems with more of 25 millions unknowns on clusters of SMP nodes. In order to solve larger 3D problems, we apply these blockwise algorithms to compute robust and efficient parallel ILU preconditioners. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="C:LaBRI::PMAA2004a"></a><a href="../Author/HENON-P.html">P. Hénon</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>A Blockwise Algorithm for Parallel Incomplete Cholesky Factorization</strong>.
+In <em>Proceedings of PMAA'2004</em>,
+Marseille, France,
+October 2004.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<center>
+<table border=1 align=center width=80%>
+<tr>
+Abstract: <td>
+ Solving large sparse linear systems by iterative methods has often been quite unsatisfactory when dealing with pratical "industrial" problems. The main difficulty encountered by such methods is their lack of robustness and, generally, the unpredictability and unconsistency of their performance over a wide sample of different problems; certain methods work quite well for certain types of problems but can fail completely on other problems. 
+
+Over the past few years, direct methods have made significant progress thanks to either the combinatorial analysis of the Gaussian elimination process and the parallel algorithmic of blockwise solvers optimized for modern parallel supercomputers. Its is now possible to solve practical three-dimensional problems in the order of several millions of equations in a very powerful way with the direct solvers that efficiently use the superscalar effects of modern processors. 
+
+However, direct methods may fail to solve very large three-dimensional problems, due to the large amount of memory needed for these cases. 
+
+In our work, we consider an approach which, we hope, will bridge the gap between the two classes of methods. The goal is to provide a method which exploits the parallel blockwise algorithmic used in the framework of the high performance sparse direct solvers for developping robust parallel incomplete factorization based preconditioners for iterative solvers. 
+
+The idea is then to define an adaptive blockwise incomplete factorization that is much more accurate (and numerically more robust) than the scalar incomplete factorizations commonly used to precondition iterative solvers. Our approach consists in computing symbolically the block structure of the factors that would have been obtained with a complete factorization, and then deciding to drop off some blocks of this structure according to relevant criterions. Such incomplete factorization can take advantage of the latest breakthroughts in sparse direct methods and therefore be very competitive in CPU time while avoiding the memory limitation encountered by direct methods. By this way, we expect to be able to solve systems in the order of hundred millions of unknowns. </td>
+
+</tr></table></center>
+<br /><pre>
+@InProceedings{C:LaBRI::PMAA2004a,
+author = "H\'enon, P. and Ramet, P. and Roman, J.",
+title = "A Blockwise Algorithm for Parallel Incomplete Cholesky Factorization",
+booktitle = "Proceedings of {PMAA}'2004",
+OPTcrossref = {},
+OPTkey = {},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+year = "2004",
+OPTorganization = {},
+OPTpublisher = {},
+address = {Marseille, France},
+month = oct,
+OPTpages = {},
+OPTnote = {},
+OPTannote = {},
+KEYWORDS = "Sparse",
+ABSTRACT = { Solving large sparse linear systems by iterative methods has often been quite unsatisfactory when dealing with pratical "industrial" problems. The main difficulty encountered by such methods is their lack of robustness and, generally, the unpredictability and unconsistency of their performance over a wide sample of different problems; certain methods work quite well for certain types of problems but can fail completely on other problems. 
+
+Over the past few years, direct methods have made significant progress thanks to either the combinatorial analysis of the Gaussian elimination process and the parallel algorithmic of blockwise solvers optimized for modern parallel supercomputers. Its is now possible to solve practical three-dimensional problems in the order of several millions of equations in a very powerful way with the direct solvers that efficiently use the superscalar effects of modern processors. 
+
+However, direct methods may fail to solve very large three-dimensional problems, due to the large amount of memory needed for these cases. 
+
+In our work, we consider an approach which, we hope, will bridge the gap between the two classes of methods. The goal is to provide a method which exploits the parallel blockwise algorithmic used in the framework of the high performance sparse direct solvers for developping robust parallel incomplete factorization based preconditioners for iterative solvers. 
+
+The idea is then to define an adaptive blockwise incomplete factorization that is much more accurate (and numerically more robust) than the scalar incomplete factorizations commonly used to precondition iterative solvers. Our approach consists in computing symbolically the block structure of the factors that would have been obtained with a complete factorization, and then deciding to drop off some blocks of this structure according to relevant criterions. Such incomplete factorization can take advantage of the latest breakthroughts in sparse direct methods and therefore be very competitive in CPU time while avoiding the memory limitation encountered by direct methods. By this way, we expect to be able to solve systems in the order of hundred millions of unknowns. } 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Internal reports
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="f:LaBRI::grr04b"></a>A. Goureman,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Développement de la phase d'assemblage de la chaîne EMILIO (distribution du maillage et multi-threading)</strong>.
+Technical report,
+C.E.A. / C.E.S.T.A,
+2004.
+Note: Rapport Final.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@TechReport{f:LaBRI::grr04b,
+author = "Goureman, A. and Ramet, P. and Roman, J.",
+title = "D\'eveloppement de la phase d'assemblage de la cha\^ine EMILIO (distribution du maillage et multi-threading)",
+institution = "C.E.A. / C.E.S.T.A",
+year = "2004",
+note = "Rapport Final",
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+<li>
+<a name="f:LaBRI::hprr04b"></a><a href="../Author/HENON-P.html">P. Hénon</a>,
+<a href="../Author/PELLEGRINI-F.html">F. Pellegrini</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Etude sur l'applicabilité de méthodes itératives nouvelles aux problèmes du CESTA</strong>.
+Technical report,
+C.E.A. / C.E.S.T.A,
+2004.
+Note: Rapport Final.
+Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@TechReport{f:LaBRI::hprr04b,
+author = "H\'enon, P. and Pellegrini, F. and Ramet, P. and Roman, J.",
+title = "Etude sur l'applicabilit\'e de m\'ethodes it\'eratives nouvelles aux probl\`emes du CESTA",
+institution = "C.E.A. / C.E.S.T.A",
+year = "2004",
+note = "Rapport Final",
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<table width="100%">
+<tr><td height="35"  align="center" valign="center" bgcolor="#badfe1">
+<strong><font size=4 face="times">
+Miscellaneous
+</font></strong>
+</td></tr>
+</table>
+
+
+<ol>
+
+<li>
+<a name="c:LaBRI::SC2004"></a><a href="../Author/HENON-P.html">P. Hénon</a>,
+<a href="../Author/RAMET-P.html">P. Ramet</a>,
+ and <a href="../Author/ROMAN-J.html">J. Roman</a>.
+<strong>Parallel Complete and Incomplete Blockwise Factorisations for Very Large Sparse Systems</strong>.
+SuperComputing'2004, Pittsburgh, USA,
+November 2004.
+ <a href="http://www.labri.fr/~ramet/restricted/poster_sc2004.tar"><img align="middle" border="0" src="../Icons/www.gif"></a> Keyword(s): <a href="../Keyword/SPARSE.html">Sparse</a>.
+<br /><pre>
+@Misc{c:LaBRI::SC2004,
+author = "H\'enon, P. and Ramet, P. and Roman, J.",
+title = "{P}arallel {C}omplete and {I}ncomplete {B}lockwise {F}actorisations for {V}ery {L}arge {S}parse {S}ystems",
+booktitle = "{SuperComputing}'2004",
+OPTcrossref = {},
+OPTkey = {},
+OPTeditor = {},
+OPTvolume = {},
+OPTnumber = {},
+OPTseries = {},
+year = "2004",
+OPTorganization = {},
+OPTpublisher = {},
+howpublished = {{SuperComputing}'2004, Pittsburgh, USA},
+month = nov,
+OPTpages = {},
+OPTnote = {},
+OPTannote = {},
+URL = {http://www.labri.fr/~ramet/restricted/poster_sc2004.tar},
+KEYWORDS = "Sparse" 
+}
+</pre>
+
+</li>
+<br /><br />
+
+
+</ol>
+
+<br />
+<a href="../index.html"><strong> BACK TO INDEX </strong></a>
+<br /><br />
+
+
+<br /><hr size="2" width="100%"><br />
+
+<u><strong>Disclaimer:</strong></u><br /><br />
+<p><em>
+This material is presented to ensure timely dissemination of
+scholarly and technical work. Copyright and all rights therein
+are retained by authors or by other copyright holders.
+All person copying this information are expected to adhere to
+the terms and constraints invoked by each author's copyright.
+In most cases, these works may not be reposted
+without the explicit permission of the copyright holder.
+
+</em></p>
+<p><em>
+Les documents contenus dans ces répertoires sont rendus disponibles
+par les auteurs qui y ont contribué en vue d'assurer la diffusion
+à temps de travaux savants et techniques sur une base non-commerciale.
+Les droits de copie et autres droits sont gardés par les auteurs
+et par les détenteurs du copyright, en dépit du fait qu'ils présentent
+ici leurs travaux sous forme électronique. Les personnes copiant ces
+informations doivent adhérer aux termes et contraintes couverts par
+le copyright de chaque auteur. Ces travaux ne peuvent pas être
+rendus disponibles ailleurs sans la permission explicite du détenteur
+du copyright.
+
+</em></p>
+
+<br /><hr size="2" width="100%"><br />
+
+Last modified: Sat Mar  8 09:59:24 2025
+
+<br />Author: root.
+
+<br /><hr size="2" width="100%"><br />
+
+<p>This document was translated from BibT<sub>E</sub>X by
+<a href="http://www-sop.inria.fr/epidaure/personnel/malandain/codes/bibtex2html.html"><em>bibtex2html</em></a>
+</p>
+
+
+</body>
+
+
+</html>

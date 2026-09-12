@@ -1,0 +1,52 @@
+@phdthesis{pichon:tel-01953908,
+ abstract = {
+Solving sparse linear systems is a problem that arises in many
+scientific applications, and sparse direct solvers are a time
+consuming and key kernel for those applications and for more
+advanced solvers such as hybrid direct-iterative solvers. For those
+reasons, optimizing their performance on modern architectures is
+critical. However, memory requirements and time-to-solution limit
+the use of direct methods for very large matrices. For other
+approaches, such as iterative methods, general black-box
+preconditioners that can ensure fast convergence for a wide range of
+problems are still missing. In the first part of this thesis, we
+present two approaches using a Block Low-Rank (BLR) compression
+technique to reduce the memory footprint and/or the time-to-solution
+of a supernodal sparse direct solver. This flat, non-hierarchical,
+compression method allows to take advantage of the low-rank property
+of the blocks appearing during the factorization of sparse linear
+systems. The proposed solver can be used either as a direct solver
+at a lower precision or as a very robust preconditioner. The first
+approach, called Minimal-Memory, illustrates the maximum memory gain that
+can be obtained with the BLR compression method, while the second
+approach, called Just-In-Time, mainly focuses on reducing the
+computational complexity and thus the time-to-solution. In the
+second part, we present a reordering strategy that increases the
+block granularity to better take advantage of the locality for
+multicores and provide larger tasks to GPUs. This strategy relies on
+the block-symbolic factorization to refine the ordering produced by
+tools such as Metis or Scotch, but it does not impact the number
+of operations required to solve the problem. From this approach, we
+propose in the third part of this manuscript a new low-rank
+clustering technique that is designed to cluster unknowns within a
+separator to obtain the BLR partition, and demonstrate its assets
+with respect to widely used clustering strategies. Both reordering
+and clustering where designed for the flat BLR representation but
+are also a first step to move to hierarchical formats.  We
+investigate in the last part of this thesis a modified nested
+dissection strategy that aligns separators with respect to their
+father to obtain more regular data structure.
+},
+ author = {Pichon, Gregoire},
+ hal_id = {tel-01953908},
+ hal_version = {v2},
+ keywords = {Low-Rank compression},
+ month = {November},
+ number = {2018BORD0249},
+ pdf = {https://hal.inria.fr/tel-01953908v2/file/PICHON_GREGOIRE_2018.pdf},
+ school = {Université de Bordeaux},
+ title = {On the use of low-rank arithmetic to reduce the complexity of parallel sparse linear solvers based on direct factorization techniques},
+ type = {Theses},
+ url = {https://hal.inria.fr/tel-01953908},
+ year = {2018}
+}
