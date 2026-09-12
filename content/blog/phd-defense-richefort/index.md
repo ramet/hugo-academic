@@ -9,6 +9,10 @@ date: 2024-11-28T14:00:00+01:00
 lastmod: 2024-11-28T14:00:00+01:00
 featured: false
 draft: false
+image:
+  caption: "[CEA](https://www.cea.fr/)"
+  focal_point: Smart
+  preview_only: false
 projects: [pastix6]
 ---
 

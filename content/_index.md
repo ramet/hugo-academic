@@ -92,7 +92,7 @@ sections:
           - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering integration throughout the curriculum.
         - **Enseirb-Matmeca & Master in Computer Science:**
           - Numerical algorithms.
-          - High-Performance Computing (HPC), parallel & distributed algorithms, concurrent programming, and scientific computing.
+          - High-Performance Computing (HPC), parallel & distributed algorithms, and scientific computing.
           - Cryptography and security.
           - Introduction to Quantum Computing.
         - **International Teaching:**
@@ -102,7 +102,7 @@ sections:
         - **Head of Licences Professionnelles (IUT de Bordeaux, 2007–2014):**
           - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
           - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
-        - Coordinator for further education / graduate studies placement (*Responsable des poursuites d'études*, 2017–2025) for the Computer Science Department.
+        - Coordinator for further education / graduate studies placement (2017–2025) for the Computer Science Department.
         - Active member of university pedagogical committees and exam boards.
 
         <div style="margin-top: 1.5rem; text-align: left;">

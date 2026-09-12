@@ -9,6 +9,10 @@ date: 2024-06-20T10:00:00+01:00
 lastmod: 2024-06-20T10:00:00+01:00
 featured: false
 draft: false
+image:
+  caption: "[HybQuant](https://quantique.labri.fr/hybquant/)"
+  focal_point: Smart
+  preview_only: false
 projects: []
 ---
 

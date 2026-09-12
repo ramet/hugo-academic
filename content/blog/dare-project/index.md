@@ -9,6 +9,10 @@ date: 2025-01-15T09:00:00+01:00
 lastmod: 2025-01-15T09:00:00+01:00
 featured: false
 draft: false
+image:
+  caption: "[DARE](https://dare-riscv.eu/)"
+  focal_point: Smart
+  preview_only: false
 projects: [pastix6]
 ---
 
