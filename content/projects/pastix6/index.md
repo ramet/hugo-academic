@@ -1,9 +1,12 @@
 ---
 title: PaStiX 6
-summary: Parallel Sparse Direct Solver
+summary: Parallel Sparse Direct Solver (Latest release v6.4.0)
 tags:
 - Sparse
-date: "2022-04-02"
+- Linear Algebra
+- HPC
+- SolverStack
+date: "2024-07-12"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -15,8 +18,12 @@ image:
 links:
 - icon: gitlab
   icon_pack: fab
-  name: Follow
+  name: GitLab
   url: https://gitlab.inria.fr/solverstack/pastix
+- icon: book
+  icon_pack: fas
+  name: Documentation
+  url: https://solverstack.gitlabpages.inria.fr/pastix
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -39,26 +46,20 @@ high-performance parallel solver for very large sparse linear systems based on
 direct methods. Numerical algorithms are implemented in single or double
 precision (real or complex) using LLt, LDLt and LU with static pivoting (for non-symmetric
 matrices having a symmetric pattern).
-This solver also provides low-rank compression methods to reduce the memory footprint and/or the time-to-solution.
+This solver also provides low-rank compression methods (BLR and HODLR) to reduce the memory footprint and/or the time-to-solution, as well as mixed-precision arithmetic.
 
 ## Get PaStiX
 
+The latest official release is **v6.4.0** (July 2024). All releases, source tarballs, and changelogs are available on [GitLab Releases](https://gitlab.inria.fr/solverstack/pastix/-/releases).
+
 To use the latest development version of PaStiX, please clone the master
-branch. Note that PaStiX contains two git submodules: **spm** and **morse_cmake**.
-To obtain the source code, please use the following commands:
+branch. Note that PaStiX contains git submodules (**spm** and **morse_cmake**):
 
-    # if git version >= 1.9
-      git clone --recursive git@gitlab.inria.fr:solverstack/pastix.git
-      cd pastix
-    # else
-      git clone git@gitlab.inria.fr:solverstack/pastix.git
-      cd pastix
-      git submodule init
-      git submodule update
-
-Previous releases of PaStiX were hosted on
-[gforge.inria.fr](https://gforge.inria.fr/frs/?group_id=186).
-Future releases will be available directly on this GitLab project.
+```bash
+# Clone with submodules
+git clone --recursive https://gitlab.inria.fr/solverstack/pastix.git
+cd pastix
+```
 
 ## Available Features
 
@@ -93,9 +94,9 @@ Future releases will be available directly on this GitLab project.
 
 ## Documentation
 
-The latest Doxygen documentation is available [here](http://solverstack.gitlabpages.inria.fr/pastix).
+The latest Doxygen documentation is available [here](https://solverstack.gitlabpages.inria.fr/pastix).
 
-The [main steps](http://solverstack.gitlabpages.inria.fr/pastix/group__pastix__users.html) and [parameters](http://solverstack.gitlabpages.inria.fr/pastix/group__pastix__api.html) of the solver are described. Some [examples](http://solverstack.gitlabpages.inria.fr/pastix/group__pastix__examples.html) are also provided.
+The [main steps](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__users.html) and [parameters](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__api.html) of the solver are described. Some [examples](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__examples.html) are also provided.
 
 ## Installation
 
@@ -168,6 +169,7 @@ The following people contribute or contributed to the development of PaStiX:
 * Tony Delarue, MPI implementation
 * Brieuc Nicolas, Mixed precision
 * Alycia Lisito
+* Clément Richefort, Algebraic multigrid and mixed precision
 
 If we missed your name, please let us know so we can update the list.
 

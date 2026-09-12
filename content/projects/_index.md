@@ -7,8 +7,8 @@ type: landing
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Software & Projects
+      text: High-Performance Computing and Numerical Linear Algebra Software. A selection of open-source libraries, solvers, and scientific tools developed within the Inria SolverStack and TOPAL research teams.
       filters:
         folders:
           - projects

@@ -10,17 +10,23 @@ main:
   - name: Experience
     url: /#experience
     weight: 15
+  - name: Research
+    url: /#research
+    weight: 20
+  - name: Teaching
+    url: /#teaching
+    weight: 25
   - name: Publications
     url: /#papers
-    weight: 20
-  - name: Publications HAL
-    url: https://cv.hal.science/pierre-ramet
     weight: 30
+  - name: HAL
+    url: https://cv.hal.science/pierre-ramet
+    weight: 35
   - name: BibTeX
-    url: bib/
+    url: /bib/
     weight: 40
   - name: Projects
-    url: projects/
+    url: /#projects
     weight: 50
   - name: News
     url: /#news
