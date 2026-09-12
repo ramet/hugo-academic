@@ -20,15 +20,6 @@ hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 
-############################
-## PAGE OPTIONS
-############################
-
-cascade:
-  - target:
-      path: /slides/**
-      kind: page
-    outputs: [HTML, present]
 
 ############################
 ## ADVANCED
