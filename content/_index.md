@@ -86,10 +86,12 @@ sections:
         ### Main Teaching Domains & Programs
         - **IUT de Bordeaux (Computer Science Dept. / BUT Informatique):**
           - Operating systems, computer networks, computer architecture, and systems programming.
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation* / Project-based learning).
+          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering integration throughout the curriculum.
           - Cryptography and security fundamentals.
-          - DevOps and unsupervised machine learning in the context of the **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
+          - DevOps.
+          - Unsupervised machine learning in the context of the **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
         - **Enseirb-Matmeca & Master in Computer Science:**
+          - Numerical algorithms (*Algorithmique numérique*).
           - High-Performance Computing (HPC), parallel & distributed algorithms, concurrent programming, and scientific computing.
           - Cryptography and security.
           - Introduction to Quantum Computing (*Informatique quantique*).
@@ -97,8 +99,9 @@ sections:
           - Graduate-level courses and summer schools abroad (Gabon, Vietnam).
 
         ### Pedagogical Responsibilities
-        - **Head of Vocational Bachelor Degrees (Licences Professionnelles):**
-          - Former pedagogical leader of **DAWIN** (*Développement d'Applications Web et Images Numériques*) and **DAGPI** (*Développement d'Applications Géolocalisées et Plates-formes Intelligentes*) at IUT de Bordeaux (curriculum design, industrial partnerships, apprentice recruitment).
+        - **Head of Licences Professionnelles (IUT de Bordeaux):**
+          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*), 2007–2014.
+          - **DAWIN** (*Développement d'Applications Web et Images Numériques*), 2014–2021.
         - Active member of university pedagogical committees and exam boards.
 
         <div style="margin-top: 1.5rem; text-align: left;">
@@ -107,6 +110,8 @@ sections:
             <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
           </a>
         </div>
+    design:
+      wide: true
 
   - block: collection
     id: papers

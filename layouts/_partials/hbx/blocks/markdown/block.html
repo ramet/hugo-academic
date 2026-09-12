@@ -18,11 +18,15 @@
 {{ $containerWidth := "max-w-prose" }}
 {{ $proseWidth := "max-w-prose" }}
 {{ if $wide }}
-  {{ $containerWidth = "max-w-7xl w-full" }}
+  {{ $containerWidth = "max-w-5xl w-full" }}
+  {{ $proseWidth = "max-w-none w-full" }}
+{{ end }}
+{{ with index $design "container_width" }}
+  {{ $containerWidth = printf "%v w-full" . }}
   {{ $proseWidth = "max-w-none w-full" }}
 {{ end }}
 
-<div class="flex flex-col items-center {{ $containerWidth }} mx-auto gap-3 justify-center px-6">
+<div class="flex flex-col items-center {{ $containerWidth }} mx-auto gap-3 justify-center px-4 sm:px-6">
 
   {{ with $title }}
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white text-center">
@@ -31,5 +35,5 @@
   {{ end }}
 
   {{/* We use DIV rather than P to support `prose` class and multiple paragraphs */}}
-  {{ with $text }}<div class="prose prose-slate lg:prose-xl dark:prose-invert {{ $proseWidth }}">{{ . }}</div>{{ end }}
+  {{ with $text }}<div class="prose prose-slate lg:prose-lg dark:prose-invert {{ $proseWidth }} text-left">{{ . }}</div>{{ end }}
 </div>
