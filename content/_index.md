@@ -86,22 +86,23 @@ sections:
         ### Main Teaching Domains & Programs
         - **IUT de Bordeaux (Computer Science Dept. / BUT Informatique):**
           - Operating systems, computer networks, computer architecture, and systems programming.
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering integration throughout the curriculum.
           - Cryptography and security fundamentals.
-          - DevOps.
+          - DevOps (virtualization and CI/CD automation).
           - Unsupervised machine learning in the context of the **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
+          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering integration throughout the curriculum.
         - **Enseirb-Matmeca & Master in Computer Science:**
-          - Numerical algorithms (*Algorithmique numérique*).
+          - Numerical algorithms.
           - High-Performance Computing (HPC), parallel & distributed algorithms, concurrent programming, and scientific computing.
           - Cryptography and security.
-          - Introduction to Quantum Computing (*Informatique quantique*).
+          - Introduction to Quantum Computing.
         - **International Teaching:**
           - Graduate-level courses and summer schools abroad (Gabon, Vietnam).
 
         ### Pedagogical Responsibilities
-        - **Head of Licences Professionnelles (IUT de Bordeaux):**
-          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*), 2007–2014.
-          - **DAWIN** (*Développement d'Applications Web et Images Numériques*), 2014–2021.
+        - **Head of Licences Professionnelles (IUT de Bordeaux, 2007–2014):**
+          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
+          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
+        - Coordinator for further education / graduate studies placement (*Responsable des poursuites d'études*, 2017–2025) for the Computer Science Department.
         - Active member of university pedagogical committees and exam boards.
 
         <div style="margin-top: 1.5rem; text-align: left;">
