@@ -5,7 +5,7 @@ title: "Build PaStiX with Guix-HPC"
 subtitle: ""
 summary: "See [Gitlab Inria](https://gitlab.inria.fr/guix-hpc/guix-hpc)"
 authors: [me]
-tags: [pastix6]
+tags: [Guix]
 categories: []
 date: 2019-11-16T13:49:56+01:00
 lastmod: 2019-11-16T13:49:56+01:00

@@ -1,7 +1,7 @@
 ---
 title: "Soutenance de thèse : Clément Richefort"
 subtitle: "Algebraic multigrid solver for the indefinite Helmholtz equation"
-summary: "Soutenance avec succès de la thèse de doctorat de Clément Richefort à l'Université de Bordeaux / LaBRI (bourse CEA)."
+summary: "Soutenance de la thèse de doctorat de Clément Richefort à l'Université de Bordeaux / LaBRI (bourse CEA)."
 authors: [me]
 tags: [PhD, Multigrid, Helmholtz, Linear Algebra]
 categories: [PhD Advising]
@@ -16,7 +16,7 @@ image:
 projects: [pastix6]
 ---
 
-**Clément Richefort** a soutenu avec succès sa thèse de doctorat en informatique le 28 novembre 2024 à l'Université de Bordeaux (LaBRI).
+**Clément Richefort** a soutenu sa thèse de doctorat en informatique le 28 novembre 2024 à l'Université de Bordeaux (LaBRI).
 
 - **Titre :** *Development of an algebraic multigrid solver for the indefinite Helmholtz equation*
 - **Direction :** Pierre Ramet (directeur de thèse, encadrement 100%)

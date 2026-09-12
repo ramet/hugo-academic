@@ -1,7 +1,7 @@
 ---
 title: "Participation au projet européen EuroHPC DARE"
 subtitle: "HPC Digital Autonomy with RISC-V in Europe"
-summary: "Participation au projet européen DARE (EuroHPC JU) axé sur le développement de bibliothèques d'algèbre linéaire creuse pour les architectures européennes exaflopiques RISC-V."
+summary: "Participation au projet européen DARE (EuroHPC JU) axé sur le développement de bibliothèques d'algèbre linéaire pour les architectures européennes RISC-V."
 authors: [me]
 tags: [HPC, EuroHPC, RISC-V, Linear Algebra]
 categories: [Research]
