@@ -13,7 +13,7 @@ image:
   caption: "[CEA](https://www.cea.fr/)"
   focal_point: Smart
   preview_only: false
-projects: [pastix6]
+projects: [pastix]
 ---
 
 **Clément Richefort** a soutenu sa thèse de doctorat en informatique le 28 novembre 2024 à l'Université de Bordeaux (LaBRI).

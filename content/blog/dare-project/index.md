@@ -13,7 +13,7 @@ image:
   caption: "[DARE](https://dare-riscv.eu/)"
   focal_point: Smart
   preview_only: false
-projects: [pastix6]
+projects: [pastix]
 ---
 
 Participation au projet européen **DARE** (*HPC Digital Autonomy with RISC-V in Europe*), sélectionné dans le cadre de l'entreprise commune **EuroHPC JU** (*Joint Undertaking*).

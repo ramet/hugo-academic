@@ -1,5 +1,5 @@
 ---
-title: PaStiX 6
+title: PaStiX
 summary: Parallel Sparse Direct Solver (Latest release v6.4.0)
 tags:
 - Sparse
@@ -7,6 +7,8 @@ tags:
 - HPC
 - SolverStack
 date: "2024-07-12"
+aliases:
+- /projects/pastix6/
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
