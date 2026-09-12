@@ -8,6 +8,7 @@ tags:
 - SolverStack
 date: "2024-07-12"
 aliases:
+- /projects/pastix6
 - /projects/pastix6/
 
 # Optional external URL for project (replaces project detail page).
