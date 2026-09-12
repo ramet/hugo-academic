@@ -1,9 +1,12 @@
 ---
 title: SPM
-summary: SParse Matrix Package
+summary: SParse Matrix Package (Latest release v1.2.4)
 tags:
 - Sparse
-date: "2022-04-02"
+- Linear Algebra
+- HPC
+- SolverStack
+date: "2024-07-09"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -15,8 +18,12 @@ image:
 links:
 - icon: gitlab
   icon_pack: fab
-  name: Follow
+  name: GitLab
   url: https://gitlab.inria.fr/solverstack/spm
+- icon: book
+  icon_pack: fas
+  name: Documentation
+  url: https://solverstack.gitlabpages.inria.fr/spm
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -62,24 +69,23 @@ module for shared memory.
 
 ## Get SPM
 
+The latest official release is **v1.2.4** (July 2024). All releases, source tarballs, and changelogs are available on [GitLab Releases](https://gitlab.inria.fr/solverstack/spm/-/releases).
+
 To use the latest development version of SPM, please clone the master
 branch. Note that SPM contains the **morse_cmake** `git submodule`.
 To obtain the source code, please use the following commands:
 
-    # if git version >= 1.9
-      git clone --recursive git@gitlab.inria.fr:solverstack/spm.git
-      cd spm
-    # else
-      git clone git@gitlab.inria.fr:solverstack/spm.git
-      cd spm
-      git submodule init
-      git submodule update
+```bash
+# Clone with submodules
+git clone --recursive https://gitlab.inria.fr/solverstack/spm.git
+cd spm
+```
 
 ## Documentation
 
-The latest Doxygen documentation is available [here](http://solverstack.gitlabpages.inria.fr/spm).
+The latest Doxygen documentation is available [here](https://solverstack.gitlabpages.inria.fr/spm).
 
-The main functionalities are listed [here](http://solverstack.gitlabpages.inria.fr/spm/group__spm.html).
+The main functionalities are listed [here](https://solverstack.gitlabpages.inria.fr/spm/group__spm.html).
 
 ## Installation
 

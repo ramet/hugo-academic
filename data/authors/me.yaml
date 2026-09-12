@@ -39,10 +39,10 @@ links:
     url: https://hub.docker.com/u/tthor
     label: Docker
   - icon: academicons/cv
-    url: files/cv.pdf
+    url: /files/cv.pdf
     label: CV (English)
   - icon: academicons/cv
-    url: files/cv-fr.pdf
+    url: /files/cv-fr.pdf
     label: CV (Français)
 
 interests:
