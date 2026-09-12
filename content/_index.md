@@ -28,6 +28,34 @@ sections:
         size: medium
         shape: circle
 
+  - block: slider
+    id: pastix-highlights
+    content:
+      title: '🔬 PaStiX Highlights'
+      subtitle: 'Featured publications and algorithmic contributions'
+      items:
+        - title: 'Low Rank compression for sparse matrices'
+          subtitle: 'From BLR to HODLR'
+          badge: 'Sparse Linear Algebra • PaStiX'
+          description: 'Exploiting low-rank approximations within sparse direct solvers to achieve dramatic reductions in memory consumption and computational complexity on large-scale problems.'
+          image: 'img/pastix_hodlr_file.png'
+          link: 'https://hal.inria.fr/hal-01824275'
+          button_text: 'Get Paper'
+        - title: 'Without reordering'
+          subtitle: 'Classical symbolic factorization'
+          badge: 'Symbolic Factorization • Baseline'
+          description: 'Baseline structure of the symbolic factorization illustrating fill-in distribution and supernodal blocks before applying advanced reordering techniques.'
+          image: 'img/symbol_classic.png'
+          link: 'https://hal.inria.fr/inria-00346017'
+          button_text: 'Get Paper'
+        - title: 'With reordering'
+          subtitle: 'Apply TSP on supernodes'
+          badge: 'Graph Reordering • TSP Optimization'
+          description: 'Reordering unknowns within supernodes using a Traveling Salesman Problem formulation to maximize low-rank block compression and computational efficiency.'
+          image: 'img/symbol_reordering.png'
+          link: 'https://hal.inria.fr/hal-01485507v1'
+          button_text: 'Get Paper'
+
   - block: resume-experience
     id: experience
     content:
