@@ -28,6 +28,14 @@ sections:
         size: medium
         shape: circle
 
+  - block: resume-experience
+    id: experience
+    content:
+      username: me
+    design:
+      date_format: 'Jan 2006'
+      is_education_first: false
+
   - block: markdown
     id: about
     content:
@@ -94,14 +102,6 @@ sections:
         </div>
     design:
       wide: true
-
-  - block: resume-experience
-    id: experience
-    content:
-      username: me
-    design:
-      date_format: 'Jan 2006'
-      is_education_first: false
 
   - block: collection
     id: papers
