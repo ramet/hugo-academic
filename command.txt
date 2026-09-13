@@ -30,6 +30,8 @@ hugo server
 
 # Étape E : Compiler pour la production (génère directement dans public/)
 hugo --environment production --cleanDestinationDir
+npx pagefind --site public
+
 
 # NOTE : L'injection des métadonnées Schema.org ("Person" JSON-LD) pour le
 # référencement est désormais automatisée via le hook :
