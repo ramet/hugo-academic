@@ -81,7 +81,7 @@ sections:
       title: '🎓 Enseignement & Responsabilités académiques'
       subtitle: 'Formation en informatique & encadrement pédagogique'
       text: |-
-        Pierre Ramet exerce une activité d'enseignement soutenue à l’**Université de Bordeaux**, assurant environ 300 heures (HETD) chaque année au sein de formations de premier cycle, de master et d’écoles d’ingénieurs.
+        Pierre Ramet exerce une activité d'enseignement à l’**Université de Bordeaux**, assurant environ 300 heures (HETD) chaque année au sein de formations de premier cycle, de master et d’écoles d’ingénieurs.
 
         ### Principaux domaines et filières d'enseignement
         - **IUT de Bordeaux (Dép. Informatique / BUT Informatique) :**
@@ -89,7 +89,7 @@ sections:
           - Fondements de la cryptographie et de la sécurité.
           - DevOps (virtualisation et automatisation CI/CD).
           - Apprentissage automatique non supervisé dans le cadre du **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation*) : Pédagogie par projet, résolution de problèmes et intégration génie logiciel.
+          - **SAE** (*Situations d'Apprentissage et d'Évaluation*) : Pédagogie par projet, résolution de problèmes et génie logiciel.
         - **Enseirb-Matmeca & Master Informatique :**
           - Algorithmique numérique.
           - Calcul Haute Performance (HPC), algorithmes parallèles & distribués, et calcul scientifique.
