@@ -355,7 +355,7 @@
               {{ partial "functions/get_icon" (dict "name" "identification" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
             </div>
             {{ $i18n_about := i18n "about_me" }}
-            {{ $about_default := cond (eq $i18n_about "about_me") "Professional Summary" $i18n_about }}
+            {{ $about_default := cond (eq site.Language.Lang "fr") "Présentation" (cond (eq $i18n_about "about_me") "Professional Summary" $i18n_about) }}
             {{ $about_heading := $about_default }}
             {{ $about_heading_raw := index $headings "about" }}
             {{ if eq (printf "%T" $about_heading_raw) "string" }}

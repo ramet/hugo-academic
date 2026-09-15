@@ -15,9 +15,9 @@ sections:
         - text: Download CV (English)
           url: /files/cv.pdf
       headings:
-        about: ''
-        education: ''
-        interests: ''
+        about: 'Présentation'
+        education: 'Formation'
+        interests: 'Centres d’intérêt'
     design:
       background:
         gradient_mesh:
@@ -117,7 +117,8 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Publications
+      title: Dernières publications (Revues)
+      count: 5
       text: |-
         Les publications récentes sont également accessibles sur **[HAL](https://cv.hal.science/pierre-ramet)**, et la bibliographie complète peut être consultée dans les **[Archives BibTeX (bibtex2html)](/bib/)**.
 
@@ -135,6 +136,7 @@ sections:
       filters:
         folders:
           - publications
+        publication_type: 'article-journal'
         exclude_featured: false
     design:
       view: citation

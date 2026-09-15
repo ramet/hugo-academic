@@ -15,12 +15,6 @@ main:
   - name: Publications
     url: /#papers
     weight: 30
-  - name: HAL
-    url: https://cv.hal.science/pierre-ramet
-    weight: 35
-  - name: BibTeX
-    url: /bib/
-    weight: 40
   - name: Projects
     url: /#projects
     weight: 50

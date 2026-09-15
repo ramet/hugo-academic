@@ -15,9 +15,9 @@ sections:
         - text: Télécharger CV (Français)
           url: /files/cv-fr.pdf
       headings:
-        about: ''
-        education: ''
-        interests: ''
+        about: 'Professional Summary'
+        education: 'Education'
+        interests: 'Interests'
     design:
       background:
         gradient_mesh:
@@ -117,7 +117,8 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Publications
+      title: Latest Publications (Journals)
+      count: 5
       text: |-
         Recent publications are also available on **[HAL](https://cv.hal.science/pierre-ramet)**, and the complete bibliography can be browsed in the **[BibTeX Archive (bibtex2html)](/bib/)**.
 
@@ -135,6 +136,7 @@ sections:
       filters:
         folders:
           - publications
+        publication_type: 'article-journal'
         exclude_featured: false
     design:
       view: citation

@@ -8,6 +8,8 @@
 {{ $design := $block.design }}
 {{ if not (reflect.IsMap $design) }}{{ $design = dict }}{{ end }}
 
+{{ $isFR := eq site.Language.Lang "fr" }}
+
 {{ $title := "" }}
 {{ with index $content "title" }}{{ $title = printf "%v" . | emojify | $page.RenderString }}{{ end }}
 {{ $text := "" }}
@@ -35,7 +37,7 @@
     {{/* Tab Switcher Buttons Bar */}}
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 border-b border-slate-200/80 dark:border-slate-800 pb-4">
       
-      {{/* Tab 1: Grants & Projects */}}
+      {{/* Tab 1: Grants & Projects / Contrats & Projets */}}
       <button
         @click="tab = 'grants'"
         type="button"
@@ -47,11 +49,11 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
         </svg>
-        <span>Grants & Projects</span>
+        <span>{{ cond $isFR "Contrats & Projets" "Grants & Projects" }}</span>
         <span :class="tab === 'grants' ? 'bg-white/20 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'" class="px-2 py-0.5 rounded-full text-xs font-semibold">12</span>
       </button>
 
-      {{/* Tab 2: PhD Advising */}}
+      {{/* Tab 2: PhD Advising / Direction de thèses */}}
       <button
         @click="tab = 'phd'"
         type="button"
@@ -65,11 +67,11 @@
           <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
         </svg>
-        <span>PhD Advising</span>
+        <span>{{ cond $isFR "Direction de thèses" "PhD Advising" }}</span>
         <span :class="tab === 'phd' ? 'bg-white/20 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'" class="px-2 py-0.5 rounded-full text-xs font-semibold">10</span>
       </button>
 
-      {{/* Tab 3: Industrial Partners */}}
+      {{/* Tab 3: Industrial Partners / Partenaires industriels */}}
       <button
         @click="tab = 'industry'"
         type="button"
@@ -81,11 +83,11 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
         </svg>
-        <span>Industrial Partners</span>
+        <span>{{ cond $isFR "Partenaires industriels" "Industrial Partners" }}</span>
         <span :class="tab === 'industry' ? 'bg-white/20 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'" class="px-2 py-0.5 rounded-full text-xs font-semibold">6</span>
       </button>
 
-      {{/* Tab 4: International Teams */}}
+      {{/* Tab 4: Associated Teams / Équipes associées */}}
       <button
         @click="tab = 'international'"
         type="button"
@@ -97,22 +99,22 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <span>Associated Teams</span>
+        <span>{{ cond $isFR "Équipes associées" "Associated Teams" }}</span>
         <span :class="tab === 'international' ? 'bg-white/20 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'" class="px-2 py-0.5 rounded-full text-xs font-semibold">5</span>
       </button>
 
     </div>
 
     {{/* ==================================================================== */}}
-    {{/* TAB PANEL 1: GRANTS & PROJECTS                                       */}}
+    {{/* TAB PANEL 1: GRANTS & PROJECTS / CONTRATS & PROJETS                  */}}
     {{/* ==================================================================== */}}
     <div x-show="tab === 'grants'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="space-y-6">
       
-      {{/* Subgroup 1: European & National Large-Scale Initiatives */}}
+      {{/* Subgroup 1: European & National Initiatives */}}
       <div>
         <h4 class="text-base font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-4 flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-primary-500"></span>
-          European & National Initiatives
+          {{ cond $isFR "Initiatives européennes et nationales" "European & National Initiatives" }}
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -120,10 +122,10 @@
           <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all">
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="font-bold text-gray-900 dark:text-white text-base">DARE</span>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">2025 – present</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">{{ cond $isFR "2025 – aujourd'hui" "2025 – present" }}</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">HPC Digital Autonomy with RISC-V in Europe</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">EuroHPC project aiming at sovereign European computing, focused on high-performance linear algebra software stacks optimized for emerging RISC-V architectures.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Autonomie numérique HPC avec RISC-V en Europe" "HPC Digital Autonomy with RISC-V in Europe" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Projet EuroHPC visant la souveraineté du calcul européen, axé sur les piles logicielles d'algèbre linéaire haute performance optimisées pour les architectures émergentes RISC-V." "EuroHPC project aiming at sovereign European computing, focused on high-performance linear algebra software stacks optimized for emerging RISC-V architectures." }}</p>
           </div>
 
           {{/* PEPR NumPEx */}}
@@ -133,20 +135,20 @@
                 PEPR NumPEx
                 <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">2021 – present</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">{{ cond $isFR "2021 – aujourd'hui" "2021 – present" }}</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">French Exascale Software Initiative</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Design of next-generation software methods and scalable numerical algorithms to harness upcoming European and French exascale supercomputers.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Programme national pour les logiciels Exascale" "French Exascale Software Initiative" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Conception de méthodes logicielles de nouvelle génération et d'algorithmes numériques passage à l'échelle pour exploiter les futurs supercalculateurs exascale français et européens." "Design of next-generation software methods and scalable numerical algorithms to harness upcoming European and French exascale supercomputers." }}</p>
           </div>
 
           {{/* HYBQUANT */}}
           <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all">
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="font-bold text-gray-900 dark:text-white text-base">HYBQUANT</span>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">2024 – present</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">{{ cond $isFR "2024 – aujourd'hui" "2024 – present" }}</span>
             </div>
             <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Maison du Quantique en Nouvelle-Aquitaine (HQI)</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">France Hybrid HPC Quantum Initiative (HQI): co-design and governance of hybrid high-performance computing and quantum simulation environments.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Initiative nationale de calcul hybride HPC-Quantique (HQI) : co-conception et gouvernance d'environnements couplant calcul haute performance et simulation quantique." "France Hybrid HPC Quantum Initiative (HQI): co-design and governance of hybrid high-performance computing and quantum simulation environments." }}</p>
           </div>
 
           {{/* EoCoE */}}
@@ -158,8 +160,8 @@
               </a>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2019 – 2021</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Energy Oriented Center of Excellence: Toward Exascale for Energy</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Advanced high-performance mathematical modeling and parallel numerical methods targeting clean energy transition and fusion simulation.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Centre d'Excellence pour l'Énergie : vers l'Exascale pour la transition énergétique" "Energy Oriented Center of Excellence: Toward Exascale for Energy" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Modélisation mathématique avancée et méthodes numériques parallèles haute performance pour la transition vers les énergies propres et la simulation de la fusion." "Advanced high-performance mathematical modeling and parallel numerical methods targeting clean energy transition and fusion simulation." }}</p>
           </div>
 
         </div>
@@ -169,7 +171,7 @@
       <div>
         <h4 class="text-base font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-4 flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-primary-500"></span>
-          ANR Research Grants
+          {{ cond $isFR "Projets de recherche ANR" "ANR Research Grants" }}
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -182,8 +184,8 @@
               </a>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2019 – 2024</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">SOLvers for Heterogeneous Architectures over Runtime systems, Investigating Scalability</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Scalable direct methods, runtime systems (StarPU) and scheduling algorithms for extreme-scale heterogeneous architectures. Collaboration: Inria, CNRS, IRIT, CEA.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Solveurs pour architectures hétérogènes sur moteurs d'exécution, passage à l'échelle" "SOLvers for Heterogeneous Architectures over Runtime systems, Investigating Scalability" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Méthodes directes scalables, moteurs d'exécution (StarPU) et algorithmes d'ordonnancement pour architectures hétérogènes à large échelle. Collaboration : Inria, CNRS, IRIT, CEA." "Scalable direct methods, runtime systems (StarPU) and scheduling algorithms for extreme-scale heterogeneous architectures. Collaboration: Inria, CNRS, IRIT, CEA." }}</p>
           </div>
 
           {{/* SASHIMI */}}
@@ -192,8 +194,8 @@
               <span class="font-bold text-gray-900 dark:text-white text-base">SASHIMI (JCJC18)</span>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2018 – 2023</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Sparse Direct Solver using Hierarchical Matrices</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Integration of hierarchical low-rank compression (BLR / HODLR) in PaStiX over runtime systems, optimizing asymptotic complexity and memory consumption.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Solveur direct creux exploitant des matrices hiérarchiques" "Sparse Direct Solver using Hierarchical Matrices" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Intégration de la compression de rang faible hiérarchique (BLR / HODLR) dans PaStiX sur moteurs d'exécution, optimisation de la complexité asymptotique et de l'empreinte mémoire." "Integration of hierarchical low-rank compression (BLR / HODLR) in PaStiX over runtime systems, optimizing asymptotic complexity and memory consumption." }}</p>
           </div>
 
           {{/* SOLHAR */}}
@@ -202,18 +204,18 @@
               <span class="font-bold text-gray-900 dark:text-white text-base">SOLHAR (MN13)</span>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2013 – 2017</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Solvers for Heterogeneous Architectures on Top of Task-Based Runtime Systems</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Design and implementation of direct sparse linear solver algorithms on emerging platforms equipped with hardware accelerators.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Solveurs pour architectures hétérogènes au-dessus de moteurs d'exécution à base de tâches" "Solvers for Heterogeneous Architectures on Top of Task-Based Runtime Systems" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Conception et mise en œuvre d'algorithmes de solveurs linéaires directs creux sur plates-formes émergentes équipées d'accélérateurs matériels." "Design and implementation of direct sparse linear solver algorithms on emerging platforms equipped with hardware accelerators." }}</p>
           </div>
 
           {{/* ANEMOS */}}
           <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all">
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="font-bold text-gray-900 dark:text-white text-base">ANEMOS (MN11)</span>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Deputy Head • 2011 – 2015</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800">{{ cond $isFR "Responsable adjoint • 2011 – 2015" "Deputy Head • 2011 – 2015" }}</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Advanced Numeric for ELMs: Modeling and Optimized Schemes</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Modeling Edge Localized Modes (ELMs) in Tokamak plasmas (ITER) and adapting direct sparse solvers to heterogeneous multicore/multi-GPU nodes.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Numérique avancé pour les ELMs : modélisation et schémas optimisés" "Advanced Numeric for ELMs: Modeling and Optimized Schemes" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Modélisation des modes localisés de bord (ELMs) dans les plasmas de Tokamaks (ITER) et adaptation des solveurs directs creux sur nœuds hétérogènes multi-cœurs/multi-GPU." "Modeling Edge Localized Modes (ELMs) in Tokamak plasmas (ITER) and adapting direct sparse solvers to heterogeneous multicore/multi-GPU nodes." }}</p>
           </div>
 
           {{/* PETAL / PETALH */}}
@@ -222,18 +224,18 @@
               <span class="font-bold text-gray-900 dark:text-white text-base">PETAL & PETALH</span>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2008 – 2012</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Preconditioning Scientific Applications on Petascale Heterogeneous Machines</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">ANR COSINUS08 / MN10: Block incomplete factorizations (ILU) and Schur complement memory reduction for large-scale scientific applications.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Préconditionnement d'applications scientifiques sur machines hétérogènes pétaflopiques" "Preconditioning Scientific Applications on Petascale Heterogeneous Machines" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "ANR COSINUS08 / MN10 : Factorisations incomplètes par blocs (ILU) et réduction de l'empreinte mémoire du complément de Schur pour applications scientifiques à grande échelle." "ANR COSINUS08 / MN10: Block incomplete factorizations (ILU) and Schur complement memory reduction for large-scale scientific applications." }}</p>
           </div>
 
           {{/* ASTER */}}
           <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all">
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="font-bold text-gray-900 dark:text-white text-base">ASTER (CIS06)</span>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Deputy Head • 2006 – 2010</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800">{{ cond $isFR "Responsable adjoint • 2006 – 2010" "Deputy Head • 2006 – 2010" }}</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Adaptive MHD Simulation of Tokamak ELMs for ITER</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Development of magnetohydrodynamic simulation codes, adaptive mesh refinement and parallel solvers for fusion plasma instabilities.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Simulation MHD adaptative des ELMs de Tokamaks pour ITER" "Adaptive MHD Simulation of Tokamak ELMs for ITER" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Développement de codes de simulation magnétohydrodynamique, raffinement adaptatif de maillage et solveurs parallèles pour les instabilités de plasma de fusion." "Development of magnetohydrodynamic simulation codes, adaptive mesh refinement and parallel solvers for fusion plasma instabilities." }}</p>
           </div>
 
           {{/* SOLSTICE */}}
@@ -242,8 +244,8 @@
               <span class="font-bold text-gray-900 dark:text-white text-base">SOLSTICE (CIS06)</span>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2006 – 2010</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">SOLvers et SimulaTIons in Extreme Computing</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">High-performance parallel linear solvers for complex multi-physics and multi-scale grand challenge simulations.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Solveurs et simulations en calcul extrême" "SOLvers et SimulaTIons in Extreme Computing" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Solveurs linéaires parallèles haute performance pour simulations multi-physiques et multi-échelles complexes." "High-performance parallel linear solvers for complex multi-physics and multi-scale grand challenge simulations." }}</p>
           </div>
 
           {{/* NUMASIS */}}
@@ -252,8 +254,8 @@
               <span class="font-bold text-gray-900 dark:text-white text-base">NUMASIS (CIS05)</span>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2005 – 2009</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">HPC on NUMA Architectures for Seismology Simulations</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">Parallel algorithms and runtime memory models for NUMA multicore architectures, applied to seismic wave propagation and sparse solvers.</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Calcul haute performance sur architectures NUMA pour simulations sismiques" "HPC on NUMA Architectures for Seismology Simulations" }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Algorithmes parallèles et modèles mémoires pour architectures multi-cœurs NUMA, appliqués à la propagation d'ondes sismiques et aux solveurs creux." "Parallel algorithms and runtime memory models for NUMA multicore architectures, applied to seismic wave propagation and sparse solvers." }}</p>
           </div>
 
         </div>
@@ -262,15 +264,15 @@
     </div>
 
     {{/* ==================================================================== */}}
-    {{/* TAB PANEL 2: PHD ADVISING & MENTORSHIP                               */}}
+    {{/* TAB PANEL 2: PHD ADVISING & MENTORSHIP / DIRECTION DE THÈSES          */}}
     {{/* ==================================================================== */}}
     <div x-show="tab === 'phd'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="space-y-6" style="display: none;">
       
-      {{/* Ongoing PhD Theses */}}
+      {{/* Ongoing PhD Theses / Thèses en cours */}}
       <div>
         <h4 class="text-base font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          Ongoing PhD Theses
+          {{ cond $isFR "Thèses en cours (2)" "Ongoing PhD Theses" }}
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -279,15 +281,15 @@
             <div>
               <div class="flex items-center justify-between gap-2 mb-2">
                 <span class="font-bold text-gray-900 dark:text-white text-base">Dimitri Walther</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">In Progress • 100%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">{{ cond $isFR "En cours • 100%" "In Progress • 100%" }}</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Funded by CEA</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Hierarchical partitioner for electromagnetic simulation of complex 3D objects"</p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Development of scalable hierarchical matrix partitioners to optimize matrix compression within production simulation codes on CEA DAM supercomputers.</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Financement CEA" "Funded by CEA" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Partitionneur hiérarchique pour la simulation électromagnétique d'objets 3D complexes\"" "\"Hierarchical partitioner for electromagnetic simulation of complex 3D objects\"" }}</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">{{ cond $isFR "Développement de partitionneurs hiérarchiques scalables pour optimiser la compression matricielle au sein des codes de calcul de production sur les supercalculateurs du CEA DAM." "Development of scalable hierarchical matrix partitioners to optimize matrix compression within production simulation codes on CEA DAM supercomputers." }}</p>
             </div>
             <div class="mt-4 pt-2.5 border-t border-emerald-200/50 dark:border-emerald-900/50 text-xs font-medium text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              Affiliation: Bordeaux University / Inria / CEA
+              {{ cond $isFR "Affiliation : Université de Bordeaux / Inria / CEA" "Affiliation: Bordeaux University / Inria / CEA" }}
             </div>
           </div>
 
@@ -299,26 +301,26 @@
                   Alycia Lisito
                   <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">In Progress • 100%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">{{ cond $isFR "En cours • 100%" "In Progress • 100%" }}</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">CIFRE with BULL / EVIDEN / ATOS</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Design and implementation of a portable linear algebra benchmark on runtime systems for performance evaluation of heterogeneous Exascale architectures"</p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Leveraging Chameleon dense linear algebra and StarPU runtime systems to scale High Performance Linpack (HPL) on next-generation architectures.</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "CIFRE avec BULL / EVIDEN / ATOS" "CIFRE with BULL / EVIDEN / ATOS" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Conception et implémentation d'un banc d'essai d'algèbre linéaire portable sur moteurs d'exécution pour l'évaluation de performance des architectures hétérogènes Exascale\"" "\"Design and implementation of a portable linear algebra benchmark on runtime systems for performance evaluation of heterogeneous Exascale architectures\"" }}</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">{{ cond $isFR "Exploitation de la bibliothèque d'algèbre linéaire dense Chameleon et du moteur StarPU pour le passage à l'échelle du benchmark HPL (High Performance Linpack) sur architectures futures." "Leveraging Chameleon dense linear algebra and StarPU runtime systems to scale High Performance Linpack (HPL) on next-generation architectures." }}</p>
             </div>
             <div class="mt-4 pt-2.5 border-t border-emerald-200/50 dark:border-emerald-900/50 text-xs font-medium text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              Affiliation: Bordeaux University / Inria / BULL (Eviden / Atos)
+              {{ cond $isFR "Affiliation : Université de Bordeaux / Inria / BULL (Eviden / Atos)" "Affiliation: Bordeaux University / Inria / BULL (Eviden / Atos)" }}
             </div>
           </div>
 
         </div>
       </div>
 
-      {{/* Defended PhD Theses */}}
+      {{/* Defended PhD Theses / Thèses soutenues */}}
       <div>
         <h4 class="text-base font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-4 flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-slate-500"></span>
-          Defended PhD Theses (8)
+          {{ cond $isFR "Thèses soutenues (8)" "Defended PhD Theses (8)" }}
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -332,12 +334,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Nov 2024 • 100%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Funded by CEA</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Development of an algebraic multigrid solver for the indefinite Helmholtz equation"</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement CEA" "Funded by CEA" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Développement d'un solveur multigrille algébrique pour l'équation de Helmholtz indéfinie\"" "\"Development of an algebraic multigrid solver for the indefinite Helmholtz equation\"" }}</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: Postdoctoral Researcher at Jülich Supercomputing Centre (JSC), Germany
+              {{ cond $isFR "Poste actuel : Chercheur postdoctoral au Jülich Supercomputing Centre (JSC), Allemagne" "Current: Postdoctoral Researcher at Jülich Supercomputing Centre (JSC), Germany" }}
             </div>
           </div>
 
@@ -351,12 +353,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Sep 2022 • 50%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Funded by ANR SASHIMI</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Improving the memory and time overhead of low-rank parallel linear sparse direct solvers"</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement ANR SASHIMI" "Funded by ANR SASHIMI" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Réduction du coût mémoire et temporel des solveurs directs creux parallèles avec approximations de rang faible\"" "\"Improving the memory and time overhead of low-rank parallel linear sparse direct solvers\"" }}</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: Postdoctoral Researcher at Inria Bordeaux
+              {{ cond $isFR "Poste actuel : Chercheuse postdoctorale à Inria Bordeaux" "Current: Postdoctoral Researcher at Inria Bordeaux" }}
             </div>
           </div>
 
@@ -370,12 +372,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Nov 2018 • 50%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Funded by DGA</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"On the use of low-rank arithmetic to reduce the complexity of parallel sparse linear solvers based on direct factorization techniques"</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement DGA" "Funded by DGA" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"De l'utilisation d'approximations de rang faible pour réduire la complexité de solveurs linéaires creux parallèles reposant sur des méthodes directes\"" "\"On the use of low-rank arithmetic to reduce the complexity of parallel sparse linear solvers based on direct factorization techniques\"" }}</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: Research Engineer at Siemens (formerly Associate Professor at ENS Lyon)
+              {{ cond $isFR "Poste actuel : Ingénieur de recherche chez Siemens (anc. Maître de conférences à l'ENS Lyon)" "Current: Research Engineer at Siemens (formerly Associate Professor at ENS Lyon)" }}
             </div>
           </div>
 
@@ -389,12 +391,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Dec 2015 • 50%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Collaboration with EDF R&D</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Massively Parallel Cartesian Discrete Ordinates Method for Neutron Transport Simulation"</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Collaboration EDF R&D" "Collaboration with EDF R&D" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Méthode des ordonnées discrètes cartésienne massivement parallèle pour la simulation du transport neutronique\"" "\"Massively Parallel Cartesian Discrete Ordinates Method for Neutron Transport Simulation\"" }}</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: HPC Consultant at ANEO (formerly Research Engineer at EDF)
+              {{ cond $isFR "Poste actuel : Consultant HPC chez ANEO (anc. Ingénieur de recherche à EDF)" "Current: HPC Consultant at ANEO (formerly Research Engineer at EDF)" }}
             </div>
           </div>
 
@@ -408,12 +410,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Oct 2015 • 80%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Ministry for Research Grant</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Optimizations of hybrid sparse linear solvers relying on Schur complement and domain decomposition approaches"</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Bourse du Ministère de la Recherche" "Ministry for Research Grant" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Optimisations de solveurs linéaires creux hybrides fondés sur le complément de Schur et la décomposition de domaine\"" "\"Optimizations of hybrid sparse linear solvers relying on Schur complement and domain decomposition approaches\"" }}</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: Research Engineer at Naval Group
+              {{ cond $isFR "Poste actuel : Ingénieure de recherche chez Naval Group" "Current: Research Engineer at Naval Group" }}
             </div>
           </div>
 
@@ -427,12 +429,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Feb 2015 • 80%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Funded by ANR ANEMOS</p>
-              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Scheduling and memory optimizations for sparse direct solver on multi-core/multi-gpu cluster systems"</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement ANR ANEMOS" "Funded by ANR ANEMOS" }}</p>
+              <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">{{ cond $isFR "\"Ordonnancement et optimisations mémoire pour solveur direct creux sur clusters multi-cœurs/multi-GPU\"" "\"Scheduling and memory optimizations for sparse direct solver on multi-core/multi-gpu cluster systems\"" }}</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: HPC Engineer at BULL / EVIDEN / ATOS (formerly TOTAL)
+              {{ cond $isFR "Poste actuel : Ingénieur HPC chez BULL / EVIDEN / ATOS (anc. TOTAL)" "Current: HPC Engineer at BULL / EVIDEN / ATOS (formerly TOTAL)" }}
             </div>
           </div>
 
@@ -446,12 +448,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Jan 2010 • 80%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Collaboration with EDF R&D</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Collaboration EDF R&D" "Collaboration with EDF R&D" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Méthode de décomposition de domaine pour les équations du transport simplifié en neutronique"</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: Research Engineer at EDF R&D
+              {{ cond $isFR "Poste actuel : Ingénieur de recherche à EDF R&D" "Current: Research Engineer at EDF R&D" }}
             </div>
           </div>
 
@@ -465,12 +467,12 @@
                 </a>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Dec 2009 • 50%</span>
               </div>
-              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">Funded by ANR NUMASIS</p>
+              <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement ANR NUMASIS" "Funded by ANR NUMASIS" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Ordonnancement hybride statique-dynamique en algèbre linéaire creuse pour de grands clusters de machines NUMA et multi-coeurs"</p>
             </div>
             <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-xs font-medium text-primary-700 dark:text-primary-300 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-              Current: Associate Professor (Maître de conférences) at Bordeaux INP (Enseirb-Matmeca)
+              {{ cond $isFR "Poste actuel : Maître de conférences à Bordeaux INP (Enseirb-Matmeca)" "Current: Associate Professor (Maître de conférences) at Bordeaux INP (Enseirb-Matmeca)" }}
             </div>
           </div>
 
@@ -480,7 +482,7 @@
     </div>
 
     {{/* ==================================================================== */}}
-    {{/* TAB PANEL 3: INDUSTRIAL PARTNERSHIPS & TRANSFER                      */}}
+    {{/* TAB PANEL 3: INDUSTRIAL PARTNERSHIPS / PARTENAIRES INDUSTRIELS        */}}
     {{/* ==================================================================== */}}
     <div x-show="tab === 'industry'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="grid grid-cols-1 md:grid-cols-2 gap-4" style="display: none;">
 
@@ -492,10 +494,10 @@
               CEA CESTA (DAM)
               <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Advisor since 2015 • Partner since 2000</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800">{{ cond $isFR "Conseiller depuis 2015 • Partenaire depuis 2000" "Advisor since 2015 • Partner since 2000" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Defense & Security Division • Supercomputing DAM</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Long-term collaboration on parallel sparse and dense direct solvers for 3D electromagnetism and structural mechanics simulation codes (such as ARLENE) on supercomputers. Scientific advisor in HPC since 2015.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Direction des applications militaires • Supercalcul DAM" "Defense & Security Division • Supercomputing DAM" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Collaboration pérenne sur les solveurs directs parallèles creux et denses pour les codes de simulation 3D d'électromagnétisme et de mécanique des structures (tels qu'ARLENE) sur supercalculateurs. Conseiller scientifique en HPC depuis 2015." "Long-term collaboration on parallel sparse and dense direct solvers for 3D electromagnetism and structural mechanics simulation codes (such as ARLENE) on supercomputers. Scientific advisor in HPC since 2015." }}</p>
         </div>
       </div>
 
@@ -507,10 +509,10 @@
               CEA Cadarache / IRFM (ITER)
               <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">2014 – present</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">{{ cond $isFR "2014 – aujourd'hui" "2014 – present" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Magnetic Fusion Research Institute • JOREK Simulation Code</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Optimization of linear algebra routines in JOREK, the European non-linear extended MHD simulation code for plasma instabilities and ELM control in Tokamaks.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Institut de Recherche sur la Fusion Magnétique • Code de simulation JOREK" "Magnetic Fusion Research Institute • JOREK Simulation Code" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Optimisation des routines d'algèbre linéaire dans JOREK, le code européen de simulation MHD non-linéaire pour les instabilités de plasma et le contrôle des ELMs dans les Tokamaks." "Optimization of linear algebra routines in JOREK, the European non-linear extended MHD simulation code for plasma instabilities and ELM control in Tokamaks." }}</p>
         </div>
       </div>
 
@@ -524,8 +526,8 @@
             </a>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2006 – 2015</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Nuclear Core Simulations • 3D Transport Equations</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Design of parallel 3D Cartesian $S_N$ solvers and domain decomposition methods for the simplified transport equations in nuclear reactor cores, scaling to tens of billions of unknowns.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Simulations de cœurs nucléaires • Équations de transport 3D" "Nuclear Core Simulations • 3D Transport Equations" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Conception de solveurs parallèles SN cartésiens 3D et méthodes de décomposition de domaine pour les équations simplifiées du transport neutronique dans les cœurs de réacteurs, passant à l'échelle sur des dizaines de milliards d'inconnues." "Design of parallel 3D Cartesian S_N solvers and domain decomposition methods for the simplified transport equations in nuclear reactor cores, scaling to tens of billions of unknowns." }}</p>
         </div>
       </div>
 
@@ -537,10 +539,10 @@
               BULL / EVIDEN / ATOS
               <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">2021 – present</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">{{ cond $isFR "2021 – aujourd'hui" "2021 – present" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Exascale Benchmarks & Inria-BULL/Atos Framework Agreement</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Joint research through CIFRE doctoral supervision on portable linear algebra benchmarks for heterogeneous Exascale architectures and grand challenge linear algebra axes.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Bancs d'essai Exascale & Accord-cadre Inria-BULL/Atos" "Exascale Benchmarks & Inria-BULL/Atos Framework Agreement" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Recherche partenariale via l'encadrement doctoral CIFRE sur des benchmarks portables d'algèbre linéaire pour architectures Exascale hétérogènes et défis d'algèbre linéaire." "Joint research through CIFRE doctoral supervision on portable linear algebra benchmarks for heterogeneous Exascale architectures and grand challenge linear algebra axes." }}</p>
         </div>
       </div>
 
@@ -554,8 +556,8 @@
             </a>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2013 – 2016</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">HPC-PME Initiative • Bpifrance</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Technology transfer collaboration enabling an SME to take the technological leap toward high-performance computing and electromagnetic simulation software.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Programme HPC-PME • Bpifrance" "HPC-PME Initiative • Bpifrance" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Collaboration de transfert technologique ayant permis à une PME d'effectuer un saut technologique vers le calcul haute performance et la simulation électromagnétique." "Technology transfer collaboration enabling an SME to take the technological leap toward high-performance computing and electromagnetic simulation software." }}</p>
         </div>
       </div>
 
@@ -564,17 +566,17 @@
         <div>
           <div class="flex items-center justify-between gap-2 mb-2">
             <span class="font-bold text-gray-900 dark:text-white text-base">TOTAL • AIRBUS • Naval Group</span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Collaborations & CIFRE</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Collaborations & CIFRE" "Collaborations & CIFRE" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Industrial Applications in Energy & Aeronautics</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Collaborative research contracts on solver parallelization, domain decomposition, and doctoral career placements in major defense and industrial leaders.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Applications industrielles en énergie et aéronautique" "Industrial Applications in Energy & Aeronautics" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Contrats de recherche collaborative sur la parallélisation de solveurs, la décomposition de domaine et insertion professionnelle de docteurs au sein de grands groupes industriels et de défense." "Collaborative research contracts on solver parallelization, domain decomposition, and doctoral career placements in major defense and industrial leaders." }}</p>
         </div>
       </div>
 
     </div>
 
     {{/* ==================================================================== */}}
-    {{/* TAB PANEL 4: INTERNATIONAL COLLABORATIONS & ASSOCIATED TEAMS         */}}
+    {{/* TAB PANEL 4: INTERNATIONAL COLLABORATIONS / ÉQUIPES ASSOCIÉES         */}}
     {{/* ==================================================================== */}}
     <div x-show="tab === 'international'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="grid grid-cols-1 md:grid-cols-2 gap-4" style="display: none;">
 
@@ -583,10 +585,10 @@
         <div>
           <div class="flex items-center justify-between gap-2 mb-2">
             <span class="font-bold text-gray-900 dark:text-white text-base">FAST-LA</span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">Inria Associate Team • 2013 – 2017</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">{{ cond $isFR "Équipe associée Inria • 2013 – 2017" "Inria Associate Team • 2013 – 2017" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Stanford University & Lawrence Berkeley National Lab (LBNL)</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Fast and Scalable Hierarchical Algorithms for Computational Linear Algebra. Collaboration with Prof. Eric Darve (Stanford) and Dr. Esmond Ng (LBNL) on hierarchical matrix compression (H-matrices, BLR) for sparse direct solvers.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Université de Stanford & Lawrence Berkeley National Lab (LBNL)" "Stanford University & Lawrence Berkeley National Lab (LBNL)" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Algorithmes hiérarchiques rapides et scalables pour l'algèbre linéaire numérique. Collaboration avec le Prof. Eric Darve (Stanford) et le Dr. Esmond Ng (LBNL) sur la compression matricielle hiérarchique (matrices H, BLR) pour solveurs directs creux." "Fast and Scalable Hierarchical Algorithms for Computational Linear Algebra. Collaboration with Prof. Eric Darve (Stanford) and Dr. Esmond Ng (LBNL) on hierarchical matrix compression (H-matrices, BLR) for sparse direct solvers." }}</p>
         </div>
       </div>
 
@@ -595,10 +597,10 @@
         <div>
           <div class="flex items-center justify-between gap-2 mb-2">
             <span class="font-bold text-gray-900 dark:text-white text-base">MORSE</span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">Inria Associate Team • 2011 – 2015</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800">{{ cond $isFR "Équipe associée Inria • 2011 – 2015" "Inria Associate Team • 2011 – 2015" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">University of Tennessee (ICL)</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Matrices Over Runtime Systems at Exascale. Collaboration with Jack Dongarra (2022 ACM Turing Award) and George Bosilca at the Innovative Computing Laboratory (ICL) on PaRSEC DAG runtimes for sparse solvers on heterogeneous multicore/GPU clusters.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Université du Tennessee (ICL)" "University of Tennessee (ICL)" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Matrices sur moteurs d'exécution à l'échelle Exascale. Collaboration avec Jack Dongarra (Prix Turing ACM 2022) et George Bosilca à l'Innovative Computing Laboratory (ICL) sur les moteurs DAG PaRSEC pour solveurs creux sur clusters hétérogènes multi-cœurs/GPU." "Matrices Over Runtime Systems at Exascale. Collaboration with Jack Dongarra (2022 ACM Turing Award) and George Bosilca at the Innovative Computing Laboratory (ICL) on PaRSEC DAG runtimes for sparse solvers on heterogeneous multicore/GPU clusters." }}</p>
         </div>
       </div>
 
@@ -607,10 +609,10 @@
         <div>
           <div class="flex items-center justify-between gap-2 mb-2">
             <span class="font-bold text-gray-900 dark:text-white text-base">PHYLEAS</span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Inria Associate Team • 2008 – 2009</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Équipe associée Inria • 2008 – 2009" "Inria Associate Team • 2008 – 2009" }}</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">University of Minnesota</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Study of parallel hybrid sparse linear solvers and incomplete block factorizations with Prof. Yousef Saad, leading to groundbreaking work on supernodal block ILU(k) preconditioners.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Université du Minnesota" "University of Minnesota" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Étude de solveurs linéaires creux hybrides parallèles et de factorisations incomplètes par blocs avec le Prof. Yousef Saad, aboutissant à des travaux novateurs sur les préconditionneurs supernodaux blocs ILU(k)." "Study of parallel hybrid sparse linear solvers and incomplete block factorizations with Prof. Yousef Saad, leading to groundbreaking work on supernodal block ILU(k) preconditioners." }}</p>
         </div>
       </div>
 
@@ -624,8 +626,8 @@
             </a>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2015 – 2020</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Joint Laboratory for Extreme Scale Computing & Barcelona Supercomputing Center</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Collaboration within JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) with Guillaume Houzeau on integrating PaStiX into the Alya multi-physics simulation platform for structural mechanics.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Laboratoire commun JLESC & Barcelona Supercomputing Center" "Joint Laboratory for Extreme Scale Computing & Barcelona Supercomputing Center" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Collaboration au sein du JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) avec Guillaume Houzeau sur l'intégration de PaStiX dans la plateforme de simulation multi-physique Alya pour la mécanique des structures." "Collaboration within JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) with Guillaume Houzeau on integrating PaStiX into the Alya multi-physics simulation platform for structural mechanics." }}</p>
         </div>
       </div>
 
@@ -636,8 +638,8 @@
             <span class="font-bold text-gray-900 dark:text-white text-base">JAEA (Japan)</span>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2007 – 2008</span>
           </div>
-          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">Japan Atomic Energy Agency & IRIT</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">French-Japanese collaboration on national grid computing environments (NAREGI, Grid'5000) and matrix-solver prediction systems for nuclear fusion simulation.</p>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Agence japonaise de l'énergie atomique (JAEA) & IRIT" "Japan Atomic Energy Agency & IRIT" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Collaboration franco-japonaise sur les grilles de calcul nationales (NAREGI, Grid'5000) et les systèmes de prédiction de solveurs matriciels pour la simulation de fusion nucléaire." "French-Japanese collaboration on national grid computing environments (NAREGI, Grid'5000) and matrix-solver prediction systems for nuclear fusion simulation." }}</p>
         </div>
       </div>
 

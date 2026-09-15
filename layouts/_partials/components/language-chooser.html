@@ -1,0 +1,52 @@
+{{ $page := .page }}
+{{ $class := .class }}
+
+{{ $isFR := eq site.Language.Lang "fr" }}
+{{ $targetUrl := "/fr/" }}
+{{ $targetTitle := "Passer en français" }}
+{{ $targetAria := "Passer le site en français" }}
+
+{{ if $isFR }}
+  {{ $targetUrl = "/" }}
+  {{ $targetTitle = "Switch to English" }}
+  {{ $targetAria = "Switch website to English" }}
+{{ end }}
+
+{{/* If the current page has a direct translation, link directly to it */}}
+{{ if $page.IsTranslated }}
+  {{ range $page.Translations }}
+    {{ $targetUrl = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+<div class="flex items-center {{ with $class }}{{. | safeCSS }}{{ end }}">
+  <a
+    href="{{ $targetUrl }}"
+    title="{{ $targetTitle }}"
+    aria-label="{{ $targetAria }}"
+    class="inline-flex items-center justify-center p-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-150 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-500"
+  >
+    {{ if $isFR }}
+      {{/* Currently viewing French -> Show UK Flag to switch to English */}}
+      <svg class="w-6 h-4 rounded-[3px] shadow-xs overflow-hidden border border-slate-300 dark:border-slate-600 block" viewBox="0 0 60 40" aria-hidden="true">
+        <clipPath id="flag-gb-clip">
+          <rect width="60" height="40"/>
+        </clipPath>
+        <g clip-path="url(#flag-gb-clip)">
+          <rect width="60" height="40" fill="#012169"/>
+          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#ffffff" stroke-width="8"/>
+          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/>
+          <path d="M30,0 v40 M0,20 h60" stroke="#ffffff" stroke-width="12"/>
+          <path d="M30,0 v40 M0,20 h60" stroke="#C8102E" stroke-width="7"/>
+        </g>
+      </svg>
+    {{ else }}
+      {{/* Currently viewing English -> Show French Flag to switch to French */}}
+      <svg class="w-6 h-4 rounded-[3px] shadow-xs overflow-hidden border border-slate-300 dark:border-slate-600 block" viewBox="0 0 3 2" aria-hidden="true">
+        <rect width="1" height="2" fill="#002395"/>
+        <rect width="1" height="2" x="1" fill="#FFFFFF"/>
+        <rect width="1" height="2" x="2" fill="#ED2939"/>
+      </svg>
+    {{ end }}
+  </a>
+</div>
