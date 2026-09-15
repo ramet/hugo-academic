@@ -1,0 +1,81 @@
+role: Professeur des Universités en Informatique
+bio: |
+  Pierre Ramet est Professeur des Universités en Informatique à l'Université de Bordeaux et chercheur à Inria. Ses activités de recherche portent sur le calcul haute performance, en particulier l'algèbre linéaire creuse et les algorithmes parallèles. Il anime l'équipe chargée du développement de PaStiX, un solveur direct creux haute performance.
+
+affiliations:
+  - name: Université de Bordeaux - Inria
+    url: https://www.u-bordeaux.fr/
+
+interests:
+  - Calcul Haute Performance
+  - Algèbre linéaire creuse
+  - Algorithmes parallèles
+  - Calcul scientifique
+
+education:
+  - degree: HdR en Informatique
+    institution: Université de Bordeaux
+    year: 2017
+    summary: "Habilitation à Diriger des Recherches"
+  - degree: Doctorat en Informatique
+    institution: Université de Bordeaux
+    year: 2000
+    summary: "Doctorat en Informatique"
+
+experience:
+  - role: Professeur des Universités
+    org: Université de Bordeaux
+    org_url: https://www.u-bordeaux.fr/
+    start: "2023-09-01"
+    end: ""
+    summary: "Algorithmes parallèles pour le calcul scientifique"
+  - role: Responsable de département
+    org: Département SATANAS du LaBRI
+    org_url: https://www.labri.fr/
+    start: "2020-01-01"
+    end: ""
+    summary: "Responsable du département SATANAS (Supports et Algorithmes pour les Applications Numériques Haute Performance)"
+  - role: Conseiller scientifique
+    org: CEA (Commissariat à l'Énergie Atomique et aux Énergies Alternatives)
+    org_url: http://www.cea.fr/
+    start: "2015-01-01"
+    end: ""
+    summary: "Conseiller scientifique dans le domaine du calcul haute performance pour la simulation numérique"
+  - role: Responsable adjoint de département
+    org: Département SATANAS du LaBRI
+    org_url: https://www.labri.fr/
+    start: "2011-01-01"
+    end: "2020-01-01"
+    summary: "Responsable adjoint du département SATANAS (Supports et Algorithmes pour les Applications Numériques Haute Performance)"
+  - role: Expert scientifique
+    org: GENCI (Grand Équipement National de Calcul Intensif)
+    org_url: http://www.genci.fr/
+    start: "2008-01-01"
+    end: "2016-01-01"
+    summary: "Expert scientifique au sein du comité d'évaluation Mathématiques et Informatique"
+  - role: Maître de Conférences
+    org: Université de Bordeaux
+    org_url: https://www.u-bordeaux.fr/
+    start: "2000-09-01"
+    end: "2023-09-01"
+    summary: "Algorithmes parallèles pour le calcul scientifique"
+
+skills:
+  - name: Domaines de recherche
+    items:
+      - label: Algèbre linéaire creuse
+        level: 5
+      - label: Calcul Haute Performance (HPC)
+        level: 5
+      - label: Algorithmes parallèles & supports d'exécution
+        level: 5
+      - label: Calcul scientifique
+        level: 5
+
+languages:
+  - name: Français
+    level: 5
+    label: Langue maternelle
+  - name: Anglais
+    level: 5
+    label: Courant

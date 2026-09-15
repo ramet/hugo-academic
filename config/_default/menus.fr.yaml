@@ -1,0 +1,32 @@
+# French Navigation Links
+main:
+  - name: À propos
+    url: /fr/
+    weight: 10
+  - name: Expérience
+    url: /fr/#experience
+    weight: 15
+  - name: Recherche
+    url: /fr/#research
+    weight: 20
+  - name: Enseignement
+    url: /fr/#teaching
+    weight: 25
+  - name: Publications
+    url: /fr/#papers
+    weight: 30
+  - name: HAL
+    url: https://cv.hal.science/pierre-ramet
+    weight: 35
+  - name: BibTeX
+    url: /bib/
+    weight: 40
+  - name: Projets
+    url: /fr/#projects
+    weight: 50
+  - name: Actualités
+    url: /fr/#news
+    weight: 60
+  - name: Contact
+    url: /fr/#contact
+    weight: 70

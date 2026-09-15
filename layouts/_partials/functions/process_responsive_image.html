@@ -1,0 +1,124 @@
+{{/*
+Responsive Image Processor for Hugo Blox Kit (HBB) - with robust fallback fix
+Uses Hugo's .Process method with configurable quality and responsive breakpoints
+*/}}
+
+{{ $image := .image }}
+{{ $sizes := .sizes | default (slice 320 480 768 1024 1366 1920 2560) }}
+{{ $mode := .mode | default "fit" }}
+{{ $anchor := .anchor | default "smart" }}
+{{ $aspect_ratio := .aspect_ratio | default "" }}
+{{ $quality := .quality }}
+
+{{/* Initialize return variables */}}
+{{ $processed_images := slice }}
+{{ $srcset_parts := slice }}
+{{ $fallback_image := "" }}
+
+{{ $isProcessable := reflect.IsImageResourceProcessable $image }}
+{{ $isGIF := and $isProcessable (eq $image.MediaType.SubType "gif") }}
+
+{{ if and $isProcessable (not $isGIF) }}
+  {{/* Handle responsive mode - for already processed images */}}
+  {{ if eq $mode "responsive" }}
+    {{/* Convert to WebP if needed */}}
+    {{ $base_image := $image }}
+    {{ $base_image = $image.Process "webp" }}
+    
+    {{/* Create responsive variants by resizing down from the processed image */}}
+    {{ range $width := $sizes }}
+      {{/* Only create smaller variants */}}
+      {{ if and (le $width $base_image.Width) (gt $width 0) }}
+        {{ $resized := $base_image.Resize (printf "%dx webp" $width) }}
+        {{ $processed_images = $processed_images | append $resized }}
+        
+        {{/* Add to srcset */}}
+        {{ $srcset_part := printf "%s %dw" $resized.RelPermalink $resized.Width }}
+        {{ $srcset_parts = $srcset_parts | append $srcset_part }}
+        
+        {{/* Set fallback to smallest image */}}
+        {{ if not $fallback_image }}
+          {{ $fallback_image = $resized }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* Always include the original size as the largest option */}}
+    {{ $srcset_part := printf "%s %dw" $base_image.RelPermalink $base_image.Width }}
+    {{ $srcset_parts = $srcset_parts | append $srcset_part }}
+    {{ $processed_images = $processed_images | append $base_image }}
+    {{ if not $fallback_image }}{{ $fallback_image = $base_image }}{{ end }}
+    
+  {{ else }}
+    {{/* Process images for each breakpoint */}}
+    {{ range $width := $sizes }}
+      {{/* Only process if the source image is larger than target width */}}
+      {{ if ge $image.Width $width }}
+        {{ $process_params := "" }}
+        {{/* Build processing parameters based on mode */}}
+        {{- if eq $mode "resize" -}}
+        {{- if $quality -}}
+          {{- $process_params = printf "resize %dx webp q%d" $width $quality -}}
+        {{- else -}}
+          {{- $process_params = printf "resize %dx webp" $width -}}
+        {{- end -}}
+      {{- else if eq $mode "fill" -}}
+        {{- if $aspect_ratio -}}
+          {{- $ratio_parts := split $aspect_ratio ":" -}}
+          {{- $ratio_width := int (index $ratio_parts 0) -}}
+          {{- $ratio_height := int (index $ratio_parts 1) -}}
+          {{- $height := div (mul $width $ratio_height) $ratio_width -}}
+          {{- if $quality -}}
+            {{- $process_params = printf "fill %dx%d webp q%d %s" $width $height $quality $anchor -}}
+          {{- else -}}
+            {{- $process_params = printf "fill %dx%d webp %s" $width $height $anchor -}}
+          {{- end -}}
+        {{- else -}}
+          {{/* Fill mode without aspect ratio - use resize instead to maintain original proportions */}}
+          {{- if $quality -}}
+            {{- $process_params = printf "resize %dx webp q%d" $width $quality -}}
+          {{- else -}}
+            {{- $process_params = printf "resize %dx webp" $width -}}
+          {{- end -}}
+        {{- end -}}
+      {{- else -}}
+        {{/* Default to fit - always maintain original aspect ratio */}}
+        {{- if $quality -}}
+          {{- $process_params = printf "resize %dx webp q%d" $width $quality -}}
+        {{- else -}}
+          {{- $process_params = printf "resize %dx webp" $width -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{/* Process the image */}}
+      {{- $processed := $image.Process $process_params -}}
+      {{- $processed_images = $processed_images | append $processed -}}
+
+      {{/* Add to srcset */}}
+      {{- $srcset_part := printf "%s %dw" $processed.RelPermalink $processed.Width -}}
+      {{- $srcset_parts = $srcset_parts | append $srcset_part -}}
+
+      {{/* Set fallback to smallest image */}}
+      {{- if not $fallback_image -}}
+        {{- $fallback_image = $processed -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{ end }}
+{{- else -}}
+  {{/* Non-processable (SVG) or intentionally skipped (GIF): pass through without srcset */}}
+  {{- $fallback_image = $image -}}
+  {{- $processed_images = $processed_images | append $image -}}
+{{- end -}}
+
+{{/* Safety fallback: if image was smaller than all target sizes, fall back to base image */}}
+{{- if not $fallback_image -}}
+  {{- $fallback_image = $image -}}
+{{- end -}}
+
+{{/* Return processed data */}}
+{{ return (dict 
+  "srcset" (delimit $srcset_parts ", ") 
+  "fallback" $fallback_image 
+  "sizes" $processed_images
+) }}
