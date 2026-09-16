@@ -18,7 +18,7 @@ author_notes: []
 date: '2017-01-01'
 
 # Date to publish webpage (NOT necessarily Bibtex publication's date).
-publishDate: '2026-09-12T15:28:01.260824Z'
+publishDate: '2026-09-16T14:43:40.881466Z'
 
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
@@ -40,7 +40,7 @@ tags:
 - Sparse
 
 # Display this page in a list of Featured pages?
-featured: true
+featured: false
 
 # Links
 url_pdf: ''

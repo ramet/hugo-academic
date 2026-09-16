@@ -10,11 +10,11 @@ cat "$DIR"/bib/*.bib > "$DIR"/all.bib
 echo "=== 2. Import des publications dans Hugo ==="
 ~/.venv/bin/academic import --normalize --overwrite "$DIR"/all.bib "$DIR"/content/publications/
 
-echo "=== 3. Synchronisation de la bibliographie bibtex2html (si présente) ==="
-if [ -d "$DIR"/bib/target ]; then
-  rm -rf "$DIR"/static/bib
-  cp -r "$DIR"/bib/target "$DIR"/static/bib
-fi
+echo "=== 3. Génération et synchronisation de la bibliographie bibtex2html ==="
+(cd "$DIR"/bib && make clean && make bib)
+rm -rf "$DIR"/static/bib
+cp -r "$DIR"/bib/target "$DIR"/static/bib
+(cd "$DIR"/bib && make clean)
 
 echo "=== 4. Compilation du site avec Hugo ==="
 cd "$DIR"

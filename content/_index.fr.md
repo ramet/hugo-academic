@@ -81,16 +81,21 @@ sections:
       text: |-
         Pierre Ramet exerce une activité d'enseignement à l’**Université de Bordeaux**, assurant environ 300 heures (HETD) chaque année au sein de formations de premier cycle, de master et d’écoles d’ingénieurs.
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
+        ### Principaux domaines et filières d'enseignement
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-4">
         <div>
 
-        ### Principaux domaines et filières d'enseignement
         - **IUT de Bordeaux (Dép. Informatique / BUT Informatique) :**
           - Systèmes d'exploitation, réseaux informatiques, architecture des ordinateurs et programmation système.
           - Fondements de la cryptographie et de la sécurité.
           - DevOps (virtualisation et automatisation CI/CD).
           - Apprentissage automatique non supervisé dans le cadre du **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
           - **SAE** (*Situations d'Apprentissage et d'Évaluation*) : Pédagogie par projet, résolution de problèmes et génie logiciel.
+
+        </div>
+        <div>
+
         - **Enseirb-Matmeca & Master Informatique :**
           - Algorithmique numérique.
           - Calcul Haute Performance (HPC), algorithmes parallèles & distribués, et calcul scientifique.
@@ -100,24 +105,22 @@ sections:
           - Cours de niveau master et écoles d'été à l'étranger (Vietnam).
 
         </div>
-        <div>
+        </div>
 
-        ### Responsabilités pédagogiques
-        - **Responsable de Licences Professionnelles (IUT de Bordeaux, 2007–2014) :**
-          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
-          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
-        - **Coordinateur des poursuites d'études (2017–2025)** pour le département Informatique.
-        - **Membre actif** des commissions pédagogiques et jurys d'examens universitaires.
-
-        <div style="margin-top: 1.5rem; text-align: left;">
+        <div class="mt-4 mb-8">
           <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
             <span>Consulter les supports de cours & notes d'enseignement</span>
             <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
           </a>
         </div>
 
-        </div>
-        </div>
+        ### Responsabilités pédagogiques
+
+        - **Responsable de Licences Professionnelles (IUT de Bordeaux, 2007–2014) :**
+          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
+          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
+        - **Coordinateur des poursuites d'études (2017–2025)** pour le département Informatique.
+        - **Membre actif** des commissions pédagogiques et jurys d'examens universitaires.
     design:
       wide: true
 

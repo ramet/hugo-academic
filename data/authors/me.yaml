@@ -64,10 +64,10 @@ education:
     institution: Graduate School in Computer Science of Bordeaux
     year: 1995
     summary: "Engineer in Computer Science"
-  - degree: Preparatory class
+  - degree: Preparatory Class
     institution: Lycée Charlemagne, Paris
     year: 1992
-    summary: "Preparatory class at Lycée Charlemagne in Paris"
+    summary: "Preparatory Class at Lycée Charlemagne in Paris"
 
 experience:
   - role: Full Professor

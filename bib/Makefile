@@ -8,7 +8,7 @@ bib:
 	mkdir -p target/Keyword
 	mkdir -p target/Year
 	cp Icons/* target/Icons/
-	find . -name "*.html" -exec bash -c 'iconv -f iso-8859-1 -t utf-8 "{}" > target/"{}"' \;
+	find . -path "./target" -prune -o -name "*.html" -exec bash -c 'iconv -f iso-8859-1 -t utf-8 "{}" > target/"{}"' \;
 
 clean:
 	rm -rf Author Biblio Category Keyword Year index.html target *~
