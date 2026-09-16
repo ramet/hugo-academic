@@ -55,19 +55,19 @@ education:
   - degree: HdR in Computer Science
     institution: Bordeaux University
     year: 2017
-    summary: "Habilitation à Diriger des Recherches"
+    summary: "Habilitation to Supervise Research"
   - degree: PhD in Computer Science
     institution: Bordeaux University
     year: 2000
-    summary: "Doctorat en Informatique"
-  - degree: Engineering Degree (ENSEIRB)
-    institution: Ecole Nationale Supérieure d’Electronique, Informatique et de Radiocommunications de Bordeaux (ENSEIRB)
+    summary: "PhD in Computer Science"
+  - degree: Engineering Degree
+    institution: Graduate School in Computer Science of Bordeaux
     year: 1995
-    summary: "Ingénieur Ecole Nationale Supérieure d’Electronique, Informatique et de Radiocommunications de Bordeaux (ENSEIRB)"
-  - degree: Classes préparatoires P'
+    summary: "Engineer in Computer Science"
+  - degree: Preparatory class
     institution: Lycée Charlemagne, Paris
     year: 1992
-    summary: "Classes préparatoires P' au Lycée Charlemagne à Paris"
+    summary: "Preparatory class at Lycée Charlemagne in Paris"
 
 experience:
   - role: Full Professor

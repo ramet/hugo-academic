@@ -81,100 +81,42 @@ sections:
       text: |-
         Pierre Ramet exerce une activité d'enseignement à l’**Université de Bordeaux**, assurant environ 300 heures (HETD) chaque année au sein de formations de premier cycle, de master et d’écoles d’ingénieurs.
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 not-prose my-6 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
+        <div>
 
-          <!-- Col 1: Domaines & filières d'enseignement -->
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
-                <span class="w-2.5 h-2.5 rounded-full bg-primary-500"></span>
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Principaux domaines & filières d'enseignement</h3>
-              </div>
+        ### Principaux domaines et filières d'enseignement
+        - **IUT de Bordeaux (Dép. Informatique / BUT Informatique) :**
+          - Systèmes d'exploitation, réseaux informatiques, architecture des ordinateurs et programmation système.
+          - Fondements de la cryptographie et de la sécurité.
+          - DevOps (virtualisation et automatisation CI/CD).
+          - Apprentissage automatique non supervisé dans le cadre du **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
+          - **SAE** (*Situations d'Apprentissage et d'Évaluation*) : Pédagogie par projet, résolution de problèmes et génie logiciel.
+        - **Enseirb-Matmeca & Master Informatique :**
+          - Algorithmique numérique.
+          - Calcul Haute Performance (HPC), algorithmes parallèles & distribués, et calcul scientifique.
+          - Cryptographie et sécurité.
+          - Introduction au calcul quantique.
+        - **Enseignement à l'international :**
+          - Cours de niveau master et écoles d'été à l'étranger (Vietnam).
 
-              <div class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
-                <div>
-                  <h4 class="font-semibold text-gray-900 dark:text-white mb-1.5 flex items-center gap-1.5">
-                    <span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300">IUT de Bordeaux</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400">Dép. Informatique / BUT</span>
-                  </h4>
-                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
-                    <li>Systèmes d'exploitation, réseaux informatiques, architecture des ordinateurs et programmation système.</li>
-                    <li>Fondements de la cryptographie et de la sécurité.</li>
-                    <li>DevOps (virtualisation et automatisation CI/CD).</li>
-                    <li>Apprentissage automatique non supervisé dans le cadre du <strong>DU IA</strong> (<em>Diplôme d'Université Intelligence Artificielle</em>).</li>
-                    <li><strong>SAE</strong> (<em>Situations d'Apprentissage et d'Évaluation</em>) : Pédagogie par projet, résolution de problèmes et génie logiciel.</li>
-                  </ul>
-                </div>
+        </div>
+        <div>
 
-                <div>
-                  <h4 class="font-semibold text-gray-900 dark:text-white mb-1.5 flex items-center gap-1.5">
-                    <span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300">Enseirb-Matmeca & Master</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400">Informatique</span>
-                  </h4>
-                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
-                    <li>Algorithmique numérique.</li>
-                    <li>Calcul Haute Performance (HPC), algorithmes parallèles & distribués, et calcul scientifique.</li>
-                    <li>Cryptographie et sécurité.</li>
-                    <li>Introduction au calcul quantique.</li>
-                  </ul>
-                </div>
+        ### Responsabilités pédagogiques
+        - **Responsable de Licences Professionnelles (IUT de Bordeaux, 2007–2014) :**
+          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
+          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
+        - **Coordinateur des poursuites d'études (2017–2025)** pour le département Informatique.
+        - **Membre actif** des commissions pédagogiques et jurys d'examens universitaires.
 
-                <div>
-                  <h4 class="font-semibold text-gray-900 dark:text-white mb-1.5 flex items-center gap-1.5">
-                    <span class="px-2 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-primary-300">Enseignement à l'international</span>
-                  </h4>
-                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
-                    <li>Cours de niveau master et écoles d'été à l'étranger (Vietnam).</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div style="margin-top: 1.5rem; text-align: left;">
+          <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
+            <span>Consulter les supports de cours & notes d'enseignement</span>
+            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
 
-          <!-- Col 2: Responsabilités pédagogiques -->
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
-                <span class="w-2.5 h-2.5 rounded-full bg-secondary-500"></span>
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Responsabilités pédagogiques</h3>
-              </div>
-
-              <div class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
-                <div class="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 border border-slate-100 dark:border-slate-800">
-                  <div class="flex items-center justify-between gap-2 mb-1">
-                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Responsable de Licences Professionnelles</h4>
-                    <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">2007–2014</span>
-                  </div>
-                  <p class="text-xs text-primary-600 dark:text-primary-400 font-medium mb-2">IUT de Bordeaux</p>
-                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
-                    <li><strong>DAGPI</strong> (<em>Développement d'Applications et Gestion de Projet Informatique</em>).</li>
-                    <li><strong>DAWIN</strong> (<em>Développement d'Applications Web et Images Numériques</em>).</li>
-                  </ul>
-                </div>
-
-                <div class="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 border border-slate-100 dark:border-slate-800">
-                  <div class="flex items-center justify-between gap-2 mb-1">
-                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Coordinateur des poursuites d'études</h4>
-                    <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">2017–2025</span>
-                  </div>
-                  <p class="text-xs text-gray-600 dark:text-gray-400">Coordinateur des poursuites d'études en écoles d'ingénieurs et masters pour le département Informatique.</p>
-                </div>
-
-                <div class="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 border border-slate-100 dark:border-slate-800">
-                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-1">Commissions & Jurys</h4>
-                  <p class="text-xs text-gray-600 dark:text-gray-400">Membre actif des commissions pédagogiques et jurys d'examens universitaires.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
-              <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
-                <span>Consulter les supports de cours & notes d'enseignement</span>
-                <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
-            </div>
-          </div>
-
+        </div>
         </div>
     design:
       wide: true

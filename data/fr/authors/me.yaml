@@ -22,13 +22,13 @@ education:
     year: 2000
     summary: "Doctorat en Informatique"
   - degree: Ingénieur ENSEIRB
-    institution: École Nationale Supérieure d’Électronique, Informatique et de Radiocommunications de Bordeaux (ENSEIRB)
+    institution: École Nationale Supérieure d’Électronique, Informatique et de Radiocommunications de Bordeaux
     year: 1995
-    summary: "Ingénieur École Nationale Supérieure d’Électronique, Informatique et de Radiocommunications de Bordeaux (ENSEIRB)"
+    summary: "Ingénieur en Informatique"
   - degree: Classes préparatoires P'
     institution: Lycée Charlemagne à Paris
     year: 1992
-    summary: "Classes préparatoires P' au Lycée Charlemagne à Paris"
+    summary: "Classes préparatoires au Lycée Charlemagne à Paris"
 
 experience:
   - role: Professeur des Universités
