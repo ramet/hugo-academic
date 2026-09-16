@@ -62,7 +62,7 @@ sections:
       username: me
     design:
       date_format: 'Jan 2006'
-      is_education_first: false
+      show_education: false
 
   - block: research-tabs
     id: research
@@ -71,9 +71,7 @@ sections:
       text: |-
         Pierre Ramet is a Full Professor of Computer Science at **Bordeaux University** and a researcher at **Inria**. His research interests span high-performance computing, focusing on sparse linear algebra and parallel algorithms.
 
-        He leads the team in charge of developing **[PaStiX](https://gitlab.inria.fr/solverstack/pastix)**, a high-performance sparse direct solver.
-
-        - **Research team:** [TOPAL](https://team.inria.fr/topal) (Tools and Optimization for High-Performance Applications and Learning)
+        He leads the team in charge of developing **[PaStiX](https://gitlab.inria.fr/solverstack/pastix)**, a high-performance sparse direct solver. He is a member of the team **[TOPAL](https://team.inria.fr/topal)** (Tools and Optimization for High-Performance Applications and Learning).
 
   - block: markdown
     id: teaching
@@ -83,33 +81,100 @@ sections:
       text: |-
         Pierre Ramet has an extensive teaching activity at **Bordeaux University**, teaching approximately 300 hours (HETD) each year across undergraduate, graduate, and engineering curricula.
 
-        ### Main Teaching Domains & Programs
-        - **IUT de Bordeaux (Computer Science Dept. / BUT Informatique):**
-          - Operating systems, computer networks, computer architecture, and systems programming.
-          - Cryptography and security fundamentals.
-          - DevOps (virtualization and CI/CD automation).
-          - Unsupervised machine learning in the context of the **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering.
-        - **Enseirb-Matmeca & Master in Computer Science:**
-          - Numerical algorithms.
-          - High-Performance Computing (HPC), parallel & distributed algorithms, and scientific computing.
-          - Cryptography and security.
-          - Introduction to Quantum Computing.
-        - **International Teaching:**
-          - Graduate-level courses and summer schools abroad (Gabon, Vietnam).
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 not-prose my-6 text-left">
 
-        ### Pedagogical Responsibilities
-        - **Head of Licences Professionnelles (IUT de Bordeaux, 2007–2014):**
-          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
-          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
-        - Coordinator for further education / graduate studies placement (2017–2025) for the Computer Science Department.
-        - Active member of university pedagogical committees and exam boards.
+          <!-- Col 1: Main Teaching Domains & Programs -->
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
+                <span class="w-2.5 h-2.5 rounded-full bg-primary-500"></span>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Main Teaching Domains & Programs</h3>
+              </div>
 
-        <div style="margin-top: 1.5rem; text-align: left;">
-          <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
-            <span>Browse Course Materials & Lecture Notes</span>
-            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-          </a>
+              <div class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white mb-1.5 flex items-center gap-1.5">
+                    <span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300">IUT de Bordeaux</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400">Computer Science Dept. / BUT</span>
+                  </h4>
+                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
+                    <li>Operating systems, computer networks, computer architecture, and systems programming.</li>
+                    <li>Cryptography and security fundamentals.</li>
+                    <li>DevOps (virtualization and CI/CD automation).</li>
+                    <li>Unsupervised machine learning in the context of the <strong>DU IA</strong> (<em>Diplôme d'Université Intelligence Artificielle</em>).</li>
+                    <li><strong>SAE</strong> (<em>Situations d'Apprentissage et d'Évaluation</em>): Project-based learning, problem-solving, and software engineering.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white mb-1.5 flex items-center gap-1.5">
+                    <span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300">Enseirb-Matmeca & Master</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400">Computer Science</span>
+                  </h4>
+                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
+                    <li>Numerical algorithms.</li>
+                    <li>High-Performance Computing (HPC), parallel & distributed algorithms, and scientific computing.</li>
+                    <li>Cryptography and security.</li>
+                    <li>Introduction to Quantum Computing.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white mb-1.5 flex items-center gap-1.5">
+                    <span class="px-2 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-300">International Teaching</span>
+                  </h4>
+                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
+                    <li>Graduate-level courses and summer schools abroad (Vietnam).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2: Pedagogical Responsibilities -->
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary-500"></span>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Pedagogical Responsibilities</h3>
+              </div>
+
+              <div class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
+                <div class="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 border border-slate-100 dark:border-slate-800">
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Head of Licences Professionnelles</h4>
+                    <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">2007–2014</span>
+                  </div>
+                  <p class="text-xs text-primary-600 dark:text-primary-400 font-medium mb-2">IUT de Bordeaux</p>
+                  <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-1 text-gray-600 dark:text-gray-300">
+                    <li><strong>DAGPI</strong> (<em>Développement d'Applications et Gestion de Projet Informatique</em>).</li>
+                    <li><strong>DAWIN</strong> (<em>Développement d'Applications Web et Images Numériques</em>).</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 border border-slate-100 dark:border-slate-800">
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Graduate Studies Placement Coordinator</h4>
+                    <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">2017–2025</span>
+                  </div>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">Coordinator for further education and graduate studies placement for the Computer Science Department.</p>
+                </div>
+
+                <div class="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 border border-slate-100 dark:border-slate-800">
+                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-1">Academic Committees</h4>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">Active member of university pedagogical committees and exam boards.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+              <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
+                <span>Browse Course Materials & Lecture Notes</span>
+                <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+          </div>
+
         </div>
     design:
       wide: true
