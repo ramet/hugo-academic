@@ -255,7 +255,11 @@
             {{ $button_scheme := (urls.Parse $button_link).Scheme }}
             {{ if not $button_scheme }}
               {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
+                {{ if or (ne (path.Ext $button_link) "") (hasPrefix $button_link "/files/") (hasPrefix $button_link "files/") (hasPrefix $button_link "/bib/") (hasPrefix $button_link "bib/") }}
+                  {{ $button_link = $button_link | relURL }}
+                {{ else }}
+                  {{ $button_link = $button_link | relLangURL }}
+                {{ end }}
               {{ end }}
               {{ if eq (path.Ext $button_link) ".pdf" }}{{ $button_target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
             {{ else if in (slice "http" "https") $button_scheme }}
@@ -378,7 +382,11 @@
             {{ $button_scheme := (urls.Parse $button_link).Scheme }}
             {{ if not $button_scheme }}
               {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
+                {{ if or (ne (path.Ext $button_link) "") (hasPrefix $button_link "/files/") (hasPrefix $button_link "files/") (hasPrefix $button_link "/bib/") (hasPrefix $button_link "bib/") }}
+                  {{ $button_link = $button_link | relURL }}
+                {{ else }}
+                  {{ $button_link = $button_link | relLangURL }}
+                {{ end }}
               {{ end }}
               {{ if eq (path.Ext $button_link) ".pdf" }}{{ $button_target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
             {{ else if in (slice "http" "https") $button_scheme }}

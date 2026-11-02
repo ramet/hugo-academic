@@ -340,16 +340,19 @@
   {{ if eq (printf "%T" $archive_link_raw) "string" }}
     {{ $archive_link = strings.TrimSpace $archive_link_raw }}
   {{ end }}
-  {{ if not $archive_link }}
-    {{ $archive_link = $archive_page.RelPermalink }}
-  {{ end }}
   {{ if $archive_link }}
     {{ $scheme := (urls.Parse $archive_link).Scheme }}
     {{ if not $scheme }}
       {{ if not (hasPrefix $archive_link "#") }}
-        {{ $archive_link = $archive_link | relLangURL }}
+        {{ if or (ne (path.Ext $archive_link) "") (hasPrefix $archive_link "/files/") (hasPrefix $archive_link "files/") (hasPrefix $archive_link "/bib/") (hasPrefix $archive_link "bib/") }}
+          {{ $archive_link = $archive_link | relURL }}
+        {{ else }}
+          {{ $archive_link = $archive_link | relLangURL }}
+        {{ end }}
       {{ end }}
     {{ end }}
+  {{ else if $archive_page }}
+    {{ $archive_link = $archive_page.RelPermalink }}
   {{ end }}
 
   {{/* Localisation */}}

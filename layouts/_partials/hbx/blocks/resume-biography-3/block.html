@@ -265,7 +265,11 @@
                   {{ $target := "" }}
                   {{ if not $scheme }}
                     {{ if not (hasPrefix $link "#") }}
-                      {{ $link = $link | relLangURL }}
+                      {{ if or (ne (path.Ext $link) "") (hasPrefix $link "/files/") (hasPrefix $link "files/") (hasPrefix $link "/bib/") (hasPrefix $link "bib/") }}
+                        {{ $link = $link | relURL }}
+                      {{ else }}
+                        {{ $link = $link | relLangURL }}
+                      {{ end }}
                     {{ end }}
                     {{ if eq (path.Ext $link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
                   {{ else if in (slice "http" "https") $scheme }}
@@ -316,7 +320,11 @@
             {{ $target := "" }}
             {{ if not $scheme }}
               {{ if not (hasPrefix $linkUrl "#") }}
-                {{ $linkUrl = $linkUrl | relLangURL }}
+                {{ if or (ne (path.Ext $linkUrl) "") (hasPrefix $linkUrl "/files/") (hasPrefix $linkUrl "files/") (hasPrefix $linkUrl "/bib/") (hasPrefix $linkUrl "bib/") }}
+                  {{ $linkUrl = $linkUrl | relURL }}
+                {{ else }}
+                  {{ $linkUrl = $linkUrl | relLangURL }}
+                {{ end }}
               {{ end }}
               {{ if eq (path.Ext $linkUrl) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
             {{ else if in (slice "http" "https") $scheme }}
@@ -391,7 +399,11 @@
                 {{ $target := "" }}
                 {{ if not $scheme }}
                   {{ if not (hasPrefix $btn_link "#") }}
-                    {{ $btn_link = $btn_link | relLangURL }}
+                    {{ if or (ne (path.Ext $btn_link) "") (hasPrefix $btn_link "/files/") (hasPrefix $btn_link "files/") (hasPrefix $btn_link "/bib/") (hasPrefix $btn_link "bib/") }}
+                      {{ $btn_link = $btn_link | relURL }}
+                    {{ else }}
+                      {{ $btn_link = $btn_link | relLangURL }}
+                    {{ end }}
                   {{ end }}
                   {{ if eq (path.Ext $btn_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
                 {{ else if in (slice "http" "https") $scheme }}
@@ -420,7 +432,11 @@
               {{ $target := "" }}
               {{ if not $scheme }}
                 {{ if not (hasPrefix $button_link "#") }}
-                  {{ $button_link = $button_link | relLangURL }}
+                  {{ if or (ne (path.Ext $button_link) "") (hasPrefix $button_link "/files/") (hasPrefix $button_link "files/") (hasPrefix $button_link "/bib/") (hasPrefix $button_link "bib/") }}
+                    {{ $button_link = $button_link | relURL }}
+                  {{ else }}
+                    {{ $button_link = $button_link | relLangURL }}
+                  {{ end }}
                 {{ end }}
                 {{ if eq (path.Ext $button_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
               {{ else if in (slice "http" "https") $scheme }}
