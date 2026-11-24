@@ -53,7 +53,7 @@ sections:
           badge: 'Réordonnancement de graphe • Optimisation TSP'
           description: 'Réordonnancement des inconnues au sein des supernœuds via une formulation de voyageur de commerce pour maximiser la compressibilité en rang faible et l’efficacité des calculs.'
           image: 'img/symbol_reordering.png'
-          link: 'https://hal.inria.fr/hal-01485507v1'
+          link: 'https://hal.science/hal-01485507'
           button_text: 'Consulter l’article'
 
   - block: resume-experience
@@ -73,56 +73,12 @@ sections:
 
         Il anime l’équipe chargée du développement de **[PaStiX](https://gitlab.inria.fr/solverstack/pastix)**, un solveur direct creux haute performance. Il est membre de l’équipe de recherche **[TOPAL](https://team.inria.fr/topal)** (*Tools and Optimization for High-Performance Applications and Learning*).
 
-  - block: markdown
+  - block: teaching
     id: teaching
     content:
       title: '🎓 Enseignement & Responsabilités académiques'
       subtitle: 'Formation en informatique & encadrement pédagogique'
-      text: |-
-        Pierre Ramet exerce une activité d'enseignement à l’**Université de Bordeaux**, assurant environ 300 heures (HETD) chaque année au sein de formations de premier cycle, de master et d’écoles d’ingénieurs.
-
-        ### Principaux domaines et filières d'enseignement
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-4">
-        <div>
-
-        - **IUT de Bordeaux (Dép. Informatique / BUT Informatique) :**
-          - Systèmes d'exploitation, réseaux informatiques, architecture des ordinateurs et programmation système.
-          - Fondements de la cryptographie et de la sécurité.
-          - DevOps (virtualisation et automatisation CI/CD).
-          - Apprentissage automatique non supervisé dans le cadre du **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation*) : Pédagogie par projet, résolution de problèmes et génie logiciel.
-
-        </div>
-        <div>
-
-        - **Enseirb-Matmeca & Master Informatique :**
-          - Algorithmique numérique.
-          - Calcul Haute Performance (HPC), algorithmes parallèles & distribués, et calcul scientifique.
-          - Cryptographie et sécurité.
-          - Introduction au calcul quantique.
-        - **Enseignement à l'international :**
-          - Cours de niveau master et écoles d'été à l'étranger (Vietnam).
-
-        </div>
-        </div>
-
-        <div class="mt-4 mb-8 flex justify-center">
-          <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
-            <span>Consulter les supports de cours & notes d'enseignement</span>
-            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-          </a>
-        </div>
-
-        ### Responsabilités pédagogiques
-
-        - **Responsable de Licences Professionnelles (IUT de Bordeaux, 2007–2014) :**
-          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
-          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
-        - **Coordinateur des poursuites d'études (2017–2025)** pour le département Informatique.
-        - **Membre actif** des commissions pédagogiques et jurys d'examens universitaires.
-    design:
-      wide: true
+      portal_url: 'https://ramet.gitlab.io/'
 
   - block: collection
     id: papers
@@ -133,7 +89,7 @@ sections:
         Les publications récentes sont également accessibles sur **[HAL](https://cv.hal.science/pierre-ramet)**, et la bibliographie complète peut être consultée dans les **[Archives BibTeX (bibtex2html)](/bib/)**.
 
         <div class="flex flex-wrap gap-2.5 mt-3 mb-4">
-          <a href="/publications/" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 text-xs font-semibold border border-neutral-300 dark:border-neutral-700 transition-colors">
+          <a href="/fr/publications/" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 text-xs font-semibold border border-neutral-300 dark:border-neutral-700 transition-colors">
             <span>📚 Toutes les publications</span>
           </a>
           <a href="https://cv.hal.science/pierre-ramet" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 text-xs font-semibold border border-neutral-300 dark:border-neutral-700 transition-colors">

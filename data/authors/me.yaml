@@ -38,12 +38,6 @@ links:
   - icon: brands/docker
     url: https://hub.docker.com/u/tthor
     label: Docker
-  - icon: academicons/cv
-    url: /files/cv.pdf
-    label: CV (English)
-  - icon: academicons/cv
-    url: /files/cv-fr.pdf
-    label: CV (Français)
 
 interests:
   - High-Performance Computing
@@ -84,7 +78,7 @@ experience:
     summary: "Head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) department"
   - role: Scientific Advisor
     org: CEA (French Atomic Energy Commission)
-    org_url: http://www.cea.fr/
+    org_url: https://www.cea.fr/
     start: "2015-01-01"
     end: ""
     summary: "Scientific advisor in the field of high-performance computing for numerical simulations"
@@ -96,7 +90,7 @@ experience:
     summary: "Deputy head of the SATANAS (Supports and Algorithms for High Performance Numerical Applications) department"
   - role: Scientific Expert
     org: GENCI (French National High-Performance Computing Agency)
-    org_url: http://www.genci.fr/
+    org_url: https://www.genci.fr/
     start: "2008-01-01"
     end: "2016-01-01"
     summary: "Scientific expert on the Mathematics and Computer Science evaluation board"

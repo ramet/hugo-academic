@@ -1,0 +1,261 @@
+{{/* Hugo Blox: Teaching & Academic Responsibilities Block */}}
+{{/* Modern responsive cards + prominent Course Portal CTA */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+
+{{ $isFR := eq site.Language.Lang "fr" }}
+
+{{ $title := "" }}
+{{ with index $content "title" }}{{ $title = printf "%v" . | emojify | $page.RenderString }}{{ end }}
+{{ $subtitle := "" }}
+{{ with index $content "subtitle" }}{{ $subtitle = printf "%v" . | emojify | $page.RenderString }}{{ end }}
+{{ $portalUrl := index $content "portal_url" | default "https://ramet.gitlab.io/" }}
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+  {{/* Section Header */}}
+  <div class="text-center max-w-3xl mx-auto mb-8">
+    {{ with $title }}
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+      {{ . }}
+    </h2>
+    {{ end }}
+    {{ with $subtitle }}
+    <p class="mt-2 text-lg font-medium text-primary-600 dark:text-primary-400">
+      {{ . }}
+    </p>
+    {{ end }}
+    <p class="mt-4 text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+      {{ if $isFR }}
+        Activité d'enseignement à l’<strong class="text-gray-900 dark:text-white">Université de Bordeaux</strong> (~300 heures HETD par an) au sein des formations de premier cycle (BUT, DU), de master et d’écoles d’ingénieurs.
+      {{ else }}
+        Extensive teaching activity at <strong class="text-gray-900 dark:text-white">Bordeaux University</strong> (~300 hours HETD per year) across undergraduate (BUT, DU), graduate, and engineering curricula.
+      {{ end }}
+    </p>
+  </div>
+
+  {{/* Prominent Course Portal Hero CTA */}}
+  <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-800 dark:from-primary-700 dark:via-primary-800 dark:to-slate-900 p-6 sm:p-8 lg:p-10 mb-10 shadow-xl ring-1 ring-primary-500/30">
+    <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-20 -left-16 h-64 w-64 rounded-full bg-indigo-400/20 blur-3xl"></div>
+
+    <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div class="flex items-start gap-4 sm:gap-5 max-w-2xl">
+        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/25 flex items-center justify-center text-white shadow-inner">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/15 text-white border border-white/20 mb-2">
+            {{ cond $isFR "Ressources pédagogiques en ligne" "Online Teaching Portal" }}
+          </span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+            {{ cond $isFR "Portail de cours & supports d'enseignement" "Course Portal & Lecture Notes" }}
+          </h3>
+          <p class="mt-2 text-sm sm:text-base text-primary-100 leading-relaxed">
+            {{ cond $isFR "Accédez à l'ensemble des supports de cours, sujets de TD/TP, projets SAE et ressources pour le BUT Informatique, le DU IA, l'Enseirb-Matmeca et le Master." "Access lecture slides, lab assignments, project materials, and course notes for BUT Computer Science, DU AI, Enseirb-Matmeca, and Master programs." }}
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-auto flex-shrink-0">
+        <a
+          href="{{ $portalUrl | safeURL }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full lg:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-white text-primary-700 hover:bg-primary-50 active:scale-[0.98] font-bold text-base shadow-lg hover:shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
+        >
+          <span>{{ cond $isFR "Ouvrir le portail de cours" "Open Course Portal" }}</span>
+          <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {{/* Main Teaching Domains & Programs */}}
+  <div class="mb-10">
+    <h3 class="text-base font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-5 flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-primary-500"></span>
+      {{ cond $isFR "Principaux domaines et filières d'enseignement" "Main Teaching Domains & Programs" }}
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      {{/* Card 1: IUT de Bordeaux */}}
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all flex flex-col">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-950/60 text-primary-600 dark:text-primary-400 flex items-center justify-center flex-shrink-0 border border-primary-100 dark:border-primary-900">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 dark:text-white leading-snug">IUT de Bordeaux</h4>
+              <p class="text-sm font-medium text-primary-600 dark:text-primary-400">{{ cond $isFR "Dép. Informatique • BUT Informatique & DU IA" "Computer Science Dept. • BUT & DU AI" }}</p>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-50 text-primary-700 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800 flex-shrink-0">
+            {{ cond $isFR "1er cycle & DU" "Undergraduate" }}
+          </span>
+        </div>
+
+        <ul class="space-y-2.5 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></span>
+            <span>{{ cond $isFR "Systèmes d'exploitation, réseaux informatiques, architecture des ordinateurs et programmation système." "Operating systems, computer networks, computer architecture, and systems programming." }}</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></span>
+            <span>{{ cond $isFR "Fondements de la cryptographie et de la sécurité." "Cryptography and security fundamentals." }}</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></span>
+            <span>{{ cond $isFR "DevOps (virtualisation et automatisation CI/CD)." "DevOps (virtualization and CI/CD automation)." }}</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></span>
+            <span>
+              {{ if $isFR }}
+                Apprentissage automatique non supervisé dans le cadre du <strong class="text-gray-900 dark:text-white">DU IA</strong> (<em>Diplôme d'Université Intelligence Artificielle</em>).
+              {{ else }}
+                Unsupervised machine learning in the context of the <strong class="text-gray-900 dark:text-white">DU IA</strong> (<em>Diplôme d'Université Intelligence Artificielle</em>).
+              {{ end }}
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></span>
+            <span>
+              {{ if $isFR }}
+                <strong class="text-gray-900 dark:text-white">SAE</strong> (<em>Situations d'Apprentissage et d'Évaluation</em>) : pédagogie par projet, résolution de problèmes et génie logiciel.
+              {{ else }}
+                <strong class="text-gray-900 dark:text-white">SAE</strong> (<em>Situations d'Apprentissage et d'Évaluation</em>): project-based learning, problem-solving, and software engineering.
+              {{ end }}
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      {{/* Card 2: Enseirb-Matmeca & Master + International */}}
+      <div class="flex flex-col gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all flex-1">
+          <div class="flex items-start justify-between gap-3 mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 border border-indigo-100 dark:border-indigo-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white leading-snug">{{ cond $isFR "Enseirb-Matmeca & Master Informatique" "Enseirb-Matmeca & Master in CS" }}</h4>
+                <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">{{ cond $isFR "École d'ingénieurs & Master" "Engineering School & Graduate" }}</p>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 dark:bg-indigo-950/70 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 flex-shrink-0">
+              {{ cond $isFR "Master & Ingénieur" "Graduate" }}
+            </span>
+          </div>
+
+          <ul class="space-y-2.5 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+              <span>{{ cond $isFR "Algorithmique numérique." "Numerical algorithms." }}</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+              <span>{{ cond $isFR "Calcul Haute Performance (HPC), algorithmes parallèles & distribués, et calcul scientifique." "High-Performance Computing (HPC), parallel & distributed algorithms, and scientific computing." }}</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+              <span>{{ cond $isFR "Cryptographie et sécurité." "Cryptography and security." }}</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+              <span>{{ cond $isFR "Introduction au calcul quantique." "Introduction to Quantum Computing." }}</span>
+            </li>
+          </ul>
+        </div>
+
+        {{/* International Teaching Card */}}
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-100 dark:border-emerald-900">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-gray-900 dark:text-white">{{ cond $isFR "Enseignement à l'international" "International Teaching" }}</h4>
+              <p class="mt-1 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                {{ cond $isFR "Cours de niveau master et écoles d'été à l'étranger (Vietnam)." "Graduate-level courses and summer schools abroad (Vietnam)." }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {{/* Pedagogical Responsibilities */}}
+  <div>
+    <h3 class="text-base font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-5 flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+      {{ cond $isFR "Responsabilités pédagogiques" "Pedagogical Responsibilities" }}
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      {{/* Licences Pro */}}
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="font-bold text-gray-900 dark:text-white text-base">{{ cond $isFR "Licences Professionnelles" "Vocational Bachelor Degrees" }}</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700 flex-shrink-0">2007 – 2014</span>
+          </div>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Responsable • IUT de Bordeaux" "Head of Programs • IUT de Bordeaux" }}</p>
+          <ul class="space-y-1.5 text-sm text-gray-600 dark:text-gray-300">
+            <li><strong class="text-gray-900 dark:text-white">DAGPI</strong> : <em>Développement d'Applications et Gestion de Projet Informatique</em>.</li>
+            <li><strong class="text-gray-900 dark:text-white">DAWIN</strong> : <em>Développement d'Applications Web et Images Numériques</em>.</li>
+          </ul>
+        </div>
+      </div>
+
+      {{/* Poursuites d'études */}}
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="font-bold text-gray-900 dark:text-white text-base">{{ cond $isFR "Poursuites d'études" "Graduate Placement" }}</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700 flex-shrink-0">2017 – 2025</span>
+          </div>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Coordinateur • Dép. Informatique" "Coordinator • CS Department" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            {{ cond $isFR "Accompagnement et coordination des poursuites d'études vers les écoles d'ingénieurs et masters pour les étudiants du département Informatique." "Coordination and advising for further education and graduate studies placement for Computer Science Department students." }}
+          </p>
+        </div>
+      </div>
+
+      {{/* Commissions & jurys */}}
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="font-bold text-gray-900 dark:text-white text-base">{{ cond $isFR "Commissions & Jurys" "Committees & Boards" }}</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-950/70 dark:text-primary-300 border border-primary-200 dark:border-primary-800 flex-shrink-0">{{ cond $isFR "Actif" "Active" }}</span>
+          </div>
+          <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Université de Bordeaux" "Bordeaux University" }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            {{ cond $isFR "Membre actif des commissions pédagogiques, jurys d'examens et instances universitaires." "Active member of university pedagogical committees and examination boards." }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

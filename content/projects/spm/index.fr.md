@@ -8,7 +8,6 @@ tags:
 - SolverStack
 date: "2024-07-09"
 
-# Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
@@ -29,105 +28,91 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
 slides: ""
 ---
 
-# SPM: SParse Matrix package
+# SPM : SParse Matrix package
 
-[![pipeline status](https://gitlab.inria.fr/solverstack/spm/badges/master/pipeline.svg)](https://gitlab.inria.fr/solverstack/spm/pipelines) [![coverage report](https://gitlab.inria.fr/solverstack/spm/badges/master/coverage.svg)](https://sonarqube.inria.fr/sonarqube/dashboard?id=hiepacs%3Aspm%3Agitlab%3Amaster)[![coverity report](https://scan.coverity.com/projects/20444/badge.svg)](https://scan.coverity.com/projects/spm)
+[![pipeline status](https://gitlab.inria.fr/solverstack/spm/badges/master/pipeline.svg)](https://gitlab.inria.fr/solverstack/spm/pipelines) [![coverage report](https://gitlab.inria.fr/solverstack/spm/badges/master/coverage.svg)](https://sonarqube.inria.fr/sonarqube/dashboard?id=hiepacs%3Aspm%3Agitlab%3Amaster) [![coverity report](https://scan.coverity.com/projects/20444/badge.svg)](https://scan.coverity.com/projects/spm)
 
-SPM (SParse Matrix package) is a scientific library that provides
-comprehensive basic routines to manipulate sparse matrices in CSC, CSR,
-and IJV formats.
-The functionalities covered are:
+SPM (*SParse Matrix package*) est une bibliothèque scientifique fournissant un ensemble complet de routines de base pour manipuler des matrices creuses aux formats CSC, CSR et IJV.
+Les fonctionnalités couvertes comprennent :
 
- * Sparse matrix -by- dense matrix products
- * Sparse matrix -by- vector products
- * Norm computations
- * Matrix and vector scaling
- * Sort functions
- * Graph symmetrization and merge of duplicate entries
- * Random generators for right-hand sides
- * Verification routines for linear solvers
- * In-place format conversion routines
- * Drivers to read matrices from files (MatrixMarket, Harwell-Boeing/RSA, IJV, ...)
- * Laplacian generators for stencils
- * Multi-DOF and variadic DOF support
+* Produits matrice creuse par matrice dense
+* Produits matrice creuse par vecteur
+* Calculs de normes
+* Mise à l'échelle de matrices et de vecteurs
+* Fonctions de tri
+* Symétrisation de graphes et fusion des entrées dupliquées
+* Générateurs aléatoires de seconds membres
+* Routines de vérification pour solveurs linéaires
+* Routines de conversion de format en place
+* Lecteurs de fichiers matriciels (MatrixMarket, Harwell-Boeing/RSA, IJV, …)
+* Générateurs de Laplaciens sur grilles
+* Support multi-DOF et DOF variadique
 
-Python, Julia, and Fortran 90 wrappers are included in the package.
+Des interfaces Python, Julia et Fortran 90 sont incluses dans le paquetage.
 
-*Warning*: This package does not currently aim for peak performance,
-but rather provides a portable API and a simple interface to manipulate
-sparse matrices in both shared and distributed memory. This is conceptually
-similar to what was proposed in the [GNU Scientific Library (GSL) Sparse Matrix](https://www.gnu.org/software/gsl/doc/html/spmatrix.html)
-module for shared memory.
+*Attention :* ce paquetage ne vise pas la performance de crête mais propose une API portable et simple pour manipuler des matrices creuses en mémoire partagée et distribuée, dans un esprit comparable au module [GNU Scientific Library (GSL) Sparse Matrix](https://www.gnu.org/software/gsl/doc/html/spmatrix.html) pour la mémoire partagée.
 
-## Get SPM
+## Obtenir SPM
 
-The latest official release is **v1.2.4** (July 2024). All releases, source tarballs, and changelogs are available on [GitLab Releases](https://gitlab.inria.fr/solverstack/spm/-/releases).
+La dernière version officielle est la **v1.2.4** (juillet 2024). Toutes les versions, archives sources et journaux de modifications sont disponibles sur [GitLab Releases](https://gitlab.inria.fr/solverstack/spm/-/releases).
 
-To use the latest development version of SPM, please clone the master
-branch. Note that SPM contains the **morse_cmake** `git submodule`.
-To obtain the source code, please use the following commands:
+Pour utiliser la dernière version de développement de SPM, clonez la branche `master` avec le sous-module Git **morse_cmake** :
 
 ```bash
-# Clone with submodules
+# Cloner avec les sous-modules
 git clone --recursive https://gitlab.inria.fr/solverstack/spm.git
 cd spm
 ```
 
 ## Documentation
 
-The latest Doxygen documentation is available [here](https://solverstack.gitlabpages.inria.fr/spm).
+La documentation Doxygen à jour est disponible [ici](https://solverstack.gitlabpages.inria.fr/spm).
 
-The main functionalities are listed [here](https://solverstack.gitlabpages.inria.fr/spm/group__spm.html).
+Les principales fonctionnalités sont listées [ici](https://solverstack.gitlabpages.inria.fr/spm/group__spm.html).
 
 ## Installation
 
-### Build and install with CMake
+### Compilation et installation avec CMake
 
-SPM can be built using [CMake](https://cmake.org/). The build requires several
-library dependencies to be installed on the system:
+SPM se compile avec [CMake](https://cmake.org/) et nécessite :
 
-* BLAS (MKL, OpenBLAS, ...) and CBLAS (sequential version required)
-* LAPACK and LAPACKE
-* Python and Fortran compiler for wrappers and examples (optional)
+* BLAS (MKL, OpenBLAS, …) et CBLAS (version séquentielle requise)
+* LAPACK et LAPACKE
+* Python et compilateur Fortran pour les interfaces et exemples (optionnel)
 
-For instance, on Debian-like systems, dependencies can be installed with the following command:
+Sur les systèmes Debian/Ubuntu, les dépendances peuvent être installées via :
 
-      sudo apt-get install cmake gcc gfortran libopenblas-dev liblapacke-dev python-numpy
+```bash
+sudo apt-get install cmake gcc gfortran libopenblas-dev liblapacke-dev python3-numpy
+```
 
-The main options to configure the SPM build are:
+Principales options de configuration CMake :
 
-* Standard CMake options:
-  * `CMAKE_BUILD_TYPE`: Debug, RelWithDebInfo, Release, MinSizeRel; we recommend using `Release` or `RelWithDebInfo` for best performance.
-  * `CMAKE_INSTALL_PREFIX`: Specify the prefix directory to install the library.
-  * `BUILD_SHARED_LIBS=[OFF]`: Enable building shared libraries (required for the Python wrapper).
-* Integer type:
-  * `SPM_INT64[=ON]`: Enable/disable int64_t for integer arrays.
-* Documentation:
-  * `BUILD_DOCUMENTATION[=OFF]`: Enable Doxygen documentation generation.
+* Options CMake standard :
+  * `CMAKE_BUILD_TYPE` : `Debug`, `RelWithDebInfo`, `Release`, `MinSizeRel` (`Release` ou `RelWithDebInfo` recommandé).
+  * `CMAKE_INSTALL_PREFIX` : répertoire d'installation.
+  * `BUILD_SHARED_LIBS=[OFF]` : activer la construction des bibliothèques partagées (requis pour l'interface Python).
+* Type d'entiers :
+  * `SPM_INT64[=ON]` : activer/désactiver `int64_t` pour les tableaux d'entiers.
+* Documentation :
+  * `BUILD_DOCUMENTATION[=OFF]` : activer la génération de la documentation Doxygen.
 
-## Get involved!
+## Participer
 
-### Reporting an issue
+### Signaler un problème
 
-We strongly recommend all users to use the issue tracker to report any
-problems with the software, or to submit feature requests. We will do
-our best to answer them in a timely manner.
+Nous encourageons les utilisateurs à utiliser le gestionnaire de tickets pour signaler tout problème ou proposer des fonctionnalités.
 
 ### Contributions
 
 <https://gitlab.inria.fr/solverstack/spm/blob/master/CONTRIBUTING.md>
 
-## Authors
+## Auteurs
 
-The following people contribute or contributed to the development of SPM:
+Les personnes suivantes contribuent ou ont contribué au développement de SPM :
 
 * Mathieu Faverge
 * Matthieu Kuhn
@@ -136,11 +121,11 @@ The following people contribute or contributed to the development of SPM:
 * Grégoire Pichon
 * Florent Pruvost
 * Pierre Ramet
-* Theophile Terraz
+* Théophile Terraz
 * Tony Delarue
 
-If we missed your name, please let us know so we can update the list.
+Si votre nom a été oublié, n'hésitez pas à nous le signaler afin que nous mettions la liste à jour.
 
-## License
+## Licence
 
 <https://gitlab.inria.fr/solverstack/spm/blob/master/LICENSE>

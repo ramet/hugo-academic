@@ -131,9 +131,9 @@ hugoblox:
     # For local_business identity type only
     location:
       address:
-        street: "351 cours de la Liberation"
+        street: "351 cours de la Libération"
         city: "Talence"
-        region: "Aquitaine"
+        region: "Nouvelle-Aquitaine"
         postal_code: "33405"
         country: "France"
       coordinates:
@@ -145,7 +145,7 @@ hugoblox:
       allow:
         - /
       disallow: []
-      note: "Guidance for AI crawlers - customize to match your public content."
+      note: "Academic homepage of Pierre Ramet, Full Professor of Computer Science at Bordeaux University and Inria."
       contact: "pierre.ramet@u-bordeaux.fr"
 
   # ────────────────────────────────────────────────────────────────────────────

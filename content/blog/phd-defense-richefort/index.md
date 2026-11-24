@@ -1,7 +1,7 @@
 ---
-title: "Soutenance de thèse : Clément Richefort"
+title: "PhD Defense: Clément Richefort"
 subtitle: "Algebraic multigrid solver for the indefinite Helmholtz equation"
-summary: "Soutenance de la thèse de doctorat de Clément Richefort à l'Université de Bordeaux / LaBRI (bourse CEA)."
+summary: "PhD thesis defense of Clément Richefort at Bordeaux University / LaBRI (CEA grant)."
 authors: [me]
 tags: [PhD, Multigrid, Helmholtz, Linear Algebra]
 categories: [PhD Advising]
@@ -16,13 +16,13 @@ image:
 projects: [pastix]
 ---
 
-**Clément Richefort** a soutenu sa thèse de doctorat en informatique le 28 novembre 2024 à l'Université de Bordeaux (LaBRI).
+**Clément Richefort** successfully defended his PhD thesis in Computer Science on November 28, 2024, at Bordeaux University (LaBRI).
 
-- **Titre :** *Development of an algebraic multigrid solver for the indefinite Helmholtz equation*
-- **Direction :** Pierre Ramet (directeur de thèse, encadrement 100%)
-- **Financement :** Bourse CEA
-- **Établissement :** Université de Bordeaux / LaBRI
+- **Title:** *Development of an algebraic multigrid solver for the indefinite Helmholtz equation*
+- **Supervision:** Pierre Ramet (PhD advisor, 100% supervision)
+- **Funding:** CEA grant
+- **Institution:** Bordeaux University / LaBRI
 
-Ses recherches ont porté sur la conception et l'évaluation de méthodes multigrilles algébriques (AMG) adaptées à l'équation de Helmholtz indéfinie, ainsi que sur l'apport de l'arithmétique en précision mixte pour accélérer la résolution de grands systèmes linéaires creux issus de la simulation numérique.
+His research focused on designing and evaluating algebraic multigrid (AMG) methods tailored to the indefinite Helmholtz equation, as well as leveraging mixed-precision arithmetic to accelerate the solution of large sparse linear systems arising from numerical simulations.
 
-Clément Richefort est actuellement chercheur post-doctorant au **Jülich Supercomputing Centre** (JSC, Allemagne).
+Clément Richefort is currently a Postdoctoral Researcher at the **Jülich Supercomputing Centre** (JSC, Germany).
