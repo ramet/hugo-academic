@@ -45,7 +45,7 @@ experience:
     summary: "Responsable du département SATANAS (Supports et Algorithmes pour les Applications Numériques Haute Performance)"
   - role: Conseiller scientifique
     org: CEA (Commissariat à l'Énergie Atomique et aux Énergies Alternatives)
-    org_url: http://www.cea.fr/
+    org_url: https://www.cea.fr/
     start: "2015-01-01"
     end: ""
     summary: "Conseiller scientifique dans le domaine du calcul haute performance pour la simulation numérique"
@@ -57,7 +57,7 @@ experience:
     summary: "Responsable adjoint du département SATANAS (Supports et Algorithmes pour les Applications Numériques Haute Performance)"
   - role: Expert scientifique
     org: GENCI (Grand Équipement National de Calcul Intensif)
-    org_url: http://www.genci.fr/
+    org_url: https://www.genci.fr/
     start: "2008-01-01"
     end: "2016-01-01"
     summary: "Expert scientifique au sein du comité d'évaluation Mathématiques et Informatique"

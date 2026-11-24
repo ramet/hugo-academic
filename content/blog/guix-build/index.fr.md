@@ -1,9 +1,7 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
-title: "Build PaStiX with Guix-HPC"
+title: "Compiler PaStiX avec Guix-HPC"
 subtitle: ""
-summary: "See [Gitlab Inria](https://gitlab.inria.fr/guix-hpc/guix-hpc)"
+summary: "Voir [GitLab Inria](https://gitlab.inria.fr/guix-hpc/guix-hpc)"
 authors: [me]
 tags: [Guix]
 categories: []
@@ -12,57 +10,42 @@ lastmod: 2019-11-16T13:49:56+01:00
 featured: false
 draft: false
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: "[guix-hpc/guix-hpc](https://gitlab.inria.fr/guix-hpc/guix-hpc)"
   focal_point: ""
   preview_only: false
 
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
 projects: [pastix]
 ---
 
-## How to build PaStiX
+## Comment compiler PaStiX
 
-The package definitions in the *Guix-HPC* repository _extend_ [those provided with
-Guix](https://gnu.org/s/guix/packages). To make them available to
-`guix` command-line tools, create the `~/.config/guix/channels.scm` file
-with the following snippet to configure the `guix-hpc` _channel_:
+Les définitions de paquets du dépôt *Guix-HPC* _étendent_ [celles fournies par Guix](https://gnu.org/s/guix/packages). Pour les rendre accessibles aux outils en ligne de commande `guix`, créez le fichier `~/.config/guix/channels.scm` avec l'extrait suivant afin de configurer le _canal_ `guix-hpc` :
 
-```
+```scheme
 (cons (channel
         (name 'guix-hpc)
         (url "https://gitlab.inria.fr/guix-hpc/guix-hpc.git"))
       %default-channels)
 ```
 
-That way, `guix pull` will systematically update not only Guix, but also
-Guix-HPC.
+Ainsi, `guix pull` mettra systématiquement à jour non seulement Guix, mais aussi Guix-HPC :
 
-```
+```bash
 guix package -u pastix
 ```
 
-## Hacking on Guix-HPC
+## Contribuer à Guix-HPC
 
-When working on packages of the `guix-hpc` channel, you'll need to clone
-the `guix-hpc` repository:
+Pour travailler sur les paquets du canal `guix-hpc`, clonez le dépôt `guix-hpc` :
 
-```
+```bash
 cd src
 git clone https://gitlab.inria.fr/guix-hpc/guix-hpc.git
 ```
 
-From then on, you can edit package definitions, and then try them out by
-passing the location of the checkout using the `-L` flag to `guix build`
-and other command-line tools, as in this example:
+Vous pouvez ensuite modifier les définitions de paquets et les tester en indiquant le chemin de votre dépôt local via l'option `-L` de `guix build` et des autres commandes Guix :
 
-```
+```bash
 guix build -L ~/src/guix-hpc pastix
 ```

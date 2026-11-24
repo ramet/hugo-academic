@@ -244,7 +244,7 @@
               <span class="font-bold text-gray-900 dark:text-white text-base">SOLSTICE (CIS06)</span>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2006 – 2010</span>
             </div>
-            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Solveurs et simulations en calcul extrême" "SOLvers et SimulaTIons in Extreme Computing" }}</p>
+            <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Solveurs et simulations en calcul extrême" "SOLvers and SimulaTIons in Extreme Computing" }}</p>
             <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Solveurs linéaires parallèles haute performance pour simulations multi-physiques et multi-échelles complexes." "High-performance parallel linear solvers for complex multi-physics and multi-scale grand challenge simulations." }}</p>
           </div>
 
@@ -272,7 +272,7 @@
       <div>
         <h4 class="text-base font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          {{ cond $isFR "Thèses en cours (2)" "Ongoing PhD Theses" }}
+          {{ cond $isFR "Thèses en cours (2)" "Ongoing PhD Theses (2)" }}
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -354,7 +354,7 @@
                   Esragul Korkmaz
                   <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Sep 2022 • 50%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Sept 2022" "Sep 2022" }} • 50%</span>
               </div>
               <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement ANR SASHIMI" "Funded by ANR SASHIMI" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Improving the memory and time overhead of low-rank parallel linear sparse direct solvers"</p>
@@ -392,7 +392,7 @@
                   Salli Moustafa
                   <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Dec 2015 • 50%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Déc 2015" "Dec 2015" }} • 50%</span>
               </div>
               <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Collaboration EDF R&D" "Collaboration with EDF R&D" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Massively Parallel Cartesian Discrete Ordinates Method for Neutron Transport Simulation"</p>
@@ -430,7 +430,7 @@
                   Xavier Lacoste
                   <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Feb 2015 • 80%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Fév 2015" "Feb 2015" }} • 80%</span>
               </div>
               <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement ANR ANEMOS" "Funded by ANR ANEMOS" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Scheduling and memory optimizations for sparse direct solver on multi-core/multi-gpu cluster systems"</p>
@@ -449,7 +449,7 @@
                   Bruno Lathuilière
                   <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Jan 2010 • 80%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Janv 2010" "Jan 2010" }} • 80%</span>
               </div>
               <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Collaboration EDF R&D" "Collaboration with EDF R&D" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Méthode de décomposition de domaine pour les équations du transport simplifié en neutronique"</p>
@@ -468,7 +468,7 @@
                   Mathieu Faverge
                   <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">Dec 2009 • 50%</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">{{ cond $isFR "Déc 2009" "Dec 2009" }} • 50%</span>
               </div>
               <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">{{ cond $isFR "Financement ANR NUMASIS" "Funded by ANR NUMASIS" }}</p>
               <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-2">"Ordonnancement hybride statique-dynamique en algèbre linéaire creuse pour de grands clusters de machines NUMA et multi-coeurs"</p>
@@ -530,7 +530,7 @@
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2006 – 2015</span>
           </div>
           <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Simulations de cœurs nucléaires • Équations de transport 3D" "Nuclear Core Simulations • 3D Transport Equations" }}</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Conception de solveurs parallèles SN cartésiens 3D et méthodes de décomposition de domaine pour les équations simplifiées du transport neutronique dans les cœurs de réacteurs, passant à l'échelle sur des dizaines de milliards d'inconnues." "Design of parallel 3D Cartesian S_N solvers and domain decomposition methods for the simplified transport equations in nuclear reactor cores, scaling to tens of billions of unknowns." }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ if $isFR }}Conception de solveurs parallèles S<sub>N</sub> cartésiens 3D et méthodes de décomposition de domaine pour les équations simplifiées du transport neutronique dans les cœurs de réacteurs, passant à l'échelle sur des dizaines de milliards d'inconnues.{{ else }}Design of parallel 3D Cartesian S<sub>N</sub> solvers and domain decomposition methods for the simplified transport equations in nuclear reactor cores, scaling to tens of billions of unknowns.{{ end }}</p>
         </div>
       </div>
 
@@ -630,7 +630,7 @@
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2015 – 2020</span>
           </div>
           <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Laboratoire commun JLESC & Barcelona Supercomputing Center" "Joint Laboratory for Extreme Scale Computing & Barcelona Supercomputing Center" }}</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Collaboration au sein du JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) avec Guillaume Houzeau sur l'intégration de PaStiX dans la plateforme de simulation multi-physique Alya pour la mécanique des structures." "Collaboration within JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) with Guillaume Houzeau on integrating PaStiX into the Alya multi-physics simulation platform for structural mechanics." }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{{ cond $isFR "Collaboration au sein du JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) avec Guillaume Houzeaux sur l'intégration de PaStiX dans la plateforme de simulation multi-physique Alya pour la mécanique des structures." "Collaboration within JLESC (Inria, UIUC, ANL, BSC, JSC, RIKEN) with Guillaume Houzeaux on integrating PaStiX into the Alya multi-physics simulation platform for structural mechanics." }}</p>
         </div>
       </div>
 
@@ -638,7 +638,7 @@
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-5 hover:border-primary-500/50 dark:hover:border-primary-400/50 hover:shadow-md transition-all flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between gap-2 mb-2">
-            <span class="font-bold text-gray-900 dark:text-white text-base">JAEA (Japan)</span>
+            <span class="font-bold text-gray-900 dark:text-white text-base">{{ cond $isFR "JAEA (Japon)" "JAEA (Japan)" }}</span>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700">2007 – 2008</span>
           </div>
           <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2">{{ cond $isFR "Agence japonaise de l'énergie atomique (JAEA) & IRIT" "Japan Atomic Energy Agency & IRIT" }}</p>

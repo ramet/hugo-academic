@@ -1,7 +1,7 @@
 ---
-title: "Initiative HybQuant : Maison du quantique en Nouvelle-Aquitaine"
+title: "HybQuant Initiative: Quantum Hub in Nouvelle-Aquitaine"
 subtitle: "France Hybrid HPC Quantum Initiative (HQI)"
-summary: "Sélection et montage du projet HybQuant dans le cadre de l'appel national HQI, reliant calcul intensif classique et algorithmes quantiques."
+summary: "Selection and launch of the HybQuant project under the national HQI call, bridging classical high-performance computing and quantum algorithms."
 authors: [me]
 tags: [Quantum Computing, HPC, HQI, Nouvelle-Aquitaine]
 categories: [Research]
@@ -16,11 +16,11 @@ image:
 projects: []
 ---
 
-Le projet de **Maison du quantique en Nouvelle-Aquitaine (HybQuant)** a été retenu dans le cadre de l'appel national **HQI** (*France Hybrid HPC Quantum Initiative*).
+The **Nouvelle-Aquitaine Quantum Hub (HybQuant)** project has been selected under the national **HQI** (*France Hybrid HPC Quantum Initiative*) call.
 
-Pierre Ramet a participé au montage de cette initiative régionale d'envergure et s'investit dans l'organisation scientifique et technologique du projet.
+Pierre Ramet contributed to setting up this major regional initiative and is actively involved in the scientific and technological organization of the project.
 
-**HybQuant** a pour vocation de :
-- Fédérer les acteurs académiques et industriels régionaux autour de l'hybridation entre **calcul haute performance (HPC)** classique et **calcul quantique**.
-- Développer des passerelles logicielles et algorithmiques permettant d'exploiter conjointement les supercalculateurs et les processeurs/émulateurs quantiques (QPU).
-- Former et accompagner la communauté scientifique aux nouveaux paradigmes de programmation et d'algèbre linéaire hybride quantique-classique.
+**HybQuant** aims to:
+- Bring together regional academic and industrial stakeholders around the hybridization of classical **high-performance computing (HPC)** and **quantum computing**.
+- Develop software and algorithmic bridges enabling joint use of supercomputers and quantum processors/emulators (QPUs).
+- Train and support the scientific community in new programming paradigms and hybrid quantum-classical linear algebra.

@@ -100,7 +100,7 @@ library dependencies to be installed on the system:
 
 For instance, on Debian-like systems, dependencies can be installed with the following command:
 
-      sudo apt-get install cmake gcc gfortran libopenblas-dev liblapacke-dev python-numpy
+      sudo apt-get install cmake gcc gfortran libopenblas-dev liblapacke-dev python3-numpy
 
 The main options to configure the SPM build are:
 

@@ -1,7 +1,7 @@
 ---
-title: "Participation au projet européen EuroHPC DARE"
+title: "Participation in the European EuroHPC DARE Project"
 subtitle: "HPC Digital Autonomy with RISC-V in Europe"
-summary: "Participation au projet européen DARE (EuroHPC JU) axé sur le développement de bibliothèques d'algèbre linéaire pour les architectures européennes RISC-V."
+summary: "Participation in the European DARE project (EuroHPC JU) focused on developing linear algebra libraries for European RISC-V architectures."
 authors: [me]
 tags: [HPC, EuroHPC, RISC-V, Linear Algebra]
 categories: [Research]
@@ -16,11 +16,11 @@ image:
 projects: [pastix]
 ---
 
-Participation au projet européen **DARE** (*HPC Digital Autonomy with RISC-V in Europe*), sélectionné dans le cadre de l'entreprise commune **EuroHPC JU** (*Joint Undertaking*).
+Participation in the European **DARE** project (*HPC Digital Autonomy with RISC-V in Europe*), selected under the **EuroHPC JU** (*Joint Undertaking*).
 
-Ce projet vise à renforcer l'autonomie stratégique et technologique de l'Europe dans le calcul haute performance (HPC) en concevant et optimisant des environnements logiciels et algorithmiques adaptés aux processeurs européens basés sur le jeu d'instructions ouvert **RISC-V**.
+This project aims to strengthen Europe's strategic and technological autonomy in high-performance computing (HPC) by designing and optimizing software stacks and numerical algorithms tailored to European processors based on the open **RISC-V** instruction set architecture.
 
-Dans le cadre de ce projet, les travaux menés portent notamment sur :
-- Le développement et l'optimisation de bibliothèques et d'algorithmes parallèles d'**algèbre linéaire creuse**.
-- L'adaptation des noyaux de calcul et des méthodes de factorisation directe/hybride aux architectures accélérées et vectorielles RISC-V.
-- L'évaluation des performances à l'échelle exaflopique en collaboration avec les partenaires académiques et industriels européens.
+Within this project, our work focuses in particular on:
+- Developing and optimizing parallel **sparse linear algebra** libraries and algorithms.
+- Adapting computational kernels and direct/hybrid factorization methods to accelerated and vector RISC-V architectures.
+- Evaluating performance at exascale in collaboration with European academic and industrial partners.

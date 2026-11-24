@@ -2,15 +2,13 @@
 # Documentation: https://docs.hugoblox.com/reference/language/
 
 en:
-  languageCode: en-us
   locale: en-us
-  languageName: English
+  label: English
   weight: 1
   title: "Pierre Ramet"
 
 fr:
-  languageCode: fr-fr
   locale: fr-fr
-  languageName: Français
+  label: Français
   weight: 2
   title: "Pierre Ramet"

@@ -11,7 +11,6 @@ aliases:
 - /projects/pastix6
 - /projects/pastix6/
 
-# Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
@@ -32,163 +31,154 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
 slides: ""
 ---
 
-# PaStiX: A sparse direct solver
+# PaStiX : un solveur direct creux haute performance
 
-[![pipeline status](https://gitlab.inria.fr/solverstack/pastix/badges/master/pipeline.svg)](https://gitlab.inria.fr/solverstack/pastix/pipelines) [![coverage report](https://gitlab.inria.fr/solverstack/pastix/badges/master/coverage.svg)](https://sonarqube.inria.fr/sonarqube/dashboard?id=hiepacs%3Apastix%3Agitlab%3Amaster)[![coverity report](https://scan.coverity.com/projects/20282/badge.svg)](https://scan.coverity.com/projects/pastix)
+[![pipeline status](https://gitlab.inria.fr/solverstack/pastix/badges/master/pipeline.svg)](https://gitlab.inria.fr/solverstack/pastix/pipelines) [![coverage report](https://gitlab.inria.fr/solverstack/pastix/badges/master/coverage.svg)](https://sonarqube.inria.fr/sonarqube/dashboard?id=hiepacs%3Apastix%3Agitlab%3Amaster) [![coverity report](https://scan.coverity.com/projects/20282/badge.svg)](https://scan.coverity.com/projects/pastix)
 
-PaStiX (Parallel Sparse matriX package) is a scientific library that provides a
-high-performance parallel solver for very large sparse linear systems based on
-direct methods. Numerical algorithms are implemented in single or double
-precision (real or complex) using LLt, LDLt and LU with static pivoting (for non-symmetric
-matrices having a symmetric pattern).
-This solver also provides low-rank compression methods (BLR and HODLR) to reduce the memory footprint and/or the time-to-solution, as well as mixed-precision arithmetic.
+PaStiX (*Parallel Sparse matriX package*) est une bibliothèque scientifique fournissant un solveur parallèle haute performance pour de très grands systèmes linéaires creux par méthodes directes. Les algorithmes numériques sont disponibles en simple ou double précision (réelle ou complexe) avec les factorisations LLt, LDLt et LU à pivotage statique (pour des matrices non symétriques à structure symétrique).
+Ce solveur intègre également des méthodes de compression de rang faible (BLR et HODLR) afin de réduire l'empreinte mémoire et/ou le temps de résolution, ainsi que l'arithmétique en précision mixte.
 
-## Get PaStiX
+## Obtenir PaStiX
 
-The latest official release is **v6.4.0** (July 2024). All releases, source tarballs, and changelogs are available on [GitLab Releases](https://gitlab.inria.fr/solverstack/pastix/-/releases).
+La dernière version officielle est la **v6.4.0** (juillet 2024). Toutes les versions, archives sources et journaux de modifications sont disponibles sur [GitLab Releases](https://gitlab.inria.fr/solverstack/pastix/-/releases).
 
-To use the latest development version of PaStiX, please clone the master
-branch. Note that PaStiX contains git submodules (**spm** and **morse_cmake**):
+Pour utiliser la dernière version de développement de PaStiX, clonez la branche `master` avec ses sous-modules Git (**spm** et **morse_cmake**) :
 
 ```bash
-# Clone with submodules
+# Cloner avec les sous-modules
 git clone --recursive https://gitlab.inria.fr/solverstack/pastix.git
 cd pastix
 ```
 
-## Available Features
+## Fonctionnalités disponibles
 
-* Features available in shared memory with POSIX threads on multicore architectures:
+* Fonctionnalités disponibles en mémoire partagée avec threads POSIX sur architectures multi-cœurs :
 
-|                         | Seq   | Static | Dyn   | StarPU    | PaRSEC    |
-|-------------------------|-------|--------|-------|-----------|-----------|
-| POTRF (Cholesky)        | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
-| PXTRF (LL^t for complex)| FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
-| HETRF (LDL^h)           | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
-| SYTRF (LDL^t)           | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
-| GETRF (LU)              | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
-| TRSM                    | FR/LR | FR/LR  | FR/LR | FR/LR     | -         |
-| DIAG                    | FR/LR | FR/LR  | FR/LR | FR/LR     | -         |
+|                          | Seq   | Static | Dyn   | StarPU    | PaRSEC    |
+|--------------------------|-------|--------|-------|-----------|-----------|
+| POTRF (Cholesky)         | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| PXTRF (LL^t complexe)    | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| HETRF (LDL^h)            | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| SYTRF (LDL^t)            | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| GETRF (LU)               | FR/LR | FR/LR  | FR/LR | FR/LR/GPU | FR/LR/GPU |
+| TRSM                     | FR/LR | FR/LR  | FR/LR | FR/LR     | -         |
+| DIAG                     | FR/LR | FR/LR  | FR/LR | FR/LR     | -         |
 
-* Features available in hybrid shared/distributed memory with MPI between processes and POSIX threads within a process:
+* Fonctionnalités disponibles en mémoire hybride partagée/distribuée (MPI entre processus et threads POSIX au sein de chaque processus) :
 
-|                         | Seq   | Static | Dyn   | StarPU    | PaRSEC    |
-|-------------------------|-------|--------|-------|-----------|-----------|
-| POTRF (Cholesky)        | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
-| PXTRF (LL^t for complex)| FR    | FR     | FR    | FR/GPU    | FR/GPU    |
-| HETRF (LDL^h)           | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
-| SYTRF (LDL^t)           | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
-| GETRF (LU)              | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
-| TRSM                    | FR    | FR     | FR    | FR        | -         |
-| DIAG                    | FR    | FR     | FR    | FR        | -         |
+|                          | Seq   | Static | Dyn   | StarPU    | PaRSEC    |
+|--------------------------|-------|--------|-------|-----------|-----------|
+| POTRF (Cholesky)         | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| PXTRF (LL^t complexe)    | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| HETRF (LDL^h)            | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| SYTRF (LDL^t)            | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| GETRF (LU)               | FR    | FR     | FR    | FR/GPU    | FR/GPU    |
+| TRSM                     | FR    | FR     | FR    | FR        | -         |
+| DIAG                     | FR    | FR     | FR    | FR        | -         |
 
-* **FR** means Full-Rank computations without compression techniques.
-* **LR** means Low-Rank compression technique to reduce the memory footprint and/or the time-to-solution.
-* *WARNING:* GPU kernels are not available on compressed supernodes.
-* *WARNING:* Low-rank compression and Schur complement are not yet available with MPI.
+* **FR** : calculs plein rang (*Full-Rank*) sans compression.
+* **LR** : compression de rang faible (*Low-Rank*) pour réduire l'empreinte mémoire et/ou le temps de calcul.
+* *ATTENTION :* les noyaux GPU ne sont pas disponibles sur les supernœuds compressés.
+* *ATTENTION :* la compression de rang faible et le complément de Schur ne sont pas encore disponibles avec MPI.
 
 ## Documentation
 
-The latest Doxygen documentation is available [here](https://solverstack.gitlabpages.inria.fr/pastix).
+La documentation Doxygen à jour est disponible [ici](https://solverstack.gitlabpages.inria.fr/pastix).
 
-The [main steps](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__users.html) and [parameters](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__api.html) of the solver are described. Some [examples](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__examples.html) are also provided.
+Les [principales étapes](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__users.html) et [paramètres](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__api.html) du solveur y sont détaillés, ainsi que plusieurs [exemples](https://solverstack.gitlabpages.inria.fr/pastix/group__pastix__examples.html).
 
 ## Installation
 
-### Build and install with CMake
+### Compilation et installation avec CMake
 
-PaStiX can be built using [CMake](https://cmake.org/). The build requires several
-library dependencies to be installed on the system:
+PaStiX se compile avec [CMake](https://cmake.org/) et nécessite plusieurs bibliothèques système :
 
-* BLAS (MKL, OpenBLAS, ...) and CBLAS (sequential version required)
-* LAPACK and LAPACKE (sequential version required, with TMG enabled for testing)
-* HWLOC (highly recommended)
-* SCOTCH (optional)
-* METIS (optional)
-* STARPU runtime support (optional)
-* PARSEC runtime support (optional)
-* CUDA/CuBLAS to enable GPU functionality with runtime support (optional)
-* EZTRACE to enable tracing support (optional)
-* Python and Fortran compiler for wrappers and examples (optional)
+* BLAS (MKL, OpenBLAS, …) et CBLAS (version séquentielle requise)
+* LAPACK et LAPACKE (version séquentielle requise, avec TMG activé pour les tests)
+* HWLOC (fortement recommandé)
+* SCOTCH (optionnel)
+* METIS (optionnel)
+* Support moteur d'exécution StarPU (optionnel)
+* Support moteur d'exécution PaRSEC (optionnel)
+* CUDA/cuBLAS pour l'accélération GPU avec support moteur d'exécution (optionnel)
+* EZTRACE pour le traçage (optionnel)
+* Python et compilateur Fortran pour les interfaces et exemples (optionnel)
 
-For instance, on Debian-like systems, dependencies can be installed with the following command:
+Sur les systèmes Debian/Ubuntu, les dépendances peuvent être installées via :
 
-      sudo apt-get install cmake gcc gfortran libhwloc-dev libscotch-dev libopenblas-dev liblapacke-dev python-numpy
+```bash
+sudo apt-get install cmake gcc gfortran libhwloc-dev libscotch-dev libopenblas-dev liblapacke-dev python3-numpy
+```
 
-The main options to configure the PaStiX build are:
+Principales options de configuration CMake :
 
-* Standard CMake options:
-  * `CMAKE_BUILD_TYPE`: Debug, RelWithDebInfo, Release, MinSizeRel; we recommend using `Release` or `RelWithDebInfo` for best performance.
-  * `CMAKE_INSTALL_PREFIX`: Specify the prefix directory to install the library.
-  * `BUILD_SHARED_LIBS=[OFF]`: Enable building shared libraries (required for the Python wrapper).
-* Integer type:
-  * `PASTIX_INT64[=ON]`: Enable/disable int64_t for integer arrays.
-* Ordering libraries:
-  * Ordering libraries must match the integer type chosen for integer arrays in PaStiX.
-  * `PASTIX_ORDERING_SCOTCH[=ON]`: Enable/disable Scotch library support for ordering.
-  * `PASTIX_ORDERING_METIS[=OFF]`: Enable/disable Metis library support for ordering (Metis 5.1 required).
-* External schedulers:
-  * `PASTIX_WITH_PARSEC[=OFF]`: Enable/disable PaRSEC runtime support. Requires installing PaRSEC tag `pastix-<releasenumber>` (`mymaster` for master branch) from the repository <https://bitbucket.org/mfaverge/parsec> that includes patches on top of the original PaRSEC runtime system. PaRSEC needs to be compiled with option `-DPARSEC_WITH_DEVEL_HEADERS=ON`.
-  * `PASTIX_WITH_STARPU[=OFF]`: Enable/disable StarPU runtime support (requires StarPU 1.3).
-* Distributed memory:
-  * `PASTIX_WITH_MPI=[OFF]`: Enable/disable distributed memory support (see above for details). If used with the PaRSEC library, MPI should be enabled or disabled consistently in both libraries.
-* External SpM library:
-  * `PASTIX_WITH_EXTERNAL_SPM=[OFF]`: Enable/disable the use of an external SpM library in favor of the internal one.
-* Documentation:
-  * `BUILD_DOCUMENTATION[=OFF]`: Enable Doxygen documentation generation.
+* Options CMake standard :
+  * `CMAKE_BUILD_TYPE` : `Debug`, `RelWithDebInfo`, `Release`, `MinSizeRel` (`Release` ou `RelWithDebInfo` recommandé pour les performances).
+  * `CMAKE_INSTALL_PREFIX` : répertoire d'installation de la bibliothèque.
+  * `BUILD_SHARED_LIBS=[OFF]` : activer la construction des bibliothèques partagées (requis pour l'interface Python).
+* Type d'entiers :
+  * `PASTIX_INT64[=ON]` : activer/désactiver `int64_t` pour les tableaux d'entiers.
+* Bibliothèques de réordonnancement :
+  * Les bibliothèques de réordonnancement doivent utiliser le même type d'entiers que PaStiX.
+  * `PASTIX_ORDERING_SCOTCH[=ON]` : activer/désactiver Scotch.
+  * `PASTIX_ORDERING_METIS[=OFF]` : activer/désactiver Metis (Metis 5.1 requis).
+* Ordonnanceurs externes :
+  * `PASTIX_WITH_PARSEC[=OFF]` : activer/désactiver le support PaRSEC (compilé avec `-DPARSEC_WITH_DEVEL_HEADERS=ON`).
+  * `PASTIX_WITH_STARPU[=OFF]` : activer/désactiver le support StarPU (StarPU >= 1.3 requis).
+* Mémoire distribuée :
+  * `PASTIX_WITH_MPI=[OFF]` : activer/désactiver le support MPI (doit correspondre à la configuration de PaRSEC le cas échéant).
+* Bibliothèque SpM externe :
+  * `PASTIX_WITH_EXTERNAL_SPM=[OFF]` : utiliser une bibliothèque SpM externe à la place de la version interne.
+* Documentation :
+  * `BUILD_DOCUMENTATION[=OFF]` : activer la génération de la documentation Doxygen.
 
-## Get involved
+## Participer
 
-### Reporting an issue
+### Signaler un problème
 
-We strongly recommend all users to use the issue tracker to report any problems with the software, or to submit feature requests. We will do our best to answer them in a timely manner.
+Nous encourageons les utilisateurs à utiliser le gestionnaire de tickets GitLab pour signaler tout problème ou proposer de nouvelles fonctionnalités.
 
 ### Contributions
 
 <https://gitlab.inria.fr/solverstack/pastix/blob/master/CONTRIBUTING.md>
 
-## Authors
+## Auteurs
 
-The following people contribute or contributed to the development of PaStiX:
+Les personnes suivantes contribuent ou ont contribué au développement de PaStiX :
 
 * Mathieu Faverge, PI
 * Pierre Ramet, PI
 * David Goudin
 * Mathias Hastaran
-* Pascal Henon
+* Pascal Hénon
 * Xavier Lacoste
 * François Pellegrini
-* Grégoire Pichon, Low-rank solver
-* Florent Pruvost, CMake and Spack
-* Theophile Terraz
-* Tony Delarue, MPI implementation
-* Brieuc Nicolas, Mixed precision
+* Grégoire Pichon, solveur rang faible
+* Florent Pruvost, CMake et Spack
+* Théophile Terraz
+* Tony Delarue, implémentation MPI
+* Brieuc Nicolas, précision mixte
 * Alycia Lisito
-* Clément Richefort, Algebraic multigrid and mixed precision
+* Clément Richefort, multigrille algébrique et précision mixte
 
-If we missed your name, please let us know so we can update the list.
+Si votre nom a été oublié, n'hésitez pas à nous le signaler afin que nous mettions la liste à jour.
 
-## Citing PaStiX
+## Citer PaStiX
 
-Feel free to use the following publications to reference PaStiX:
+Vous pouvez référencer PaStiX à l'aide des publications suivantes :
 
-* Original paper that initiated PaStiX:
+* Article fondateur de PaStiX :
   * Pascal Hénon, Pierre Ramet, Jean Roman. PaStiX: A High-Performance Parallel Direct Solver for Sparse Symmetric Definite Systems. Parallel Computing, Elsevier, 2002, 28 (2), pp.301--321. [INRIA HAL](https://hal.inria.fr/inria-00346017)
-* Parallel incomplete factorization implemented in PaStiX:
+* Factorisation incomplète parallèle implémentée dans PaStiX :
   * Pascal Hénon, Pierre Ramet, Jean Roman. On finding approximate supernodes for an efficient ILU(k) factorization. Parallel Computing, Elsevier, 2008, 34, pp.345--362. [INRIA HAL](https://hal.inria.fr/inria-00346018)
-* Reordering strategy for blocking optimization in PaStiX:
-  * Grégoire Pichon, Mathieu Faverge, Pierre Ramet, Jean Roman. Reordering Strategy for Blocking Optimization in Sparse Linear Solvers. SIAM Journal on Matrix Analysis and Applications, Society for Industrial and Applied Mathematics, 2017, SIAM Journal on Matrix Analysis and Applications, 38 (1), pp.226 - 248. [INRIA HAL](https://hal.inria.fr/hal-01485507v2)
-* On the use of low rank approximations in PaStiX:
-  * Grégoire Pichon, Eric Darve, Mathieu Faverge, Pierre Ramet, Jean Roman. Sparse supernodal solver using block low-rank compression: Design, performance and analysis. International Journal of Computational Science and Engineering, Inderscience, 2018, 27, pp.255 - 270. [10.1016/J.JOCS.2018.06.007](http://dx.doi.org/10.1016/J.JOCS.2018.06.007) [Inria HAL](https://hal.inria.fr/hal-01824275)
+* Stratégie de réordonnancement pour l'optimisation des blocs dans PaStiX :
+  * Grégoire Pichon, Mathieu Faverge, Pierre Ramet, Jean Roman. Reordering Strategy for Blocking Optimization in Sparse Linear Solvers. SIAM Journal on Matrix Analysis and Applications, Society for Industrial and Applied Mathematics, 2017, 38 (1), pp.226--248. [INRIA HAL](https://hal.science/hal-01485507)
+* Utilisation des approximations de rang faible dans PaStiX :
+  * Grégoire Pichon, Eric Darve, Mathieu Faverge, Pierre Ramet, Jean Roman. Sparse supernodal solver using block low-rank compression: Design, performance and analysis. Journal of Computational Science, Elsevier, 2018, 27, pp.255--270. [10.1016/j.jocs.2018.06.007](https://doi.org/10.1016/j.jocs.2018.06.007) [Inria HAL](https://hal.science/hal-01824275)
 
-## License
+## Licence
 
 <https://gitlab.inria.fr/solverstack/pastix/blob/master/LICENSE>

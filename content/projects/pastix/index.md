@@ -121,7 +121,7 @@ library dependencies to be installed on the system:
 
 For instance, on Debian-like systems, dependencies can be installed with the following command:
 
-      sudo apt-get install cmake gcc gfortran libhwloc-dev libscotch-dev libopenblas-dev liblapacke-dev python-numpy
+      sudo apt-get install cmake gcc gfortran libhwloc-dev libscotch-dev libopenblas-dev liblapacke-dev python3-numpy
 
 The main options to configure the PaStiX build are:
 
@@ -185,9 +185,9 @@ Feel free to use the following publications to reference PaStiX:
 * Parallel incomplete factorization implemented in PaStiX:
   * Pascal Hénon, Pierre Ramet, Jean Roman. On finding approximate supernodes for an efficient ILU(k) factorization. Parallel Computing, Elsevier, 2008, 34, pp.345--362. [INRIA HAL](https://hal.inria.fr/inria-00346018)
 * Reordering strategy for blocking optimization in PaStiX:
-  * Grégoire Pichon, Mathieu Faverge, Pierre Ramet, Jean Roman. Reordering Strategy for Blocking Optimization in Sparse Linear Solvers. SIAM Journal on Matrix Analysis and Applications, Society for Industrial and Applied Mathematics, 2017, SIAM Journal on Matrix Analysis and Applications, 38 (1), pp.226 - 248. [INRIA HAL](https://hal.inria.fr/hal-01485507v2)
+  * Grégoire Pichon, Mathieu Faverge, Pierre Ramet, Jean Roman. Reordering Strategy for Blocking Optimization in Sparse Linear Solvers. SIAM Journal on Matrix Analysis and Applications, Society for Industrial and Applied Mathematics, 2017, 38 (1), pp.226--248. [INRIA HAL](https://hal.science/hal-01485507)
 * On the use of low rank approximations in PaStiX:
-  * Grégoire Pichon, Eric Darve, Mathieu Faverge, Pierre Ramet, Jean Roman. Sparse supernodal solver using block low-rank compression: Design, performance and analysis. International Journal of Computational Science and Engineering, Inderscience, 2018, 27, pp.255 - 270. [10.1016/J.JOCS.2018.06.007](http://dx.doi.org/10.1016/J.JOCS.2018.06.007) [Inria HAL](https://hal.inria.fr/hal-01824275)
+  * Grégoire Pichon, Eric Darve, Mathieu Faverge, Pierre Ramet, Jean Roman. Sparse supernodal solver using block low-rank compression: Design, performance and analysis. Journal of Computational Science, Elsevier, 2018, 27, pp.255--270. [10.1016/j.jocs.2018.06.007](https://doi.org/10.1016/j.jocs.2018.06.007) [Inria HAL](https://hal.science/hal-01824275)
 
 ## License
 

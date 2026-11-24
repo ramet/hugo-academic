@@ -53,7 +53,7 @@ sections:
           badge: 'Graph Reordering • TSP Optimization'
           description: 'Reordering unknowns within supernodes using a Traveling Salesman Problem formulation to maximize low-rank block compression and computational efficiency.'
           image: 'img/symbol_reordering.png'
-          link: 'https://hal.inria.fr/hal-01485507v1'
+          link: 'https://hal.science/hal-01485507'
           button_text: 'Get Paper'
 
   - block: resume-experience
@@ -73,56 +73,12 @@ sections:
 
         He leads the team in charge of developing **[PaStiX](https://gitlab.inria.fr/solverstack/pastix)**, a high-performance sparse direct solver. He is a member of the team **[TOPAL](https://team.inria.fr/topal)** (Tools and Optimization for High-Performance Applications and Learning).
 
-  - block: markdown
+  - block: teaching
     id: teaching
     content:
       title: '🎓 Teaching & Academic Responsibilities'
       subtitle: 'Computer Science Education & Pedagogical Leadership'
-      text: |-
-        Pierre Ramet has an extensive teaching activity at **Bordeaux University**, teaching approximately 300 hours (HETD) each year across undergraduate, graduate, and engineering curricula.
-
-        ### Main Teaching Domains & Programs
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-4">
-        <div>
-
-        - **IUT de Bordeaux (Computer Science Dept. / BUT Informatique):**
-          - Operating systems, computer networks, computer architecture, and systems programming.
-          - Cryptography and security fundamentals.
-          - DevOps (virtualization and CI/CD automation).
-          - Unsupervised machine learning in the context of the **DU IA** (*Diplôme d'Université Intelligence Artificielle*).
-          - **SAE** (*Situations d'Apprentissage et d'Évaluation*): Project-based learning, problem-solving, and software engineering.
-
-        </div>
-        <div>
-
-        - **Enseirb-Matmeca & Master in Computer Science:**
-          - Numerical algorithms.
-          - High-Performance Computing (HPC), parallel & distributed algorithms, and scientific computing.
-          - Cryptography and security.
-          - Introduction to Quantum Computing.
-        - **International Teaching:**
-          - Graduate-level courses and summer schools abroad (Vietnam).
-
-        </div>
-        </div>
-
-        <div class="mt-4 mb-8 flex justify-center">
-          <a href="https://ramet.gitlab.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm transition-colors text-sm">
-            <span>Browse Course Materials & Lecture Notes</span>
-            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-          </a>
-        </div>
-
-        ### Pedagogical Responsibilities
-
-        - **Head of Licences Professionnelles (IUT de Bordeaux, 2007–2014):**
-          - **DAGPI** (*Développement d'Applications et Gestion de Projet Informatique*).
-          - **DAWIN** (*Développement d'Applications Web et Images Numériques*).
-        - **Coordinator for further education / graduate studies placement (2017–2025)** for the Computer Science Department.
-        - **Active member** of university pedagogical committees and exam boards.
-    design:
-      wide: true
+      portal_url: 'https://ramet.gitlab.io/'
 
   - block: collection
     id: papers
@@ -179,7 +135,7 @@ sections:
       title: Contact
       text: |-
         **Pierre Ramet**  
-        Professeur des Universités, Université de Bordeaux  
+        Full Professor of Computer Science, Bordeaux University  
         Inria Bordeaux - Sud-Ouest  
         351 cours de la Libération, 33405 Talence Cedex, France  
 
