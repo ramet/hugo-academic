@@ -202,7 +202,7 @@
 
       {{/* Language Flag Toggle */}}
       {{ $show_translations := site.Params.hugoblox.header.language_switcher | default true }}
-      {{ if and (gt (len site.Languages) 1) $show_translations }}
+      {{ if and (gt (len hugo.Sites) 1) $show_translations }}
       <div class="px-1 text-[var(--hb-color-header-fg)] flex items-center">
         {{- partial "components/language-chooser.html" (dict "page" .) -}}
       </div>
